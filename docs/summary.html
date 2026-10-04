@@ -65,7 +65,7 @@
     &quot;raw&quot;: &quot;# 00:00 ~ 10:00 첫 게임\n## 01:00 ~ 05:00 첫 판\n- 02:35 다시 볼 순간\n- 03:00 ~ 03:20 [H?] 검토할 장면&quot;
   }]
 }</code></pre></div>
-<p><strong>D1 00:00–10:00 · D2 01:00–05:00 · Point 02:35 · 예상 구간 03:00–03:20</strong>으로 읽습니다. <code>\n</code>은 줄바꿈입니다. 실제 방송 자료가 아니므로 사용 전에 영상과 시각을 맞춰 주세요. <a href="timeline.html">시간축 용어 보기</a></p>
+<p><strong>D1 00:00–10:00 · D2 01:00–05:00 · Point 02:35 · 예상 구간 03:00–03:20</strong>으로 읽습니다. <code>\n</code>은 줄바꿈입니다. <a href="timeline.html">시간축 용어 보기</a></p>
 <details class="doc-details"><summary id="cva-내용을-호환-json으로-옮길-때">CVA 내용을 호환 JSON으로 옮길 때</summary><div class="doc-details-body"><p>분석 도구가 호환 형식으로 내보내거나 직접 아래 형식으로 준비해야 합니다. 탬패드에 요약 원본 자동 변환 버튼이 있는 것은 아닙니다.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="가로로 이동할 수 있는 표"><table><thead><tr><th scope="col">내용</th><th scope="col">호환 항목</th></tr></thead><tbody><tr><td>D1 · D2</td><td><code>role: &quot;chapter&quot;</code>, <code>depth: 1</code> 또는 <code>2</code>. 바로 위 부모와 구간 확인</td></tr><tr><td>Point</td><td><code>startSec</code>만 지정. <code>role</code>은 생략 가능</td></tr><tr><td>하이라이트</td><td><code>role: &quot;highlight&quot;</code>와 시작·끝 지정</td></tr><tr><td>예상 구간</td><td>문서 <code>raw</code>에 <code>[H?]</code> 또는 <code>[예상]</code>과 시작·끝 표기</td></tr></tbody></table></div>
 <p>시각은 영상 시작부터 지난 <strong>정수 초</strong>입니다. 끝을 모르면 임의로 만들지 않습니다. 현재 시간표 입력은 <code>entries</code>의 <code>expected_highlight</code> 직접 지정을 거부하므로 예상 구간은 <code>raw</code>를 사용합니다.</p>
