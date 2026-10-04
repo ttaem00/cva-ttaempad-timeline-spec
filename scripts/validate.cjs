@@ -22,7 +22,7 @@ for (const name of ['README.md', 'SPEC.md', 'SUPPORT.md', 'VALIDATION.md', 'CONT
   const text = fs.readFileSync(path.join(root, name), 'utf8');
   assert.equal((text.match(/^```/gm) || []).length % 2, 0, `unclosed code fence in ${name}`);
   for (const [, target] of text.matchAll(/\]\(([^)]+)\)/g)) {
-    if (/^https?:/.test(target)) continue;
+    if (/^(?:https?|mailto):/.test(target)) continue;
     assert.ok(fs.existsSync(path.resolve(path.dirname(path.join(root,name)), target.split('#')[0])), `missing link ${name}: ${target}`);
   }
 }
