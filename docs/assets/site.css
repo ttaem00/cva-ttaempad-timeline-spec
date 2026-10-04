@@ -137,3 +137,11 @@ h2{break-after:avoid}
 footer{margin-top:24px}
 }
 
+.doc-details{margin:12px 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.doc-details>summary{padding:15px 18px;font-size:14px;font-weight:650;cursor:pointer;line-height:1.65;scroll-margin-top:100px}
+.doc-details>summary:hover{background:#edf1f4}
+.doc-details>summary:focus-visible{outline:2px solid var(--text);outline-offset:3px;border-radius:6px}
+.doc-details[open]>summary{border-bottom:1px solid var(--line)}
+.doc-details-body{padding:0 18px 12px}
+.doc-details-body>h2:first-child{margin-top:24px}
+@media(max-width:800px){.doc-details>summary{scroll-margin-top:24px}.doc-details-body{padding:0 14px 10px}}

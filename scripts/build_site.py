@@ -26,7 +26,7 @@ PAGES = [
     ("summary", "요약과 JSON 가져오기", "자료 가져오기"),
     ("files", "파일 형식과 예제", "자료 가져오기"),
     ("limits", "한계와 문제 해결", "더 알아보기"),
-    ("reference", "규격과 검증", "더 알아보기"),
+    ("reference", "작성 기준", "더 알아보기"),
 ]
 LINKS = {"PEOPLE.md": "people.html", "IMPORT.md": "files.html",
          "ROSTER.md": "files.html#참가자와-역할-이름-가져오기",
@@ -105,10 +105,11 @@ def image_figure(alt: str, target: str) -> str:
             '</a><figcaption>이미지를 선택하면 원본 크기로 볼 수 있습니다.</figcaption></figure>')
 
 
-def render_markdown(text: str):
+def render_markdown(text: str, ids=None):
     lines = text.splitlines()
     output, headings, paragraph = [], [], []
-    ids: dict[str, int] = {}
+    if ids is None:
+        ids = {}
     index = 0
     def flush():
         if paragraph:
@@ -116,7 +117,26 @@ def render_markdown(text: str):
             paragraph.clear()
     while index < len(lines):
         line = lines[index]
-        if line.startswith("```"):
+        if line.startswith(":::details "):
+            flush()
+            title = line[len(":::details "):].strip()
+            if not title:
+                raise ValueError("details needs a label")
+            base = slug(title); count = ids.get(base, 0); ids[base] = count + 1
+            anchor = base + (f"-{count+1}" if count else "")
+            body = []; index += 1
+            while index < len(lines) and lines[index].strip() != ":::":
+                if lines[index].startswith(":::details "):
+                    raise ValueError("nested details are not supported")
+                body.append(lines[index]); index += 1
+            if index == len(lines):
+                raise ValueError("unclosed details")
+            rendered, inner_headings = render_markdown("\n".join(body), ids)
+            headings.append((3, title, anchor)); headings.extend(inner_headings)
+            output.append(f'<details class="doc-details"><summary id="{anchor}">{inline(title)}</summary><div class="doc-details-body">{rendered}</div></details>')
+        elif line.strip() == ":::" or line.startswith(":::details"):
+            raise ValueError("invalid details delimiter")
+        elif line.startswith("```"):
             flush()
             language = line[3:].strip() or "text"
             body = []
@@ -202,8 +222,8 @@ def page_template(key, label, article, headings, previous, next_page):
     <nav class="header-actions" aria-label="제품 링크"><a class="product-link" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" href="https://chromewebstore.google.com/detail/ajokeikoipagcdnpdkkbamidkjgeghon/preview?hl=ko&amp;authuser=0">Chrome 스토어 보기 <span aria-hidden="true">↗</span></a></nav>
   </header>
   <div class="site-layout">
-    <aside class="sidebar"><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서">{navigation(key)}</nav><div class="sidebar-foot"><span>지원 기준 0.3.23 후보</span><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec">공개 문서 저장소 ↗</a></div></details></aside>
-    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><article>{article}</article><nav class="page-turn" aria-label="이전 다음 문서">{prev_next}</nav><footer><p class="doc-meta">문서 규격 0.4 · 편집 초안</p>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/{key}.md">이 문서의 Markdown 원본</a> · <a href="{PUBLIC_BLOB}LICENSE">MIT 라이선스</a></footer></main>
+    <aside class="sidebar"><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서">{navigation(key)}</nav><div class="sidebar-foot"><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec">공개 문서 저장소 ↗</a></div></details></aside>
+    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><article>{article}</article><nav class="page-turn" aria-label="이전 다음 문서">{prev_next}</nav><footer>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/{key}.md">이 문서의 Markdown 원본</a> · <a href="{PUBLIC_BLOB}LICENSE">MIT 라이선스</a></footer></main>
     <aside class="toc"><nav aria-label="현재 문서 목차"><p>이 문서에서</p>{toc}</nav></aside>
   </div>
   <dialog id="search-dialog" aria-labelledby="search-title"><form method="dialog" class="search-head"><h2 id="search-title">문서 검색</h2><button aria-label="검색 닫기">닫기</button></form><label for="search-input">찾을 내용</label><input id="search-input" type="search" placeholder="예: 들여쓰기, 괄호, 합방" autocomplete="off"><p id="search-status" role="status">단어를 입력하면 문서를 찾습니다.</p><div id="search-results"></div></dialog>
@@ -256,7 +276,7 @@ def main():
         (DOCS / (key + '.html')).write_text(output, encoding='utf-8', newline='\n')
         search.append({'title':label, 'url':key+'.html', 'text':re.sub(r'[`#*_]', '', text)})
         for level, title, anchor in headings:
-            if level == 2: search.append({'title':label+' · '+title,'url':key+'.html#'+anchor, 'text':title})
+            if level in (2, 3): search.append({'title':label+' · '+title,'url':key+'.html#'+anchor, 'text':title})
     (DOCS / 'assets/search-index.js').write_text('window.DOC_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('<','\\u003c')+';\n',encoding='utf-8',newline='\n')
     validate_site()
     artifact_paths = [DOCS/(key+'.html') for key,_,_ in PAGES] + [p for p in (DOCS/'assets').rglob('*') if p.is_file()] + [DOCS/'.nojekyll']
