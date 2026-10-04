@@ -32,6 +32,7 @@ LINKS = {"PEOPLE.md": "people.html", "IMPORT.md": "files.html",
          "ROSTER.md": "files.html#참가자와-역할-이름-가져오기",
          "SPEC.md": "reference.html", "SUPPORT.md": "formats.html",
          "README.md": "index.html", "VALIDATION.md": "reference.html#검증-범위"}
+APP_VERSION = '0.3.31'
 PUBLIC_BLOB = 'https://github.com/ttaem00/cva-ttaempad-timeline-spec/blob/main/'
 
 
@@ -222,7 +223,7 @@ def page_template(key, label, article, headings, previous, next_page):
     <nav class="header-actions" aria-label="제품 링크"><a class="product-link" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" href="https://chromewebstore.google.com/detail/ajokeikoipagcdnpdkkbamidkjgeghon/preview?hl=ko&amp;authuser=0">Chrome 스토어 보기 <span aria-hidden="true">↗</span></a></nav>
   </header>
   <div class="site-layout">
-    <aside class="sidebar"><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서">{navigation(key)}</nav><div class="sidebar-foot"><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec">공개 문서 저장소 ↗</a></div></details></aside>
+    <aside class="sidebar"><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서">{navigation(key)}</nav><div class="sidebar-foot"><span>지원 앱 {APP_VERSION}</span><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec">공개 문서 저장소 ↗</a></div></details></aside>
     <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><article>{article}</article><nav class="page-turn" aria-label="이전 다음 문서">{prev_next}</nav><footer>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/{key}.md">이 문서의 Markdown 원본</a> · <a href="{PUBLIC_BLOB}LICENSE">MIT 라이선스</a></footer></main>
     <aside class="toc"><nav aria-label="현재 문서 목차"><p>이 문서에서</p>{toc}</nav></aside>
   </div>
@@ -280,7 +281,7 @@ def main():
     (DOCS / 'assets/search-index.js').write_text('window.DOC_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('<','\\u003c')+';\n',encoding='utf-8',newline='\n')
     validate_site()
     artifact_paths = [DOCS/(key+'.html') for key,_,_ in PAGES] + [p for p in (DOCS/'assets').rglob('*') if p.is_file()] + [DOCS/'.nojekyll']
-    manifest = {'format':'cva-ttaempad.reading-site.v1','documentVersion':'0.4','consumer':'0.3.23 candidate','pages':len(PAGES),'generated':{str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
+    manifest = {'format':'cva-ttaempad.reading-site.v1','documentVersion':'0.4','consumer':APP_VERSION,'pages':len(PAGES),'generated':{str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
     (DOCS/'build-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(f'Reading site build and local links PASS; {len(PAGES)} pages; no comment parser distributed')
 
