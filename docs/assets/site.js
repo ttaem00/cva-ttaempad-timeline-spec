@@ -5,6 +5,18 @@
   const adaptNavigation = () => { if (drawer) drawer.open = !narrow.matches; };
   adaptNavigation();
   narrow.addEventListener('change', adaptNavigation);
+  // Reveal only the disclosures containing the linked section, including search hits.
+  const revealLinkedSection = () => {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = id && document.getElementById(id);
+    if (!target) return;
+    let section = target.closest('details.doc-details');
+    while (section) { section.open = true; section = section.parentElement.closest('details.doc-details'); }
+    target.scrollIntoView({block:'start'});
+  };
+  revealLinkedSection();
+  window.addEventListener('hashchange', revealLinkedSection);
   const dialog = document.getElementById('search-dialog');
   const button = document.querySelector('.search-open');
   const input = document.getElementById('search-input');
