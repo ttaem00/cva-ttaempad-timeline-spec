@@ -82,7 +82,7 @@
     {&quot;alias&quot;: &quot;기자&quot;, &quot;streamer&quot;: &quot;가상 방송인 B&quot;}
   ]
 }</code></pre></div>
-<p><code>aliases</code>는 선택사항이며 선언 대상이 <code>members</code>에 있어야 합니다. 파일의 단일 이름에 쉼표·등호·줄바꿈·HTML을 넣지 않습니다. 파일은 한 줄 입력과 같은 신원 검사를 거칩니다. <a href="examples/participant-roster.json">예제 파일</a>를 사용할 수 있습니다. 도구가 명시된 참가자 파일을 선택하면 참가자 자료로 적용합니다. <a href="files.html">시간축 JSON</a>은 장면 미리보기 후 별도 채택하므로 두 파일의 적용 목적이 다릅니다.</p>
+<p><code>aliases</code>는 선택사항이며 선언 대상이 <code>members</code>에 있어야 합니다. 파일의 단일 이름에 쉼표·등호·줄바꿈·HTML을 넣지 않습니다. <a href="examples/participant-roster.json">예제 파일</a>를 사용할 수 있습니다. 도구가 명시된 참가자 파일을 선택하면 참가자 자료로 적용합니다. <a href="files.html">시간축 JSON</a>은 장면 미리보기 후 별도 채택하므로 두 파일의 적용 목적이 다릅니다.</p>
 <h3 id="기존-syncher-합방-자료">기존 Syncher 합방 자료</h3>
 <p>이미 연결한 다시보기와 기준 시각을 전달하는 기존 합방 자료도 읽을 수 있습니다. 컷 작업 파일과는 다릅니다.</p>
 <details class="doc-details"><summary id="syncher-파일-조건">Syncher 파일 조건</summary><div class="doc-details-body"><p>기존 <code>schemaVersion: 3</code> 자료도 읽습니다. 최소 <code>projectId</code> 문자열과 2–12명의 <code>people</code>이 필요합니다. 각 인물은 고유한 <code>id</code>, <code>name</code>과 <code>vod.url</code>을 가지며, <code>vod.url</code>은 <code>https://chzzk.naver.com/video/숫자</code>입니다. 현재 기준 VOD가 명단에 포함되어야 하고 중복 VOD는 거부합니다. <code>vod.wallAnchorSec</code>와 <code>vod.vodAnchorSec</code>가 유효하면 차이를 영상 0초의 벽시계 기준으로 사용합니다. <code>vod.verified: true</code>가 있어도 실제 같은 장면과 소리는 직접 확인하세요.</p>
