@@ -27,6 +27,8 @@ PAGES = [
     ("files", "파일 형식과 예제", "자료 가져오기"),
     ("limits", "한계와 문제 해결", "더 알아보기"),
     ("reference", "작성 기준", "더 알아보기"),
+    ("contact", "문의·오류 제보", "더 알아보기"),
+    ("policy", "이용 정책", "더 알아보기"),
 ]
 LINKS = {"PEOPLE.md": "people.html", "IMPORT.md": "files.html",
          "ROSTER.md": "files.html#참가자와-역할-이름-가져오기",
@@ -70,7 +72,7 @@ def inline(text: str) -> str:
     text = html.escape(text)
     def link(match):
         target = rewrite_link(html.unescape(match.group(2)))
-        if urlsplit(target).scheme not in ("", "https", "http"):
+        if urlsplit(target).scheme not in ("", "https", "http", "mailto"):
             raise ValueError("unsupported link scheme")
         return '<a href="' + html.escape(target, quote=True) + '">' + match.group(1) + '</a>'
     text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link, text)
@@ -224,7 +226,7 @@ def page_template(key, label, article, headings, previous, next_page):
   </header>
   <div class="site-layout">
     <aside class="sidebar"><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서">{navigation(key)}</nav><div class="sidebar-foot"><span>지원 앱 {APP_VERSION}</span><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec">공개 문서 저장소 ↗</a></div></details></aside>
-    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><article>{article}</article><nav class="page-turn" aria-label="이전 다음 문서">{prev_next}</nav><footer>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/{key}.md">이 문서의 Markdown 원본</a> · <a href="{PUBLIC_BLOB}LICENSE">MIT 라이선스</a></footer></main>
+    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><article>{article}</article><nav class="page-turn" aria-label="이전 다음 문서">{prev_next}</nav><footer>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/{key}.md">이 문서의 Markdown 원본</a> · <a href="mailto:ttaem00@naver.com">문의·제보</a> · <a href="policy.html">이용 정책</a></footer></main>
     <aside class="toc"><nav aria-label="현재 문서 목차"><p>이 문서에서</p>{toc}</nav></aside>
   </div>
   <dialog id="search-dialog" aria-labelledby="search-title"><form method="dialog" class="search-head"><h2 id="search-title">문서 검색</h2><button aria-label="검색 닫기">닫기</button></form><label for="search-input">찾을 내용</label><input id="search-input" type="search" placeholder="예: 들여쓰기, 괄호, 합방" autocomplete="off"><p id="search-status" role="status">단어를 입력하면 문서를 찾습니다.</p><div id="search-results"></div></dialog>
