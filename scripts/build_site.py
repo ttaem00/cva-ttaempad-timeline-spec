@@ -418,7 +418,9 @@ def main():
     artifact_paths = [p for p in DOCS.rglob('*') if p.is_file() and p.name != 'build-manifest.json']
     manifest = {'format':'cva-ttaempad.reading-site.v2','documentVersion':'0.4','consumer':APP_VERSION,
                 'pages':len(root_pages), 'versions':[r['version'] for r in VERSIONS['versions']],
-                'generated':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
+                'generated':{p.relative_to(ROOT).as_posix():hashlib.sha256(
+                    p.read_bytes().replace(b'\r\n', b'\n') if p.suffix in {'.json', '.js', '.md', '.html', '.css', '.txt'}
+                    else p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
     (DOCS/'build-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(f'Reading site build and local links PASS; {len(root_pages)} stable pages; {len(VERSIONS["versions"])} preserved versions')
 
