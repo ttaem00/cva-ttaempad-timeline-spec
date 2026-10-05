@@ -1,0 +1,10 @@
+{
+  "stable": "0.3.31",
+  "authoringVersion": "0.3.31",
+  "stableBasis": "Manager-selected stable baseline; store preview version observed 2026-10-05",
+  "versions": [
+    {"version": "0.3.32", "status": "preview", "label": "0.3.32 · 미리보기"},
+    {"version": "0.3.31", "status": "stable", "label": "0.3.31 · stable"},
+    {"version": "0.3.23", "status": "archive", "label": "0.3.23 · 이전 기록"}
+  ]
+}

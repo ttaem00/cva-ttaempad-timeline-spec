@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>파일 형식과 예제 · CVA-탬패드 댓글 안내</title>
+  <meta name="description" content="CVA-탬패드가 읽는 댓글 시각과 목차, 구간, 인물, 파일 형식을 예제로 설명합니다.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="../../assets/versioned/93bf3adb366880eec513fbfd2a1593b13df91a005949b0dd695ba2ba0b76fea1.png" type="image/png">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script src="assets/search-index.js" defer></script><script src="../../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="../../assets/versioned/93bf3adb366880eec513fbfd2a1593b13df91a005949b0dd695ba2ba0b76fea1.png" alt="" width="36" height="36"><span>CVA-탬패드<small>댓글 시간축 안내</small></span></a>
+    <button class="search-open" type="button" hidden><span>문서 검색</span><kbd aria-hidden="true">/</kbd></button>
+    <nav class="header-actions" aria-label="제품 링크"><a class="product-link" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://chromewebstore.google.com/detail/ajokeikoipagcdnpdkkbamidkjgeghon/preview?hl=ko&amp;authuser=0">Chrome 스토어 보기 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <div class="site-layout">
+    <aside class="sidebar"><details class="guide-version"><summary>0.3.23 · 이전 기록</summary><nav aria-label="문서 버전"><a href="../../files.html">현재 stable 안내</a><a href="../../versions/0.3.32/files.html">0.3.32 · 미리보기</a><a href="../../versions/0.3.31/files.html">0.3.31 · stable</a><a href="../../versions/0.3.23/files.html">0.3.23 · 이전 기록</a><a href="../../history.html">버전 기록 모두 보기</a></nav></details><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서"><div class="nav-section" role="group" aria-labelledby="nav-시작하기"><p id="nav-시작하기" class="nav-group">시작하기</p>
+<a href="index.html">빠른 시작</a>
+<a href="formats.html">지원 형태 한눈에</a>
+</div>
+<div class="nav-section" role="group" aria-labelledby="nav-시간축-용어"><p id="nav-시간축-용어" class="nav-group">시간축 용어</p>
+<a href="timeline.html">D1·D2·Point</a>
+</div>
+<div class="nav-section" role="group" aria-labelledby="nav-작성과-읽기"><p id="nav-작성과-읽기" class="nav-group">작성과 읽기</p>
+<a href="existing.html">기존 댓글 읽기</a>
+<a href="ranges.html">구간과 강조</a>
+<a href="people.html">인물과 합방</a>
+</div>
+<div class="nav-section" role="group" aria-labelledby="nav-자료-가져오기"><p id="nav-자료-가져오기" class="nav-group">자료 가져오기</p>
+<a href="summary.html">요약과 JSON 가져오기</a>
+<a href="files.html" aria-current="page">파일 형식과 예제</a>
+</div>
+<div class="nav-section" role="group" aria-labelledby="nav-더-알아보기"><p id="nav-더-알아보기" class="nav-group">더 알아보기</p>
+<a href="limits.html">한계와 문제 해결</a>
+<a href="reference.html">작성 기준</a>
+</div></nav><div class="sidebar-foot"><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec" target="_blank" rel="noopener noreferrer">공개 문서 저장소 ↗</a></div></details></aside>
+    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><p class="version-note">0.3.23 · 이전 기록 — 보존된 당시 안내입니다. <a href="../../history.html">버전 기록</a></p><article><h1 id="파일-형식과-예제">파일 형식과 예제</h1>
+<p>댓글은 <strong>TXT</strong>, 정리한 시간표는 <strong>호환 JSON</strong>, 합방 이름은 <strong>참가자 파일</strong>을 사용합니다.</p>
+<p><strong>JSON·TXT는 ttaem.com에 올리지 않고 사용할 수 있습니다.</strong> 앱에서 여는 순서는 <a href="summary.html">요약과 JSON 가져오기</a>, D1·D2·Point의 뜻은 <a href="timeline.html">시간축 용어</a>에 있습니다.</p>
+<h2 id="평문-txt">평문 TXT</h2>
+<p>기존 댓글 평문은 TXT로 가져와 미리보기할 수 있습니다. JSON을 작성할 필요는 없습니다. 원문·시각·진단을 확인한 뒤 시간축에 불러옵니다.</p>
+<h2 id="시간축-json-가져오기">시간축 JSON 가져오기</h2>
+<p><strong>댓글 가져오기 → 시간표 파일 열기 → 미리보기 → 시간축에 불러오기</strong> 순서로 사용합니다. 파일을 고르기만 해서는 기존 자료가 바뀌지 않습니다.</p>
+<p>아래 형식으로 시간표를 전달합니다. 요약 원본·컷 작업·영상 파일과는 다른 입력입니다.</p>
+<div class="code-example"><span class="code-label">JSON</span><pre><code>{
+  &quot;format&quot;: &quot;chzzk.comment-timeline&quot;,
+  &quot;version&quot;: 1,
+  &quot;documents&quot;: [{
+    &quot;name&quot;: &quot;가상 게임 목차&quot;,
+    &quot;aliases&quot;: [{&quot;alias&quot;: &quot;역할A&quot;, &quot;streamer&quot;: &quot;가상 방송인 A&quot;}],
+    &quot;entries&quot;: [
+      {&quot;role&quot;: &quot;chapter&quot;, &quot;depth&quot;: 1, &quot;startSec&quot;: 0, &quot;endSec&quot;: 60, &quot;title&quot;: &quot;첫 게임&quot;},
+      {&quot;startSec&quot;: 10, &quot;title&quot;: &quot;첫 만남 (w. 역할A)&quot;},
+      {&quot;role&quot;: &quot;highlight&quot;, &quot;startSec&quot;: 20, &quot;endSec&quot;: 25, &quot;title&quot;: &quot;결정적인 순간&quot;}
+    ]
+  }]
+}</code></pre></div>
+<p><strong>예상 구간</strong>은 <code>raw</code>에 <code>- 03:00 ~ 03:20 [H?] 검토할 장면</code>처럼 담으세요. 현재 <code>entries</code>의 <code>expected_highlight</code> 직접 지정은 지원하지 않습니다.</p>
+<p><a href="examples/portable-timeline.json" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기">시간축 JSON 예제 열기</a> · <a href="examples/summary-timeline.json" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기">예상 구간 포함 예제</a></p>
+<details class="doc-details"><summary id="json-필드와-입력-제한">JSON 필드와 입력 제한</summary><div class="doc-details-body"><div class="table-scroll" tabindex="0" role="region" aria-label="가로로 이동할 수 있는 표"><table><thead><tr><th scope="col">필드</th><th scope="col">의미·조건</th></tr></thead><tbody><tr><td><code>documents</code></td><td>1–100개의 원문 문서. 서로 다른 문서의 부모·구간·별칭을 섞지 않음</td></tr><tr><td>문서 <code>name</code></td><td>선택한 시간표의 표시 이름, 최대 120자</td></tr><tr><td><code>raw</code> 또는 <code>entries</code></td><td>둘 중 하나. <code>raw</code>는 기존 댓글 문자열을 그대로 보존. <code>entries</code>는 시간과 종류를 항목별로 작성</td></tr><tr><td><code>aliases</code></td><td>선택적 문서별 가명 목록, 최대 100개. alias/streamer는 공백만으로 이루어지지 않은 80자 이하 문자열; 줄바꿈·대괄호·꺾쇠·슬래시 금지</td></tr><tr><td>항목 <code>startSec</code></td><td>0 이상의 안전한 정수, VOD 경과초</td></tr><tr><td><code>endSec</code></td><td>선택적 정수, 시작보다 뒤. 영상 길이와 항목 종류가 맞는지 미리보기에서 확인</td></tr><tr><td><code>title</code></td><td>줄바꿈 없는 1,000자 이하 문자열</td></tr><tr><td><code>role</code></td><td>생략하면 <code>point</code>; <code>chapter</code>, <code>memo</code>, <code>watch</code>, <code>highlight</code>, <code>collab_context</code>. 예상 구간은 아래 현재 버전 제한 확인</td></tr><tr><td><code>depth</code></td><td>chapter일 때 1–6; 바로 위 주제와 구간이 맞는지 확인</td></tr><tr><td>루트 <code>videoNo</code></td><td>선택 필드. 지정하면 현재 다시보기 번호와 같아야 함</td></tr></tbody></table></div>
+<p>입력은 250,000자 이하, 문서당 항목은 최대 5,000개입니다. <code>point</code>에는 <code>endSec</code>를 붙이지 않습니다. 구간은 <code>memo</code>나 <code>highlight</code>를 사용하세요.</p>
+<p>원문 댓글이 있다면 <code>raw</code>에 그대로 담으세요. 항목별 <code>entries</code>에 넣은 제목 때문에 다른 시각이나 종류로 읽히면 <code>raw</code>로 바꿔 가져오세요. 채널 ID나 영상 동기화 정보는 이 시간표 파일에 포함하지 않습니다.</p></div></details>
+<h2 id="참가자와-역할-이름-가져오기">참가자와 역할 이름 가져오기</h2>
+<p>참가자 이름으로 방송인을 찾고, 기준 영상과 방송 시각이 겹치는 다시보기를 불러옵니다. 실제 참여와 정확한 시각은 영상을 보고 확인하세요.</p>
+<h3 id="한-줄-입력">한 줄 입력</h3>
+<div class="code-example"><span class="code-label">TEXT</span><pre><code>가상 방송인 A, 탐정=가상 방송인 A, 기자=가상 방송인 B</code></pre></div>
+<p>쉼표로 나누고 <code>역할명=방송인</code>으로 별칭을 연결합니다. 같은 방송인은 한 명으로 묶습니다. 별칭이 여러 사람과 충돌하면 확인이 필요합니다.</p>
+<details class="doc-details"><summary id="이름-입력-제한">이름 입력 제한</summary><div class="doc-details-body"><p>한 줄 2,000자, 이름 80자, 참가자 1–24명까지입니다. 입력은 현재 영상의 검색 보조 자료입니다. 댓글 안의 <code>별칭:</code>은 해당 댓글에만 적용하며, 입력과 충돌하면 자동 신원 선택을 멈춥니다.</p></div></details>
+<h3 id="참가자-파일">참가자 파일</h3>
+<div class="code-example"><span class="code-label">JSON</span><pre><code>{
+  &quot;schema&quot;: &quot;chzzk.participant-roster&quot;,
+  &quot;version&quot;: 1,
+  &quot;members&quot;: [
+    {&quot;streamer&quot;: &quot;가상 방송인 A&quot;},
+    {&quot;streamer&quot;: &quot;가상 방송인 B&quot;}
+  ],
+  &quot;aliases&quot;: [
+    {&quot;alias&quot;: &quot;탐정&quot;, &quot;streamer&quot;: &quot;가상 방송인 A&quot;},
+    {&quot;alias&quot;: &quot;기자&quot;, &quot;streamer&quot;: &quot;가상 방송인 B&quot;}
+  ]
+}</code></pre></div>
+<p><code>aliases</code>는 선택사항이며 선언 대상이 <code>members</code>에 있어야 합니다. 파일의 단일 이름에 쉼표·등호·줄바꿈·HTML을 넣지 않습니다. <a href="examples/participant-roster.json" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기">예제 파일</a>를 사용할 수 있습니다. 도구가 명시된 참가자 파일을 선택하면 참가자 자료로 적용합니다. <a href="files.html">시간축 JSON</a>은 장면 미리보기 후 별도 채택하므로 두 파일의 적용 목적이 다릅니다.</p>
+<h3 id="기존-syncher-합방-자료">기존 Syncher 합방 자료</h3>
+<p>이미 연결한 다시보기와 기준 시각을 전달하는 기존 합방 자료도 읽을 수 있습니다. 컷 작업 파일과는 다릅니다.</p>
+<details class="doc-details"><summary id="syncher-파일-조건">Syncher 파일 조건</summary><div class="doc-details-body"><p>기존 <code>schemaVersion: 3</code> 자료도 읽습니다. 최소 <code>projectId</code> 문자열과 2–12명의 <code>people</code>이 필요합니다. 각 인물은 고유한 <code>id</code>, <code>name</code>과 <code>vod.url</code>을 가지며, <code>vod.url</code>은 <code>https://chzzk.naver.com/video/숫자</code>입니다. 현재 기준 VOD가 명단에 포함되어야 하고 중복 VOD는 거부합니다. <code>vod.wallAnchorSec</code>와 <code>vod.vodAnchorSec</code>가 유효하면 차이를 영상 0초의 벽시계 기준으로 사용합니다. <code>vod.verified: true</code>가 있어도 실제 같은 장면과 소리는 직접 확인하세요.</p>
+<p>참가자 파일은 이름 검색에 필요한 최소 구조입니다. Syncher 자료는 이미 연결한 VOD와 기준 시각을 전달하는 기존 제품 자료입니다. 컷 작업 JSON과 자동 게시 형식으로 쓰지 않습니다.</p></div></details>
+<h3 id="자동-선택과-보정">자동 선택과 보정</h3>
+<p>유일하게 정확한 이름이 일치하는 채널만 자동으로 선택합니다. 모호한 이름은 선택을 요청합니다. 방송 시작·길이로 현재 기준 시각을 포함하는 VOD를 고르며, 방송 재시작으로 나뉜 VOD는 다른 다시보기 목록에서 바꿀 수 있어야 합니다. 겹치는 영상이 없으면 임의로 가까운 영상을 정렬하지 않습니다. 방송 시각에 따른 초벌 정렬과 같은 장면의 개인 시각 보정은 구분합니다. 개인 보정은 기준/비교 VOD 쌍에만 적용하고, 영상 선택과 소리 선택은 독립적으로 제공합니다.</p></article><nav class="page-turn" aria-label="이전 다음 문서"><a href="summary.html"><small>이전 문서</small><span>요약과 JSON 가져오기 ←</span></a><a href="limits.html"><small>다음 문서</small><span>한계와 문제 해결 →</span></a></nav><footer>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/files.md" target="_blank" rel="noopener noreferrer">이 문서의 Markdown 원본</a> · <a href="mailto:ttaem00@naver.com">문의·제보</a> · <a href="../../policy.html">이용 정책</a></footer></main>
+    <aside class="toc"><nav aria-label="현재 문서 목차"><p>이 문서에서</p><a class="toc-depth-2" href="#평문-txt">평문 TXT</a><a class="toc-depth-2" href="#시간축-json-가져오기">시간축 JSON 가져오기</a><a class="toc-depth-2" href="#참가자와-역할-이름-가져오기">참가자와 역할 이름 가져오기</a></nav></aside>
+  </div>
+  <dialog id="search-dialog" aria-labelledby="search-title"><form method="dialog" class="search-head"><h2 id="search-title">문서 검색</h2><button aria-label="검색 닫기">닫기</button></form><label for="search-input">찾을 내용</label><input id="search-input" type="search" placeholder="예: 들여쓰기, 괄호, 합방" autocomplete="off"><p id="search-status" role="status">단어를 입력하면 문서를 찾습니다.</p><div id="search-results"></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" closedby="any" aria-labelledby="image-title"><form method="dialog" class="image-head"><h2 id="image-title">이미지 확대</h2><button autofocus aria-label="이미지 닫기">닫기</button></form><div class="image-scroll"><img id="image-preview" alt=""></div><p class="image-foot"><a id="image-original" target="_blank" rel="noopener noreferrer">원본 크기로 새 탭에서 보기 ↗</a></p></dialog>
+  <noscript><p class="no-script">본문과 목차는 그대로 읽을 수 있습니다. 검색은 브라우저의 페이지 찾기(Ctrl+F)를 사용하세요.</p></noscript>
+</body></html>
