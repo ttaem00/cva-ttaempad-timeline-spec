@@ -73,6 +73,22 @@ blockquote{margin:22px 0;border-left:3px solid var(--brass);padding:10px 18px;ba
 footer{font-size:11px;line-height:1.8;color:var(--muted);padding-top:22px;border-top:1px solid var(--line)}
 footer a{color:var(--muted)}
 .doc-meta{margin:0 0 10px;font-size:12px;font-weight:600;color:var(--brass)}
+.version-note{font-size:12px;color:var(--muted);margin:0 0 22px;line-height:1.8}
+.version-note a{margin-left:10px}
+.guide-version{margin:0 0 24px;border:1px solid var(--line);border-radius:7px;background:var(--surface)}
+.guide-version>summary{padding:11px 13px;font-size:13px;font-weight:650;cursor:pointer}
+.guide-version nav{display:grid;border-top:1px solid var(--line);padding:6px}
+.guide-version nav a{padding:9px 7px;font-size:12px;border-radius:4px;text-decoration:none}
+.guide-version nav a:hover{background:var(--code)}
+.image-open{cursor:zoom-in}
+.image-dialog{width:min(1200px,calc(100vw - 32px));max-height:94vh;padding:16px;overflow:auto}
+.image-head{display:flex;gap:16px;align-items:center;justify-content:space-between;margin:0 0 12px}
+.image-head h2{margin:0;font-size:17px}
+.image-head button{min-height:40px;padding:7px 16px;cursor:pointer;flex-shrink:0}
+.image-scroll{overflow:auto;max-height:calc(94vh - 140px);border-radius:5px;background:#121820}
+.image-scroll img{display:block;width:100%;height:auto;color:white}
+.image-foot{font-size:13px;margin:12px 0 0}
+html:has(.image-dialog[open]){overflow:hidden}
 dialog{border:1px solid var(--line);border-radius:12px;padding:24px;width:min(640px,calc(100vw - 32px));max-height:80vh;color:var(--text);background:var(--surface)}
 dialog::backdrop{background:rgb(16 31 46 / .45)}
 .search-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
@@ -104,6 +120,7 @@ dialog input{width:100%;padding:12px 14px;border:1px solid #a9b4bc;border-radius
 .nav-section+.nav-section{padding-top:16px}
 .nav-group{grid-column:1/-1;margin:0 12px 3px}
 .sidebar-foot{display:none}
+.guide-version{margin:14px 0}
 main{padding:36px 24px}
 h1{font-size:29px}
 h2{font-size:21px;margin-top:36px}

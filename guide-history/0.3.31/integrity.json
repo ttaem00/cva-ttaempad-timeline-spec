@@ -1,0 +1,28 @@
+{
+  "version": "0.3.31",
+  "sourceCommit": "b1f56efb54fa260bee37ca6ea7ff299101317d54",
+  "originalConsumer": "0.3.31",
+  "files": {
+    "assets.json": "40ebc551ee2a3d94454da25bafa2abed1282d6b781c6d283446dc2997b573c2a",
+    "examples/fixtures.json": "0ed1c03275672a9b3ded8c3b5fb17d8521ba17a19bccb6b182d877e2fddc2708",
+    "examples/mixed-formats.json": "48446d06b89f83bbba781500b7852647eb9d4117604582aebf035f9c67b47c32",
+    "examples/natural-hierarchy.json": "41c5fb2c9cb32baa5b630169b7899a18215e7a3a22fe24f467cae18b81045aa8",
+    "examples/nested-emphasis.json": "99222357a1e32185c22490a1e0f64d0145adce6e014c3f4a31f945ec30f3d7af",
+    "examples/participant-roster.json": "0757c7dc6f98c1a53ec4123f6750f3113cd37b270d39ea8fb740fdc479ea46ff",
+    "examples/people.json": "2c7e80788fd4a26d1afe528dfe978ddc78843d71483238b77ae00f5e9d7bc4f1",
+    "examples/portable-timeline.json": "ceccb0cf442a6e32ea77ebbe17c533050893d97913cfde3dc7dd95d9c43d1415",
+    "examples/summary-timeline.json": "72e9722959b32e536af675dbe54f43444ba9c239dbff8f8188d22e2fb367be36",
+    "source/contact.md": "63412e328264d5ec8047e97a678cd9de5698d5a796652c05026c686c2e37adec",
+    "source/existing.md": "5b3e5775e9ddb4a434fa21d881f0bf4dd1564a68bac42efcfecc1be68e8a250b",
+    "source/files.md": "8d5f25f10c9f029824787fb04211e9321dd9899a48ef26a58e2ef3aeceaeea11",
+    "source/formats.md": "fb5f0295fecc62c72542f3475c4798eeff720de5eca85c6af8523de055e69e21",
+    "source/index.md": "aa0e4ea8de6d510780a9110ea2f1f3fdb5aad17cc1be252f015f512522266045",
+    "source/limits.md": "08befd5f63ea04bf21666cd16c93ce9e42de076e744655ccdf3fe0e201e9c5e7",
+    "source/people.md": "faea30263a42f2402c45cf13d0e9edfd41830293e6880981f1b4d1c4af52d42d",
+    "source/policy.md": "c42f36b76f4b428276c0681fb4a16aaac74eebcfda49cb361767d879842653ac",
+    "source/ranges.md": "3af53f97d70826cbabf8ba502f810900271839dc6de9efa4a5c5a2daa483722b",
+    "source/reference.md": "815242045df0332d44ae576826db1daa13f3ad4f3e97b187c77b42bd4befc758",
+    "source/summary.md": "600b4e1493dfae0e9f771a67b8d0690dd496e75f59181432bae3ee597f9ef465",
+    "source/timeline.md": "dbbef1bc914cf68c982f437bce63c46cd16519ecafc4b793adb4410b1e029ba3"
+  }
+}

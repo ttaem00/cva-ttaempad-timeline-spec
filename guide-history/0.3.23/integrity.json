@@ -1,0 +1,26 @@
+{
+  "version": "0.3.23",
+  "sourceCommit": "2c264324b65e30ef43692f112240d53d3fc9343b",
+  "originalConsumer": "0.3.23 candidate",
+  "files": {
+    "assets.json": "c6cb54e170b48ef50018b7af74a8de5aadb60fa175404d289104842e98fc4e29",
+    "examples/fixtures.json": "0ed1c03275672a9b3ded8c3b5fb17d8521ba17a19bccb6b182d877e2fddc2708",
+    "examples/mixed-formats.json": "48446d06b89f83bbba781500b7852647eb9d4117604582aebf035f9c67b47c32",
+    "examples/natural-hierarchy.json": "41c5fb2c9cb32baa5b630169b7899a18215e7a3a22fe24f467cae18b81045aa8",
+    "examples/nested-emphasis.json": "99222357a1e32185c22490a1e0f64d0145adce6e014c3f4a31f945ec30f3d7af",
+    "examples/participant-roster.json": "0757c7dc6f98c1a53ec4123f6750f3113cd37b270d39ea8fb740fdc479ea46ff",
+    "examples/people.json": "2c7e80788fd4a26d1afe528dfe978ddc78843d71483238b77ae00f5e9d7bc4f1",
+    "examples/portable-timeline.json": "ceccb0cf442a6e32ea77ebbe17c533050893d97913cfde3dc7dd95d9c43d1415",
+    "examples/summary-timeline.json": "72e9722959b32e536af675dbe54f43444ba9c239dbff8f8188d22e2fb367be36",
+    "source/existing.md": "c82ee93d16db52ae57d3ffc799d0f150e3ce771948ffcc9f409901cd7860e9e3",
+    "source/files.md": "60e89d30df5424ff9009260ad3a9b08148040c0f42045b2d29e3d08a10749d93",
+    "source/formats.md": "512c53cc4ac3a5c375b606182fda4e92068e0f480c67c030ef2320fb0b2fc8f7",
+    "source/index.md": "aa0e4ea8de6d510780a9110ea2f1f3fdb5aad17cc1be252f015f512522266045",
+    "source/limits.md": "89237d00e16472bf461bec9772584dd275dff07a61c9979f256eee1e90514328",
+    "source/people.md": "b15d6c762b6cef1a6e2db164f55555c5e0811ff8335b8998098ed814b14c0142",
+    "source/ranges.md": "b2a4a11d7509f8a9de8ac05b8c2ba6c87835208b4bb022ad106b5d087fcaa725",
+    "source/reference.md": "8299a6998d7c7519879de63f22d02b7c9ce82fac8db9fbb8457a108e84a90e04",
+    "source/summary.md": "600b4e1493dfae0e9f771a67b8d0690dd496e75f59181432bae3ee597f9ef465",
+    "source/timeline.md": "e8d673d2f108e302775c1845289d0c9b727562bfcdc4d0df4695aea0191d8d8c"
+  }
+}

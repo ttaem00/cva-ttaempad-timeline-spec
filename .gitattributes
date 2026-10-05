@@ -1,0 +1,6 @@
+docs/** text=auto eol=lf
+guide-history/** text eol=lf
+*.py text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary

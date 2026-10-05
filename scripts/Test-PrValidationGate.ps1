@@ -8,6 +8,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Site build or generated links failed' }
     & node scripts/validate.cjs
     if ($LASTEXITCODE -ne 0) { throw 'Documentation checks failed' }
+    & python scripts/test_guide_versions.py
+    if ($LASTEXITCODE -ne 0) { throw 'Guide version boundaries failed' }
     & git diff --check
     if ($LASTEXITCODE -ne 0) { throw 'Diff whitespace check failed' }
     Write-Output 'RESULT: PASS'

@@ -17,6 +17,38 @@
   };
   revealLinkedSection();
   window.addEventListener('hashchange', revealLinkedSection);
+  // One native dialog and one delegated listener, regardless of image count.
+  const imageDialog = document.getElementById('image-dialog');
+  if (imageDialog && typeof imageDialog.showModal === 'function') {
+    const image = document.getElementById('image-preview');
+    const original = document.getElementById('image-original');
+    let opener = null;
+    document.addEventListener('click', event => {
+      const link = event.target.closest('a.image-open');
+      if (!link || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || document.querySelector('dialog[open]')) return;
+      const thumbnail = link.querySelector('img');
+      if (!thumbnail) return;
+      opener = link;
+      image.src = thumbnail.src;
+      image.alt = thumbnail.alt;
+      original.href = link.href;
+      imageDialog.showModal();
+      event.preventDefault();
+    });
+    imageDialog.addEventListener('close', () => {
+      image.removeAttribute('src');
+      image.alt = '';
+      opener?.focus({preventScroll:true});
+      opener = null;
+    });
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+      imageDialog.addEventListener('click', event => {
+        if (event.target !== imageDialog) return;
+        const rect = imageDialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) imageDialog.close();
+      });
+    }
+  }
   const dialog = document.getElementById('search-dialog');
   const button = document.querySelector('.search-open');
   const input = document.getElementById('search-input');
@@ -30,7 +62,7 @@
   button.addEventListener('click', showSearch);
   document.addEventListener('keydown', event => {
     if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey &&
-        !['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName) && !event.target.isContentEditable && !dialog.open) {
+        !['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName) && !event.target.isContentEditable && !document.querySelector('dialog[open]')) {
       event.preventDefault(); showSearch();
     }
   });
