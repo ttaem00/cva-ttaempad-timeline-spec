@@ -23,6 +23,7 @@ PAGES = [
     ("existing", "기존 댓글 읽기", "작성과 읽기"),
     ("ranges", "구간과 강조", "작성과 읽기"),
     ("people", "인물과 합방", "작성과 읽기"),
+    ("sharing", "링크로 공유하기", "자료 가져오기"),
     ("summary", "요약과 JSON 가져오기", "자료 가져오기"),
     ("files", "파일 형식과 예제", "자료 가져오기"),
     ("limits", "한계와 문제 해결", "더 알아보기"),
@@ -34,7 +35,7 @@ LINKS = {"PEOPLE.md": "people.html", "IMPORT.md": "files.html",
          "ROSTER.md": "files.html#참가자와-역할-이름-가져오기",
          "SPEC.md": "reference.html", "SUPPORT.md": "formats.html",
          "README.md": "index.html", "VALIDATION.md": "reference.html#검증-범위"}
-APP_VERSION = '0.3.31'
+APP_VERSION = '0.3.32'
 PUBLIC_BLOB = 'https://github.com/ttaem00/cva-ttaempad-timeline-spec/blob/main/'
 
 
@@ -44,6 +45,8 @@ def slug(text: str) -> str:
 
 
 def rewrite_link(target: str) -> str:
+    if target.startswith('../assets/'):
+        return target[3:]
     if target.startswith('../../examples/'):
         return target[6:]
     if target.startswith('../../'):
@@ -91,15 +94,33 @@ def image_figure(alt: str, target: str) -> str:
     parsed = urlsplit(target)
     if (parsed.scheme or parsed.netloc or parsed.query or parsed.fragment or
             not target.startswith('assets/') or '\\' in target):
-        raise ValueError('images must be local docs/assets PNG files')
+        raise ValueError('images must be local docs/assets PNG or JPEG files')
     destination = (DOCS / unquote(parsed.path)).resolve()
-    if not destination.is_relative_to((DOCS / 'assets').resolve()) or destination.suffix.lower() != '.png':
-        raise ValueError('images must be local docs/assets PNG files')
-    with destination.open('rb') as image:
-        header = image.read(24)
-    if len(header) != 24 or header[:8] != b'\x89PNG\r\n\x1a\n' or header[12:16] != b'IHDR':
-        raise ValueError('image is not a PNG')
-    width, height = int.from_bytes(header[16:20], 'big'), int.from_bytes(header[20:24], 'big')
+    if not destination.is_relative_to((DOCS / 'assets').resolve()) or destination.suffix.lower() not in {'.png', '.jpg', '.jpeg'}:
+        raise ValueError('images must be local docs/assets PNG or JPEG files')
+    raw = destination.read_bytes()
+    if len(raw) > 20 * 1024 * 1024:
+        raise ValueError('screenshot is too large')
+    width = height = 0
+    if destination.suffix.lower() == '.png':
+        if len(raw) < 24 or raw[:8] != b'\x89PNG\r\n\x1a\n' or raw[12:16] != b'IHDR':
+            raise ValueError('image is not a PNG')
+        width, height = int.from_bytes(raw[16:20], 'big'), int.from_bytes(raw[20:24], 'big')
+    elif raw[:2] == b'\xff\xd8':
+        offset = 2
+        while offset + 4 <= len(raw) and raw[offset] == 255:
+            marker = raw[offset + 1]
+            if marker == 255:
+                offset += 1
+                continue
+            length = int.from_bytes(raw[offset + 2:offset + 4], 'big')
+            if length < 2 or offset + 2 + length > len(raw):
+                break
+            if marker in {0xc0, 0xc2} and length >= 8:
+                height = int.from_bytes(raw[offset + 5:offset + 7], 'big')
+                width = int.from_bytes(raw[offset + 7:offset + 9], 'big')
+                break
+            offset += 2 + length
     if not alt.strip() or not width or not height:
         raise ValueError('image needs alternative text and valid dimensions')
     safe_target, safe_alt = html.escape(target, quote=True), html.escape(alt, quote=True)

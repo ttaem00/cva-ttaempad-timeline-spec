@@ -4,6 +4,8 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path $PSScriptRoot -Parent
 if ($Root) { $repoRoot = (Resolve-Path -LiteralPath $Root).Path }; Push-Location $repoRoot
 try {
+    & python scripts/build_site.py
+    if ($LASTEXITCODE -ne 0) { throw 'Site build or generated links failed' }
     & node scripts/validate.cjs
     if ($LASTEXITCODE -ne 0) { throw 'Documentation checks failed' }
     & git diff --check
