@@ -19,7 +19,7 @@ class GuideVersions(unittest.TestCase):
 
     def test_unannounced_promotion_is_rejected(self):
         metadata = copy.deepcopy(site.VERSIONS)
-        metadata['authoringVersion'] = '0.3.32'
+        metadata['authoringVersion'] = '9.9.9'
         with patch.object(site, 'VERSIONS', metadata), self.assertRaisesRegex(ValueError, 'promote explicitly'):
             site.verify_history()
 
@@ -34,14 +34,18 @@ class GuideVersions(unittest.TestCase):
             with patch.object(site, 'HISTORY', history), self.assertRaisesRegex(ValueError, 'preserved version changed'):
                 site.verify_history()
 
-    def test_stable_and_preview_do_not_mix(self):
+    def test_stable_and_history_do_not_mix(self):
         stable = (site.DOCS / 'sharing.html').read_text(encoding='utf-8')
-        preview = (site.DOCS / 'versions/0.3.32/sharing.html').read_text(encoding='utf-8')
-        self.assertIn('0.3.31에는', stable)
-        self.assertNotIn('id="보내는-사람"', stable)
-        self.assertIn('0.3.32 미리보기', preview)
-        self.assertIn('현재 stable은 0.3.31', preview)
-        self.assertIn('7일간', preview)
+        current = (site.DOCS / 'versions/0.3.32/sharing.html').read_text(encoding='utf-8')
+        previous = (site.DOCS / 'versions/0.3.31/index.html').read_text(encoding='utf-8')
+        self.assertEqual(site.APP_VERSION, '0.3.32')
+        self.assertIn('0.3.32 · stable 안내', stable)
+        self.assertIn('id="보내는-사람"', stable)
+        self.assertIn('7일간', stable)
+        self.assertNotIn('0.3.31에는', stable)
+        self.assertIn('보존된 당시 안내', current)
+        self.assertIn('0.3.31 · 이전 기록', previous)
+        self.assertFalse((site.DOCS / 'versions/0.3.31/sharing.html').exists())
 
     def test_every_external_resource_opens_a_new_tab(self):
         from html.parser import HTMLParser

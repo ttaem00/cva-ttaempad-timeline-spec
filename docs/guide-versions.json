@@ -1,10 +1,22 @@
 {
-  "stable": "0.3.31",
-  "authoringVersion": "0.3.31",
-  "stableBasis": "Manager-selected stable baseline; store preview version observed 2026-10-05",
+  "stable": "0.3.32",
+  "authoringVersion": "0.3.32",
+  "stableBasis": "Manager-selected stable baseline on 2026-10-05; product source main d880756f895e5ead61e8a424c88cbf302c69d835. Store publication is tracked separately.",
   "versions": [
-    {"version": "0.3.32", "status": "preview", "label": "0.3.32 · 미리보기"},
-    {"version": "0.3.31", "status": "stable", "label": "0.3.31 · stable"},
-    {"version": "0.3.23", "status": "archive", "label": "0.3.23 · 이전 기록"}
+    {
+      "version": "0.3.32",
+      "status": "stable",
+      "label": "0.3.32 · stable"
+    },
+    {
+      "version": "0.3.31",
+      "status": "archive",
+      "label": "0.3.31 · 이전 기록"
+    },
+    {
+      "version": "0.3.23",
+      "status": "archive",
+      "label": "0.3.23 · 이전 기록"
+    }
   ]
 }

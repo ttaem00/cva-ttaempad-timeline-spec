@@ -27,6 +27,7 @@ PAGES = [
     ("sharing", "자료 공유하기", "자료 가져오기"),
     ("summary", "요약과 JSON 가져오기", "자료 가져오기"),
     ("files", "파일 형식과 예제", "자료 가져오기"),
+    ("cuts", "컷 작업과 MP4 저장", "작업과 저장"),
     ("limits", "한계와 문제 해결", "더 알아보기"),
     ("reference", "작성 기준", "더 알아보기"),
     ("contact", "문의·오류 제보", "더 알아보기"),
@@ -417,7 +418,9 @@ def main():
     artifact_paths = [p for p in DOCS.rglob('*') if p.is_file() and p.name != 'build-manifest.json']
     manifest = {'format':'cva-ttaempad.reading-site.v2','documentVersion':'0.4','consumer':APP_VERSION,
                 'pages':len(root_pages), 'versions':[r['version'] for r in VERSIONS['versions']],
-                'generated':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
+                'generated':{p.relative_to(ROOT).as_posix():hashlib.sha256(
+                    p.read_bytes().replace(b'\r\n', b'\n') if p.suffix in {'.json', '.js', '.md', '.html', '.css', '.txt'}
+                    else p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
     (DOCS/'build-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(f'Reading site build and local links PASS; {len(root_pages)} stable pages; {len(VERSIONS["versions"])} preserved versions')
 
