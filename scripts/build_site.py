@@ -315,15 +315,16 @@ class LinkReader(HTMLParser):
             if name in values: self.targets.append(values[name])
 
 
-def validate_site():
-    for source_file in DOCS.rglob('*.html'):
-        key = source_file.relative_to(DOCS).as_posix(); parser = LinkReader()
+def validate_site(docs=None):
+    docs = DOCS if docs is None else Path(docs).resolve()
+    for source_file in docs.rglob('*.html'):
+        key = source_file.relative_to(docs).as_posix(); parser = LinkReader()
         parser.feed(source_file.read_text(encoding='utf-8'))
         for target in parser.targets:
             parsed = urlsplit(target)
             if parsed.scheme or parsed.netloc: continue
             destination = (source_file.parent / unquote(parsed.path)).resolve() if parsed.path else source_file
-            if not destination.is_relative_to(DOCS): raise ValueError('link outside deployed docs directory')
+            if not destination.is_relative_to(docs): raise ValueError('link outside deployed docs directory')
             if not destination.exists(): raise ValueError(f'missing local link: {key}: {target}')
             if parsed.fragment and destination.suffix == '.html':
                 dest_parser = LinkReader(); dest_parser.feed(destination.read_text(encoding='utf-8'))
