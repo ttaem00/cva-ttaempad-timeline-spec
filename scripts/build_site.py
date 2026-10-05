@@ -289,7 +289,7 @@ def page_template(key, label, article, headings, previous, next_page, context: S
   <header class="site-header">
     <a class="brand" href="index.html"><img src="{context.asset('assets/app-icon.png')}" alt="" width="36" height="36"><span>CVA-탬패드<small>댓글 시간축 안내</small></span></a>
     <button class="search-open" type="button" hidden><span>문서 검색</span><kbd aria-hidden="true">/</kbd></button>
-    <nav class="header-actions" aria-label="제품 링크"><a class="product-link" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://chromewebstore.google.com/detail/ajokeikoipagcdnpdkkbamidkjgeghon/preview?hl=ko&amp;authuser=0">Chrome 스토어 보기 <span aria-hidden="true">↗</span></a></nav>
+    <nav class="header-actions" aria-label="제품 링크"><a class="product-link" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://chromewebstore.google.com/detail/cva-%ED%83%AC%ED%8C%A8%EB%93%9C/ajokeikoipagcdnpdkkbamidkjgeghon?authuser=0&amp;hl=ko">Chrome에 설치 <span aria-hidden="true">↗</span></a></nav>
   </header>
   <div class="site-layout">
     <aside class="sidebar">{context.version_menu(key)}<details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서">{navigation(key, context)}</nav><div class="sidebar-foot"><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec" target="_blank" rel="noopener noreferrer">공개 문서 저장소 ↗</a></div></details></aside>

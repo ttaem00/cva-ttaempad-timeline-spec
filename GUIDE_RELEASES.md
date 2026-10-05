@@ -1,6 +1,6 @@
 # Guide release maintenance
 
-The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.32 on 2026-10-05. Source main: d0423bceca6846f3fb6659073938e943aacb9972. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.31 and 0.3.23 snapshots remain immutable.
+The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.32 on 2026-10-05. Source main: b9173c4316005eb4970d2d9a7a20e07ee2211170. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.31 and 0.3.23 snapshots remain immutable.
 
 | Module | Responsibility |
 |---|---|
