@@ -23,10 +23,12 @@
     "docs/assets/examples/ranges-3.png": "a5712e819959c48cd7545b84f3b824b0ef3c9f26289f2c5853f934d4ac3c1d7c",
     "docs/assets/examples/ranges-4.png": "449c831c5b837df9f17f03df764f9d73240706073a096baa435acb594f2a6e41",
     "docs/assets/examples/share-cuts.jpg": "26037824ec124ab04284ba1e54105671b0dcef9d1d4f7ce3591f4784bd39fddb",
+    "docs/assets/examples/share-dialog-short.jpg": "a743526b444c11377ad8790051c542d86b15d66180c3011f1909339d13ef371c",
     "docs/assets/examples/share-dialog.jpg": "0bb8d722c3ca8e1b3544952f8bb187fac26f5edf6e85569aa3431e944e4a7eaf",
+    "docs/assets/examples/share-short-service.jpg": "a66e4dcb2b242140d636753804e6960578876912d30bb8feb2e3c590adf2c9a4",
     "docs/assets/examples/share-workspace.jpg": "6214ce6ecb2faf1aedb70529b2b85ae57162a2eba3673cc7e12ba41b47a31cfc",
     "docs/assets/examples/stars-timeline.png": "797d145a7e33d3e3365df0ad9379ff0504f8e437c61c687a392875fb4c401fe6",
-    "docs/assets/search-index.js": "031daec480919df5b31ca80a7425ef8be35e2aca3eaac2def73ac4ce874c065f",
+    "docs/assets/search-index.js": "1705aeb063da0d5b239e423be2a592313c29a6c6da3a6ab4ce82933ef9d833af",
     "docs/assets/site.css": "d7d4bf9d9a74b3325f1ec6496e093b49b625283afdabce8ac142ce9991123986",
     "docs/assets/site.js": "0277443039ad347fb85cecb4c47f147d46353299f6c703dd62cfae2f3d65cfc6",
     "docs/assets/timeline-preview.png": "58103000c759d2d98b5566f4ada8e462343086150479d1b9f1f21e4d3c0b21a6",
@@ -40,7 +42,7 @@
     "docs/policy.html": "97bd21967c0a39883ba70299a9a375642912a844cc595651298c40accd6aee8c",
     "docs/ranges.html": "8d8efc5b211efe8e55d29031f22c226a417f57abd338dbbf5e378c501c4eb55c",
     "docs/reference.html": "22feb480e4cb5b5d91c2165fd1ee9fea4f86e36747803a8298aa6dc9b4caea66",
-    "docs/sharing.html": "3b1053d5181a595b6df29036cce55134719d02a854f6c68d22b94d4ca8c2ea95",
+    "docs/sharing.html": "e341f8cf22b3600f5d3b27159de3a9701204771dc4ded759ac0dcd7bf2eb2192",
     "docs/summary.html": "1783b116a8b6f3137888e3f5c4445a37b5e3baabf8357399fcd44dfe47c24176",
     "docs/timeline.html": "7198d030ff1bd0e8a02d553ffb8e3b93d48be93652ee25ffa351de2ae9b16c62"
   }
