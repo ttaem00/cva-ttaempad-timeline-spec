@@ -1,7 +1,7 @@
 {
   "stable": "0.3.32",
   "authoringVersion": "0.3.32",
-  "stableBasis": "Manager-selected stable baseline on 2026-10-05; product source main d880756f895e5ead61e8a424c88cbf302c69d835. Store publication is tracked separately.",
+  "stableBasis": "Manager-selected stable 0.3.32; bounded cut UX revision on 2026-10-05; product source main d0423bceca6846f3fb6659073938e943aacb9972. Store publication is tracked separately.",
   "versions": [
     {
       "version": "0.3.32",

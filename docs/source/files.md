@@ -2,7 +2,7 @@
 
 댓글은 **TXT**, 정리한 시간표는 **호환 JSON**, 합방 이름은 **참가자 파일**을 사용합니다.
 
-**JSON·TXT는 ttaem.com에 올리지 않고 사용할 수 있습니다.** 앱에서 여는 순서는 [요약과 JSON 가져오기](summary.md), D1·D2·Point의 뜻은 [시간축 용어](timeline.md)에 있습니다.
+**JSON·TXT는 ttaem.com에 올리지 않고 사용할 수 있습니다.** 앱에서 여는 순서는 [요약과 JSON 가져오기](summary.md), d1·d2·point의 뜻은 [시간축 용어](timeline.md)에 있습니다.
 
 ## 평문 TXT
 
@@ -30,9 +30,9 @@
 }
 ```
 
-**예상 구간**은 `raw`에 `- 03:00 ~ 03:20 [H?] 검토할 장면`처럼 담으세요. 현재 `entries`의 `expected_highlight` 직접 지정은 지원하지 않습니다.
+**예상구간**은 `raw`에 `- 03:00 ~ 03:20 [H?] 검토할 장면`처럼 담으세요. 현재 `entries`의 `expected_highlight` 직접 지정은 지원하지 않습니다.
 
-[시간축 JSON 예제 열기](../../examples/portable-timeline.json) · [예상 구간 포함 예제](../../examples/summary-timeline.json)
+[시간축 JSON 예제 열기](../../examples/portable-timeline.json) · [예상구간 포함 예제](../../examples/summary-timeline.json)
 
 :::details JSON 필드와 입력 제한
 
@@ -45,7 +45,7 @@
 | 항목 `startSec` | 0 이상의 안전한 정수, VOD 경과초 |
 | `endSec` | 선택적 정수, 시작보다 뒤. 영상 길이와 항목 종류가 맞는지 미리보기에서 확인 |
 | `title` | 줄바꿈 없는 1,000자 이하 문자열 |
-| `role` | 생략하면 `point`; `chapter`, `memo`, `watch`, `highlight`, `collab_context`. 예상 구간은 아래 현재 버전 제한 확인 |
+| `role` | 생략하면 `point`; `chapter`, `memo`, `watch`, `highlight`, `collab_context`. 예상구간은 아래 현재 버전 제한 확인 |
 | `depth` | chapter일 때 1–6; 바로 위 주제와 구간이 맞는지 확인 |
 | 루트 `videoNo` | 선택 필드. 지정하면 현재 다시보기 번호와 같아야 함 |
 

@@ -30,7 +30,7 @@
 
 | 정보 | 함께 전달되는 내용 |
 |---|---|
-| 댓글 | 원문·여러 문서, D1~Dn·Point, 별 강조, 메모·예상 구간, 설명·원본 구간 |
+| 댓글 | 원문·여러 문서, d1~dn·point, 별 강조, 메모·예상구간, 설명·원본 구간 |
 | 공개 요약 | 앱에 불러온 요약의 목차와 자료 |
 | 인물·합방 | 이름·별칭·관련 인물, 찾은 겹치는 다시보기, 숨긴 인물 |
 | 시각 보정 | 영상별로 맞춘 보정값 |
@@ -58,9 +58,9 @@
 
 ## 실제 시간축 예제
 
-아래는 **합성 시간표를 실제 설치된 앱으로 연 화면**입니다. 영상의 실제 내용·참여 명단과는 무관한 예제입니다. D1·D2·상세 구간·Point의 별, 예상 구간·편집 후보·메모와 집계를 함께 볼 수 있습니다.
+아래는 **합성 시간표를 실제 설치된 앱으로 연 화면**입니다. 영상의 실제 내용·참여 명단과는 무관한 예제입니다. d1·d2·상세 구간·point의 별, 예상구간·편집 후보·메모와 집계를 함께 볼 수 있습니다.
 
-![공유 자료를 받은 작업실에서 계층 구간·별 Point·예상 구간·편집 후보·메모·집계·컷을 복원한 실제 화면](../assets/examples/share-workspace.jpg)
+![공유 자료를 받은 작업실에서 계층 구간·별 point·예상구간·편집 후보·메모·집계·컷을 복원한 실제 화면](../assets/examples/share-workspace.jpg)
 
 [예제 공유 링크 열기](https://chzzk.naver.com/video/15474104#ttaempad=1g.H4sIAAAAAAAACo1WX2sbRxD_Ksv4pYWzOUl2nB6UksQPCaVNqKF9sIVY342lbVa7x96e3NioxEQpoQnFgYSGxgkpOGncJmBipzi0_TJ91J2_Q5m901mx5VC9aHdnd_785jcztwFJ2MEuhwDCHp-2lmM35tFM0uEGZ3o18KCHJhFaQVDzwAorEQI4evhy-Ncjlu0fZD8-YPnd7eHe4Oj-NnjA4_jr0QPwZxozjTp4sMIThGADeiJC_aWGAGpzs_OzNX8WPAilDq9DAD0dtRIMtYoS8CBKDbdCq0UMIWic8_2-B6HudlHZhFRFOkzLzdIGGL7m3NrN9nYDNty7md_aZNnebv7Dr_mTQ3bBO312cVll-4P83euA5T-_Pnr47AL7dMLLZTXFfD_wffY9a7j__M0fbPjmXv50sKympphfL4S1Snh0b4skU8xvFCL_vBMNDrM_b7L86fNs92BZTZO47rN_X2-x7O5OfnebZft_s_wOgck-WpsZufWxuztbqpoNGj5b-qLJ8sFO9vttJ5srZefof-lyk-WP7lAYw7evhnsDd-UcmXJX5ujKZ0129NNh_tt9dvR4kO0fgAM3lmhRYZIQHcot9JseRIavWkK9wDl_ejt79pzlO_dZ_ngre3VIiQ9DjC1GX7kb4EGMKhKqvTCWp2a_70GcrkgRLnDLSWFBv1ZFMugJXEPTwkhYbVpWa5mUPCTutNQJ8oxoQswpeOIB73Eh-Qox1ZoUPdCplUJhKzb6WwytM7S0ASKCoHSHDEjsoYQAFmgzYvpw_-1wb5vlvzzIH_4DHiSWG1sY8z1AFRVr4mfTA-yNIvUg7HDbWknD61jGTpDoWLpC6HKVcnkMAAHeWV-_PhNzY0UoYq7stNGJRXOiBLvYXUFTsD6xBnkXDfl5irjQ9z5846JLLZeCJ1joc2vKb0E8F-4HLVBQpZfBBpTwXiFY8TtO_BlDMns3GL7dYvmjzfzWJhyDMUpET0fTY4lVvOvwP9zLd24eWx0RYWITuWpEWxBMvvsRAO-p9uc_mR9TfTqgk8rLB5OUT-pQBIeIUFlhRQnpWbYunrR1vj5Xq7mMdEQUITEU8jsvh4cHLH9ykL0YQNM5kmBEouoF2bSiK1Tb2Zvof4TScudmbaY-59qxoDy7Lh-1YjSJVlw664loKy5diyUGj_7HmLxxVhE0fOoiqbIQNOoF-6p7jferpbo4X6AWShEnx1ygbVBSqAaFuJWKMWKNF-wlKeIxolHze7bNjjYPshcnSrbuj7tRb7iiDXUPDW_jeMiJ5TYdb4MRUOklCW_jpcLzml8_frtYzq1qUhXxjClyhc0leGAw0bKH0UiPB0nIlaoO6h6k6uSlPrXOMC1mX9EzqjlbP6MmDIbaRIs6NSFOlkGgUimpFokBpHpSKfZ0RKI1LuUFFXa0WSwz39PR-EHFxKurqwna6rCwJVSbnB_fXxv1wyq2igCpna7ByLErE5yqlDih1KHDVhTV6PKs08KFOnHvtGMeKG1dYzo5fIkzDrQzP1kkX3HMK7tT1dNOQzRqEiUziG9CxWUehftI8gP3IQDO4-pgjg7-h4fHbhGIqwaCVS4T9GAdjS43fc-NVTIp-Y3CCn4XS22oQa-JCKtXLtxFsY4QzBawIY3Ob4SK9FrF8lJyjHUSosJF5CbsFNPfHXwuFCWHS0d7NyfG70h-w02yDRq55aheqI9W17Qg5heby6LdkaLdqQ4uuUIt11T_bt2n_hXhCjdXTURDaalwxH1QouWCHAlTC81-_z_TwYRB-woAAA) · [공개 JSON 주소로 열기](https://chzzk.naver.com/video/15474104#ttaempad-ref=eyJ2ZXJzaW9uIjoxLCJ2aWRlb05vIjoiMTU0NzQxMDQiLCJ1cmwiOiJodHRwczovL3R0YWVtMDAuZ2l0aHViLmlvL2N2YS10dGFlbXBhZC10aW1lbGluZS1zcGVjL2V4YW1wbGVzL3NoYXJlLXdvcmtzcGFjZS5qc29uIn0)
 

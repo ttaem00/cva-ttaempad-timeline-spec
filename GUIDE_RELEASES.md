@@ -1,6 +1,6 @@
 # Guide release maintenance
 
-The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.32 on 2026-10-05. Source main: d880756f895e5ead61e8a424c88cbf302c69d835. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.31 and 0.3.23 snapshots remain immutable.
+The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.32 on 2026-10-05. Source main: d0423bceca6846f3fb6659073938e943aacb9972. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.31 and 0.3.23 snapshots remain immutable.
 
 | Module | Responsibility |
 |---|---|
@@ -44,3 +44,7 @@ python -m http.server 8771 --bind 127.0.0.1 --directory docs
 ```
 
 Verify actual version navigation, modal close/focus/scroll restoration, external tabs and a narrow viewport before merging. The generated stable and archived pages share this site's reading controls; their article text, examples and image pixels remain version-specific. Product parser, player, renderer, CSS and extension JavaScript are not deployed by this builder. Existing public JSON URLs remain available for previously sent links.
+
+## Current images within a stable version
+
+`build_site.current_assets` pins the current PNG pixels by hash for the default guide. Archived routes use only their preserved `assets.json`. Updating a current example does not reuse the old stable image map or overwrite historical pixels. The product-owned `design/timeline-guide-examples/capture.cjs` generates 17 synthetic examples from actual shipped modules; publish only its PNG output. Capture proof, the private module bundle and installed-browser QA remain separate local release artifacts.
