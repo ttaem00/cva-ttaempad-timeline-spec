@@ -18,7 +18,7 @@
 |---|---|
 | [빠른 시작](docs/source/index.md) | 선택 → 미리보기 → 시간축에 불러오기 |
 | [지원 형태 한눈에](docs/source/formats.md) | 모든 현재 지원 형태를 예제와 의미로 비교 |
-| [시간축 용어](docs/source/timeline.md) | 독립 목차에서 CVA의 D1·D2·Dn·Point·예상 구간과 자동 끝 확인 |
+| [시간축 용어](docs/source/timeline.md) | 독립 목차에서 CVA의 d1·d2·dn·point·예상구간과 자동 끝 확인 |
 | [자료 공유하기](docs/source/sharing.md) | 시간표·합방·집계·컷을 링크나 파일로 전달 |
 | [요약과 JSON 가져오기](docs/source/summary.md) | 공개 요약 자동 연결과 게시 없는 로컬 호환 파일, 가상 요약 시간표 예제 |
 | [기존 댓글 읽기](docs/source/existing.md) | 자연 목차, 상대 들여쓰기, 독립 목록, 괄호 시각 |

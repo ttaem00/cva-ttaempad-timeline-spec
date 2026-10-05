@@ -60,6 +60,16 @@ class GuideVersions(unittest.TestCase):
         for page in site.DOCS.rglob('*.html'):
             Links().feed(page.read_text(encoding='utf-8'))
 
+    def test_current_images_follow_current_pixels_while_history_keeps_its_map(self):
+        import hashlib
+        name = 'assets/examples/glossary-depth.png'
+        raw = (site.DOCS / name).read_bytes()
+        current = site.current_assets()[name]
+        self.assertEqual(current, 'assets/versioned/' + hashlib.sha256(raw).hexdigest() + '.png')
+        self.assertIn(current, (site.DOCS / 'timeline.html').read_text(encoding='utf-8'))
+        preserved = json.loads((site.HISTORY / '0.3.32/assets.json').read_text(encoding='utf-8'))[name]
+        self.assertIn(preserved, (site.DOCS / 'versions/0.3.32/timeline.html').read_text(encoding='utf-8'))
+
 
 if __name__ == '__main__':
     unittest.main()

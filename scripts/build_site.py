@@ -387,6 +387,26 @@ def copy_examples(source: Path, output: Path):
             destination.write_bytes(example.read_bytes().replace(b'\r\n', b'\n'))
 
 
+def current_assets():
+    """Pin current pixels independently of the immutable release-history map."""
+    assets = {}
+    for source in sorted((DOCS / 'assets').rglob('*')):
+        if not source.is_file() or 'versioned' in source.relative_to(DOCS).parts:
+            continue
+        if source.suffix.lower() not in {'.png', '.jpg', '.jpeg'}:
+            continue
+        raw = source.read_bytes()
+        target = 'assets/versioned/' + hashlib.sha256(raw).hexdigest() + source.suffix.lower()
+        destination = DOCS / target
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.exists() and destination.read_bytes() != raw:
+            raise ValueError('current image hash collision')
+        if not destination.exists():
+            destination.write_bytes(raw)
+        assets[source.relative_to(DOCS).as_posix()] = target
+    return assets
+
+
 def main():
     verify_history()
     rows = []
@@ -400,8 +420,8 @@ def main():
                + '\n'.join(rows) + '\n\n이전 안내의 본문·예제·이미지는 당시 모습으로 보존합니다. '
                '미리보기의 기능은 현재 stable 안내와 구분합니다.\n')
     (SOURCE / 'history.md').write_text(history, encoding='utf-8', newline='\n')
-    stable_assets = json.loads((HISTORY / APP_VERSION / 'assets.json').read_text(encoding='utf-8'))
-    root_pages = PAGES + [('history', '버전 기록', '더 알아보기')]
+    stable_assets = current_assets()
+    root_pages = [(key, 'd1·d2·point' if key == 'timeline' else label, group) for key, label, group in PAGES] + [('history', '버전 기록', '더 알아보기')]
     build_pages(SOURCE, DOCS, SiteContext(APP_VERSION, 'stable', root_pages, '', stable_assets))
     copy_examples(ROOT / 'examples', DOCS)  # Keep already shared public JSON URLs valid.
     for release in VERSIONS['versions']:
