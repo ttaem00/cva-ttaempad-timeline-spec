@@ -25,9 +25,8 @@
     "docs/assets/examples/share-cuts.jpg": "26037824ec124ab04284ba1e54105671b0dcef9d1d4f7ce3591f4784bd39fddb",
     "docs/assets/examples/share-dialog.jpg": "0bb8d722c3ca8e1b3544952f8bb187fac26f5edf6e85569aa3431e944e4a7eaf",
     "docs/assets/examples/share-workspace.jpg": "6214ce6ecb2faf1aedb70529b2b85ae57162a2eba3673cc7e12ba41b47a31cfc",
-    "docs/assets/examples/share-workspace.json": "10b164260a72bdc8a3e618c9648075bc575be0d03cdbab85de284e9aab6a9b43",
     "docs/assets/examples/stars-timeline.png": "797d145a7e33d3e3365df0ad9379ff0504f8e437c61c687a392875fb4c401fe6",
-    "docs/assets/search-index.js": "3e08bc131d5c13b45189486e4feb4d7aa4dd4b99c2f4b14d4b74b50a3edfc0c7",
+    "docs/assets/search-index.js": "031daec480919df5b31ca80a7425ef8be35e2aca3eaac2def73ac4ce874c065f",
     "docs/assets/site.css": "d7d4bf9d9a74b3325f1ec6496e093b49b625283afdabce8ac142ce9991123986",
     "docs/assets/site.js": "0277443039ad347fb85cecb4c47f147d46353299f6c703dd62cfae2f3d65cfc6",
     "docs/assets/timeline-preview.png": "58103000c759d2d98b5566f4ada8e462343086150479d1b9f1f21e4d3c0b21a6",
@@ -41,7 +40,7 @@
     "docs/policy.html": "97bd21967c0a39883ba70299a9a375642912a844cc595651298c40accd6aee8c",
     "docs/ranges.html": "8d8efc5b211efe8e55d29031f22c226a417f57abd338dbbf5e378c501c4eb55c",
     "docs/reference.html": "22feb480e4cb5b5d91c2165fd1ee9fea4f86e36747803a8298aa6dc9b4caea66",
-    "docs/sharing.html": "422a94086556207f0a21e0aab1a75d2cc41746b9d8438f3c6633f281a072d308",
+    "docs/sharing.html": "3b1053d5181a595b6df29036cce55134719d02a854f6c68d22b94d4ca8c2ea95",
     "docs/summary.html": "1783b116a8b6f3137888e3f5c4445a37b5e3baabf8357399fcd44dfe47c24176",
     "docs/timeline.html": "7198d030ff1bd0e8a02d553ffb8e3b93d48be93652ee25ffa351de2ae9b16c62"
   }
