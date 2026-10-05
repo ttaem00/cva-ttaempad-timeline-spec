@@ -14,7 +14,7 @@
   <header class="site-header">
     <a class="brand" href="index.html"><img src="assets/versioned/93bf3adb366880eec513fbfd2a1593b13df91a005949b0dd695ba2ba0b76fea1.png" alt="" width="36" height="36"><span>CVA-탬패드<small>댓글 시간축 안내</small></span></a>
     <button class="search-open" type="button" hidden><span>문서 검색</span><kbd aria-hidden="true">/</kbd></button>
-    <nav class="header-actions" aria-label="제품 링크"><a class="product-link" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://chromewebstore.google.com/detail/ajokeikoipagcdnpdkkbamidkjgeghon/preview?hl=ko&amp;authuser=0">Chrome 스토어 보기 <span aria-hidden="true">↗</span></a></nav>
+    <nav class="header-actions" aria-label="제품 링크"><a class="product-link" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://chromewebstore.google.com/detail/cva-%ED%83%AC%ED%8C%A8%EB%93%9C/ajokeikoipagcdnpdkkbamidkjgeghon?authuser=0&amp;hl=ko">Chrome에 설치 <span aria-hidden="true">↗</span></a></nav>
   </header>
   <div class="site-layout">
     <aside class="sidebar"><details class="guide-version"><summary>0.3.32 · stable</summary><nav aria-label="문서 버전"><a href="cuts.html">현재 stable 안내</a><a href="versions/0.3.32/index.html">0.3.32 · stable</a><a href="versions/0.3.31/index.html">0.3.31 · 이전 기록</a><a href="versions/0.3.23/index.html">0.3.23 · 이전 기록</a><a href="history.html">버전 기록 모두 보기</a></nav></details><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서"><div class="nav-section" role="group" aria-labelledby="nav-시작하기"><p id="nav-시작하기" class="nav-group">시작하기</p>
@@ -46,6 +46,7 @@
 </div></nav><div class="sidebar-foot"><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec" target="_blank" rel="noopener noreferrer">공개 문서 저장소 ↗</a></div></details></aside>
     <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><p class="version-note">0.3.32 · stable 안내 <a href="history.html">버전 기록</a></p><article><h1 id="컷-작업과-mp4-저장">컷 작업과 MP4 저장</h1>
 <p>원하는 장면을 <strong>컷 담기</strong>로 모은 뒤, 담은 순서대로 확인하고 MP4로 저장합니다. 원본 영상 파일을 따로 준비하지 않아도 다시보기를 출처로 선택할 수 있습니다.</p>
+<p>아직 담은 컷이 없으면 다음 행동만 표시됩니다. 컷을 담으면 재생 도구와 목록이 나타나며, 각 컷의 제목 아래에서 출처·시작~끝·길이를 확인할 수 있습니다.</p>
 <h2 id="시작과-끝-조절하기">시작과 끝 조절하기</h2>
 <ol><li><strong>컷 편집</strong>에서 출처 영상과 시작·끝을 고르고 컷을 담습니다.</li><li><strong>컷 작업 → 담은 컷</strong>에서 수정할 컷을 선택합니다.</li><li><code>00:00:00 ~ 00:00:00</code>의 시작·끝을 직접 입력하거나 양끝 손잡이를 끕니다.</li><li>경계의 영상을 확인하고 손을 놓으면 변경한 길이를 저장합니다. <code>Esc</code>로 조절을 취소할 수 있습니다.</li></ol>
 <p>손잡이에 초점을 두고 방향키로 1초, <code>Shift</code>와 방향키로 10초씩 조절할 수 있습니다. 시작은 끝보다 앞이어야 하며 출처 영상 길이를 넘길 수 없습니다. 컷 목록에는 출처 시각, 결과 재생바에는 <strong>담은 컷 전체의 경과시간</strong>이 표시됩니다.</p>
@@ -53,7 +54,7 @@
 <p><strong>편집 결과</strong>에서 담은 순서대로 재생합니다. 결과의 구간 막대는 각 컷 길이에 비례합니다. 예를 들어 30초 컷과 5분 컷의 막대 길이는 1:10이고, 전체 길이는 5분 30초입니다.</p>
 <p>목록에서 편집할 컷을 선택하는 동작과 전체 결과를 처음부터 재생하는 동작은 구분됩니다. 선택한 컷은 파란 테두리, 재생 중인 컷은 <strong>재생 중</strong> 표시로 구분합니다. 다른 컷을 선택해도 현재 재생은 이어집니다. <strong>이 컷 보기</strong>는 선택한 컷만, <strong>처음부터 재생</strong>은 담은 결과 전체를 재생합니다.</p>
 <h2 id="화질과-저장-방법">화질과 저장 방법</h2>
-<p><strong>컷 작업 → 결과 내보내기</strong>에서 MP4 영상의 해상도와 압축을 선택합니다.</p>
+<p><strong>컷 작업 → 영상·컷 목록 저장</strong>에서 MP4 영상의 해상도와 압축을 선택합니다. 녹화 파일을 사용할 때만 <strong>내 녹화본 연결</strong>을 열면 됩니다.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="가로로 이동할 수 있는 표"><table><thead><tr><th scope="col">선택</th><th scope="col">사용 방법</th></tr></thead><tbody><tr><td>원본·1080p·720p·480p</td><td>출력 해상도의 상한. 작은 원본을 확대하지 않고 비율을 유지</td></tr><tr><td>표준·높은 화질·작은 파일</td><td>같은 해상도에서 화질과 파일 크기를 조절</td></tr><tr><td>일반 다운로드</td><td>작은 결과를 브라우저 다운로드로 저장. 최대 128 MiB. 큰 결과는 생성 전에 저장 방법을 안내</td></tr><tr><td>직접 파일 저장 · 긴 영상에 권장</td><td>먼저 저장 위치를 고르고 파일에 이어 쓰기. 긴 결과에는 이 방법 권장</td></tr></tbody></table></div>
 <p>파일 크기는 길이·영상 내용·화질에 따라 달라집니다. 예상 크기가 128 MiB 이상이면 인코딩 전에 안내합니다. 직접 저장을 선택하거나 화질·컷 길이를 줄일 수 있습니다. 추정값만 넘은 경우 <strong>예상 크기와 관계없이 일반 다운로드 진행</strong>으로 계속할 수도 있지만, 실제 128 MiB 제한은 유지됩니다. 긴 결과는 <strong>직접 파일 저장 · 긴 영상에 권장</strong>을 체크한 뒤 <strong>담은 컷 MP4 저장</strong>을 누르세요. 필요한 원본 파일을 덮어쓰지 않도록 새 이름을 선택합니다.</p>
 <h2 id="0kb로-보일-때">0KB로 보일 때</h2>
