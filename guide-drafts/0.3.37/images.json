@@ -1,0 +1,25 @@
+{
+  "version": "0.3.37",
+  "kind": "Synthetic examples from actual product modules; PNG only",
+  "productSourceCommit": "83fab17976b33dbd74868462e063218b1e2e457a",
+  "images": {
+    "ranges-1.png": "7bdbfd82d1a7a7373eb6735ab5769a6bd0910925c80b825ffe488baba668ac30",
+    "ranges-2.png": "580f1b0ccb450cdbfe2ca09848fc7f019a8cf03d13b3271953c8636fa79ad064",
+    "ranges-3.png": "48e33b96e85eb238ce6eff7745525641dae77bd1c5130b9ee624c18a50b95107",
+    "ranges-4.png": "282ffabe3e182a0e3343b90d1ddc3824ae04dc6729744f26445dcafc360bf60f",
+    "people-1.png": "a9667791ce7eca69f26d021ec0c0e7dde514c053a9da69d8711eb0b44d1f729c",
+    "people-2.png": "e921a6e901d185406ea7379a09912c0d14b7aeda1cb68451a24670e6ab925042",
+    "existing-1.png": "1524fffa328bbb7905d4bb000600f94d91ac184eb0f7b9a41ce5d4286ecea063",
+    "existing-2.png": "fb6988fdb571ded06237a0a44b6338827f332de40503609d1b22024fd69f7538",
+    "existing-3.png": "79ab9249e9f6b3d7e05112930b112cfee583554d732179e25e14142ff72be7d3",
+    "existing-4.png": "ab0a1c18d4962b10e856845b2b05cb2ed731e5edbcdf018d0b730436a686e7a8",
+    "existing-5.png": "ef2fb2c72e02cd7b7ac77831a8d7e4c3405cdea0e33ed9698cab901f455e7b5c",
+    "existing-6.png": "9b3b24e449d457503ae7f389256a7d2b3176d3f037a439692d281fbc8a435f1b",
+    "glossary-depth.png": "9f4c84fa600b9bbedf4610989e2a136bd2b840efbd7072b4a27607ffdd3b0d1f",
+    "auto-end-complete.png": "fe055f610a64f3d6ebfc4cd7da2f5b4115aa423e2e32950d3dff6df4423795cf",
+    "auto-end-partial.png": "a2e117136bd4fbf7cd1b55e5976fe665c9bd22674b38c7ef2df26b14b16f6c78",
+    "people-chips.png": "466f71c0df5dba35a8660f368a139ea7b2f591a19e8a25626ea9aa175f313d90",
+    "stars-timeline.png": "7b386a237e68589d306a6001d0329e44735f68b48a1a766f898ea700622fb617"
+  },
+  "scope": "Examples do not prove installed-browser behavior or media export. Earlier sharing JPGs are preserved UI references."
+}
