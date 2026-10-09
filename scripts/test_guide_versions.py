@@ -42,10 +42,12 @@ class GuideVersions(unittest.TestCase):
 
     def test_stable_and_history_do_not_mix(self):
         stable = (site.DOCS / 'sharing.html').read_text(encoding='utf-8')
-        current = (site.DOCS / 'versions/0.3.32/sharing.html').read_text(encoding='utf-8')
+        current = (site.DOCS / f'versions/{site.APP_VERSION}/sharing.html').read_text(encoding='utf-8')
+        archived = (site.DOCS / 'versions/0.3.32/sharing.html').read_text(encoding='utf-8')
         previous = (site.DOCS / 'versions/0.3.31/index.html').read_text(encoding='utf-8')
-        self.assertEqual(site.APP_VERSION, '0.3.32')
-        self.assertIn('0.3.32 · stable 안내', stable)
+        self.assertEqual(site.APP_VERSION, site.VERSIONS['authoringVersion'])
+        self.assertIn(f'{site.APP_VERSION} · stable 안내', stable)
+        self.assertIn('0.3.32 · 이전 기록', archived)
         self.assertIn('id="보내는-사람"', stable)
         self.assertIn('7일간', stable)
         self.assertNotIn('0.3.31에는', stable)
@@ -68,12 +70,14 @@ class GuideVersions(unittest.TestCase):
 
     def test_current_images_follow_current_pixels_while_history_keeps_its_map(self):
         import hashlib
-        name = 'assets/examples/glossary-depth.png'
+        import re
+        source = (site.SOURCE / 'timeline.md').read_text(encoding='utf-8')
+        name = re.search(r'!\[[^\]]*\]\(([^)]+glossary-depth\.png)\)', source).group(1).removeprefix('../')
         raw = (site.DOCS / name).read_bytes()
         current = site.current_assets()[name]
         self.assertEqual(current, 'assets/versioned/' + hashlib.sha256(raw).hexdigest() + '.png')
         self.assertIn(current, (site.DOCS / 'timeline.html').read_text(encoding='utf-8'))
-        preserved = json.loads((site.HISTORY / '0.3.32/assets.json').read_text(encoding='utf-8'))[name]
+        preserved = json.loads((site.HISTORY / '0.3.32/assets.json').read_text(encoding='utf-8'))['assets/examples/glossary-depth.png']
         self.assertIn(preserved, (site.DOCS / 'versions/0.3.32/timeline.html').read_text(encoding='utf-8'))
 
 

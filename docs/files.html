@@ -17,7 +17,7 @@
     <nav class="header-actions" aria-label="제품 링크"><a class="product-link" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://ttaem.com/brand/ttaempad">제품 소개 <span aria-hidden="true">↗</span></a><a class="store-cta" target="_blank" rel="noopener noreferrer" title="새 탭에서 열기" href="https://chromewebstore.google.com/detail/cva-%ED%83%AC%ED%8C%A8%EB%93%9C/ajokeikoipagcdnpdkkbamidkjgeghon?authuser=0&amp;hl=ko">Chrome에 설치 <span aria-hidden="true">↗</span></a></nav>
   </header>
   <div class="site-layout">
-    <aside class="sidebar"><details class="guide-version"><summary>0.3.32 · stable</summary><nav aria-label="문서 버전"><a href="files.html">현재 stable 안내</a><a href="versions/0.3.37/files.html">0.3.37 · 미리보기</a><a href="versions/0.3.32/files.html">0.3.32 · stable</a><a href="versions/0.3.31/files.html">0.3.31 · 이전 기록</a><a href="versions/0.3.23/files.html">0.3.23 · 이전 기록</a><a href="history.html">버전 기록 모두 보기</a></nav></details><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서"><div class="nav-section" role="group" aria-labelledby="nav-시작하기"><p id="nav-시작하기" class="nav-group">시작하기</p>
+    <aside class="sidebar"><details class="guide-version"><summary>0.3.37 · stable</summary><nav aria-label="문서 버전"><a href="files.html">현재 stable 안내</a><a href="versions/0.3.37/files.html">0.3.37 · stable</a><a href="versions/0.3.32/files.html">0.3.32 · 이전 기록</a><a href="versions/0.3.31/files.html">0.3.31 · 이전 기록</a><a href="versions/0.3.23/files.html">0.3.23 · 이전 기록</a><a href="history.html">버전 기록 모두 보기</a></nav></details><details class="nav-drawer" open><summary>문서 목차</summary><nav aria-label="문서"><div class="nav-section" role="group" aria-labelledby="nav-시작하기"><p id="nav-시작하기" class="nav-group">시작하기</p>
 <a href="index.html">빠른 시작</a>
 <a href="formats.html">지원 형태 한눈에</a>
 </div>
@@ -44,7 +44,7 @@
 <a href="policy.html">이용 정책</a>
 <a href="history.html">버전 기록</a>
 </div></nav><div class="sidebar-foot"><a href="https://github.com/ttaem00/cva-ttaempad-timeline-spec" target="_blank" rel="noopener noreferrer">공개 문서 저장소 ↗</a></div></details></aside>
-    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><p class="version-note">0.3.32 · stable 안내 <a href="history.html">버전 기록</a></p><article><h1 id="파일-형식과-예제">파일 형식과 예제</h1>
+    <main id="main" tabindex="-1"><p class="eyebrow">CVA-TTAEMPAD / COMMENT GUIDE</p><p class="version-note">0.3.37 · stable 안내 <a href="history.html">버전 기록</a></p><article><h1 id="파일-형식과-예제">파일 형식과 예제</h1>
 <p>댓글은 <strong>TXT</strong>, 정리한 시간표는 <strong>호환 JSON</strong>, 합방 이름은 <strong>참가자 파일</strong>을 사용합니다.</p>
 <p><strong>JSON·TXT는 ttaem.com에 올리지 않고 사용할 수 있습니다.</strong> 앱에서 여는 순서는 <a href="summary.html">요약과 JSON 가져오기</a>, d1·d2·point의 뜻은 <a href="timeline.html">시간축 용어</a>에 있습니다.</p>
 <h2 id="평문-txt">평문 TXT</h2>
@@ -95,7 +95,7 @@
 <details class="doc-details"><summary id="syncher-파일-조건">Syncher 파일 조건</summary><div class="doc-details-body"><p>기존 <code>schemaVersion: 3</code> 자료도 읽습니다. 최소 <code>projectId</code> 문자열과 2–12명의 <code>people</code>이 필요합니다. 각 인물은 고유한 <code>id</code>, <code>name</code>과 <code>vod.url</code>을 가지며, <code>vod.url</code>은 <code>https://chzzk.naver.com/video/숫자</code>입니다. 현재 기준 VOD가 명단에 포함되어야 하고 중복 VOD는 거부합니다. <code>vod.wallAnchorSec</code>와 <code>vod.vodAnchorSec</code>가 유효하면 차이를 영상 0초의 벽시계 기준으로 사용합니다. <code>vod.verified: true</code>가 있어도 실제 같은 장면과 소리는 직접 확인하세요.</p>
 <p>참가자 파일은 이름 검색에 필요한 최소 구조입니다. Syncher 자료는 이미 연결한 VOD와 기준 시각을 전달하는 기존 제품 자료입니다. 컷 작업 JSON과 자동 게시 형식으로 쓰지 않습니다.</p></div></details>
 <h3 id="자동-선택과-보정">자동 선택과 보정</h3>
-<p>이름이 정확히 일치하는 방송인을 자동으로 찾고, 고정 영상과 방송 시간이 겹치는 <strong>모든 다시보기</strong>를 목록에 불러옵니다. 방송이 중간에 끊겨 영상이 나뉜 경우도 포함합니다. 동명이인은 직접 선택하고, 겹치는 영상이 없으면 목록에서 확인하세요. 비교 영상을 연 뒤 같은 장면이 조금 어긋나면 <strong>시각 보정</strong>으로 맞출 수 있습니다. 보정은 원본·비교 영상 조합별로 저장합니다.</p>
+<p>이름과 공개 메타데이터로 방송 시간대가 겹치는 다시보기 후보를 찾습니다. 표시 중인 명단의 처음 12명을 조회하고 <strong>더보기</strong>마다 다음 12명을 이어 불러옵니다. 12명은 표시 단위이며 위의 파일 입력 인원 제한과 다릅니다. 같은 검증 채널의 분할 VOD는 한 행에 시간순으로 표시합니다. 이름이 모호하면 직접 선택하고, 일부 조회·영상 미연결 상태를 목록에서 확인하세요. 비교 영상을 연 뒤 같은 장면이 조금 어긋나면 <strong>시각 보정</strong>으로 맞출 수 있습니다. 보정은 원본·비교 영상 조합별로 저장합니다. 문서 전체·수동 명단은 조회 범위이며 시각이 있는 합방 구간의 참석을 대신하지 않습니다. <a href="people.html#이름-확인과-공개-다시보기-조회">이름 선택과 접근 조건</a>을 확인하세요.</p>
 <p>시간표·합방·집계·컷을 함께 전달하려면 <a href="sharing.html">링크로 공유하기</a>를 사용하세요. 댓글이 없는 다시보기에서도 공유 자료를 볼 수 있습니다.</p></article><nav class="page-turn" aria-label="이전 다음 문서"><a href="summary.html"><small>이전 문서</small><span>요약과 JSON 가져오기 ←</span></a><a href="cuts.html"><small>다음 문서</small><span>컷 작업과 MP4 저장 →</span></a></nav><footer>원문과 의도를 보존하며, 확인한 장면을 시간축에 담습니다.<br><a href="source/files.md" target="_blank" rel="noopener noreferrer">이 문서의 Markdown 원본</a> · <a href="mailto:ttaem00@naver.com">문의·제보</a> · <a href="policy.html">이용 정책</a></footer></main>
     <aside class="toc"><nav aria-label="현재 문서 목차"><p>이 문서에서</p><a class="toc-depth-2" href="#평문-txt">평문 TXT</a><a class="toc-depth-2" href="#시간축-json-가져오기">시간축 JSON 가져오기</a><a class="toc-depth-2" href="#참가자와-역할-이름-가져오기">참가자와 역할 이름 가져오기</a></nav></aside>
   </div>
