@@ -21,7 +21,8 @@ const siteSources = fs.readdirSync(path.join(root,'docs/source')).filter(name=>n
 for (const name of ['README.md', 'SPEC.md', 'SUPPORT.md', 'VALIDATION.md', 'CONTRIBUTING.md', 'PEOPLE.md', 'IMPORT.md','ROSTER.md',...siteSources]) {
   const text = fs.readFileSync(path.join(root, name), 'utf8');
   assert.equal((text.match(/^```/gm) || []).length % 2, 0, `unclosed code fence in ${name}`);
-  for (const [, target] of text.matchAll(/\]\(([^)]+)\)/g)) {
+  const prose = text.replace(/```[\s\S]*?```/g, '').replace(/`[^`]*`/g, '');
+  for (const [, target] of prose.matchAll(/\]\(([^)]+)\)/g)) {
     if (/^(?:https?|mailto):/.test(target)) continue;
     assert.ok(fs.existsSync(path.resolve(path.dirname(path.join(root,name)), target.split('#')[0])), `missing link ${name}: ${target}`);
   }

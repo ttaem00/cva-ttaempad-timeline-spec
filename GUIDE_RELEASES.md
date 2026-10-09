@@ -1,6 +1,6 @@
 # Guide release maintenance
 
-The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.32 on 2026-10-05. Source main: 5f18d804a636590eba1cfa52a0c6f8b6ae321792. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.31 and 0.3.23 snapshots remain immutable.
+The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.37 on 2026-10-09. Product source: 83fab17976b33dbd74868462e063218b1e2e457a. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.32, 0.3.31 and 0.3.23 snapshots remain immutable.
 
 | Module | Responsibility |
 |---|---|
@@ -56,4 +56,8 @@ Run `python scripts/check_published_site.py --directory .` on prepared output. I
 
 ## 0.3.37 preview / 2026-10-09
 
-User-requested package guide, preserved from exact guide source e13cb32c1108e404d1099f7d53f0e0783de73cdf. Product source 83fab17976b33dbd74868462e063218b1e2e457a. The remote issue48 branch is the authoring authority; local source archives are validation artifacts. Stable and authoringVersion remain0.3.32. New synthetic PNGs use assets/preview/0.3.37; older pixels and frozen histories remain unchanged. Packaging and guide publication do not establish Chrome Web Store submission or Whale runtime QA.
+User-requested package guide, preserved from exact guide source e13cb32c1108e404d1099f7d53f0e0783de73cdf. Product source 83fab17976b33dbd74868462e063218b1e2e457a. The remote issue48 branch is the authoring authority; local source archives are validation artifacts. At initial preview publication, stable and authoringVersion remained 0.3.32; the subsequent explicit promotion is recorded below. New synthetic PNGs use assets/preview/0.3.37; older pixels and frozen histories remain unchanged. Packaging and guide publication do not establish Chrome Web Store submission or Whale runtime QA.
+
+## 0.3.37 stable promotion / 2026-10-09
+
+The manager explicitly selected 0.3.37 as the default stable guide. The issue50 remote branch is the authoring authority. Copy the preserved 0.3.37 source to docs/source, set stable and authoringVersion to 0.3.37, and mark 0.3.32 archive. The same approved image bytes and every frozen history are retained. This guide designation does not submit a Chrome Web Store release or establish Whale runtime readiness.
