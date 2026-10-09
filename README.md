@@ -31,6 +31,8 @@
 
 ## 현재 기준
 
+**새 안내: [0.3.37 · 미리보기](https://ttaem00.github.io/cva-ttaempad-timeline-spec/versions/0.3.37/index.html)** — 댓글 표기 확대, 합방 자동 찾기와 12명씩 더보기를 설명합니다. 기본 stable0.3.32와 이전 기록은 유지합니다.
+
 **CVA-탬패드 0.3.32 stable**을 기준으로 설명합니다. 시각·구간·목차·별 표시와 제목 옆 인물 칩, 인물 자동 검색과 겹치는 다시보기 불러오기를 안내합니다. `[M]`과 `[메모]`는 같은 메모 표기입니다.
 
 [버전 기록](docs/source/history.md)에서 0.3.23·0.3.31·0.3.32의 당시 안내를 볼 수 있습니다. [자료 공유하기](docs/source/sharing.md)와 [컷 작업과 MP4 저장](docs/source/cuts.md)은 현재 stable 기능을 설명합니다. 문서 버전 관리와 모듈 경로는 [유지보수 안내](GUIDE_RELEASES.md)에 있습니다.

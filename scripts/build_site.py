@@ -58,7 +58,8 @@ class SiteContext:
         items = []
         for release in VERSIONS['versions']:
             version = release['version']
-            available = (HISTORY / version / 'source' / (key + '.md')).exists()
+            available = (key in {page[0] for page in PAGES}
+                         and (HISTORY / version / 'source' / (key + '.md')).exists())
             page = key if available else 'index'
             target = self.prefix + f'versions/{version}/{page}.html'
             items.append(f'<a href="{target}">{html.escape(release["label"])}</a>')

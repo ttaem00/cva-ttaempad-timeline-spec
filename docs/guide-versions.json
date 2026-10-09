@@ -4,6 +4,11 @@
   "stableBasis": "Manager-selected stable 0.3.32; bounded cut UX revision on 2026-10-05; product source main 5f18d804a636590eba1cfa52a0c6f8b6ae321792. Store publication is tracked separately.",
   "versions": [
     {
+      "version": "0.3.37",
+      "status": "preview",
+      "label": "0.3.37 · 미리보기"
+    },
+    {
       "version": "0.3.32",
       "status": "stable",
       "label": "0.3.32 · stable"

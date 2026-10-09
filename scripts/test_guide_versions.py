@@ -12,6 +12,12 @@ from capture_guide_release import capture
 
 
 class GuideVersions(unittest.TestCase):
+    def test_version_menu_does_not_link_an_unrendered_snapshot_page(self):
+        context = site.SiteContext(site.APP_VERSION, 'stable', site.PAGES, '', {})
+        menu = context.version_menu('history')
+        self.assertIn('versions/0.3.37/index.html', menu)
+        self.assertNotIn('versions/0.3.37/history.html', menu)
+
     def test_history_is_intact_and_cannot_be_recaptured(self):
         site.verify_history()
         with self.assertRaisesRegex(ValueError, 'already preserved'):
@@ -28,7 +34,7 @@ class GuideVersions(unittest.TestCase):
         scratch.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=scratch) as directory:
             history = Path(directory)
-            shutil.copytree(site.HISTORY / '0.3.32', history / '0.3.32')
+            shutil.copytree(site.HISTORY, history, dirs_exist_ok=True)
             target = history / '0.3.32/source/sharing.md'
             target.write_text('changed', encoding='utf-8')
             with patch.object(site, 'HISTORY', history), self.assertRaisesRegex(ValueError, 'preserved version changed'):
