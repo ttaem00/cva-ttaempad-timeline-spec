@@ -128,3 +128,10 @@ shared document to the global history page with its fragment intact. A regressio
 check covers root stable and preview contexts. Frozen source text/pixels remain
 unchanged. Exact guide source snapshot3b90a6cc4e7c957f8f30a71dbbae25d0b0865631;
 full product396429e484d41a0478488fd35238c3a187ed0e5b.
+
+Pre-publication review rejected two stale people-page chip explanations. The
+corrected draft describes direct Point candidates and inherited roster details
+consistently with the current19 PNGs. The unpublished initial capture is retained
+as recovery/Git evidence; this task's new preview snapshot is regenerated from
+the corrected exact commit before first publication. Existing published0.3.37
+and earlier histories are untouched.

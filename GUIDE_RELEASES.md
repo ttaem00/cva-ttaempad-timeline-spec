@@ -83,3 +83,10 @@ The0.3.39 snapshot comes from exact committed source
 3b90a6cc4e7c957f8f30a71dbbae25d0b0865631. Global history article links work
 from every version route, including fragments; this builder repair does not
 rewrite historical Markdown or pixels.
+
+Before first publication, review found two legacy people-page paragraphs that
+still described inherited roster chips. The task-owned, unpublished0.3.39
+capture from3b90a6c is retained in Git and the private recovery artifact.
+Its corrected draft will be captured from a new exact source revision before
+this preview's first public deployment. Previously published histories and
+pixels remain byte-identical; no recapture guard is disabled.
