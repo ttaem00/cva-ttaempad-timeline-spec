@@ -90,3 +90,7 @@ capture from3b90a6c is retained in Git and the private recovery artifact.
 Its corrected draft will be captured from a new exact source revision before
 this preview's first public deployment. Previously published histories and
 pixels remain byte-identical; no recapture guard is disabled.
+
+Final first-publication0.3.39 snapshot source57087b6e8b6bfd71038486491033a1b2f2f2768f.
+Only this task-owned new preview replaces its unpublished capture; previously
+published history/source/pixels remain unchanged.

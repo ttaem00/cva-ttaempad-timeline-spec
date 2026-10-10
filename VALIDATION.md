@@ -135,3 +135,7 @@ consistently with the current19 PNGs. The unpublished initial capture is retaine
 as recovery/Git evidence; this task's new preview snapshot is regenerated from
 the corrected exact commit before first publication. Existing published0.3.37
 and earlier histories are untouched.
+
+Final first-publication0.3.39 snapshot source57087b6e8b6bfd71038486491033a1b2f2f2768f.
+Only this task-owned new preview replaces its unpublished capture; previously
+published history/source/pixels remain unchanged.
