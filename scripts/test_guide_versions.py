@@ -12,6 +12,12 @@ from capture_guide_release import capture
 
 
 class GuideVersions(unittest.TestCase):
+    def test_history_article_links_use_the_global_history_in_every_version(self):
+        for version, status, prefix in [('0.3.37', 'stable', ''), ('0.3.39', 'preview', '../../')]:
+            context = site.SiteContext(version, status, site.PAGES, prefix, {})
+            self.assertEqual(site.rewrite_link('history.md', context), prefix + 'history.html')
+            self.assertEqual(site.rewrite_link('history.md#versions', context), prefix + 'history.html#versions')
+
     def test_version_menu_does_not_link_an_unrendered_snapshot_page(self):
         context = site.SiteContext(site.APP_VERSION, 'stable', site.PAGES, '', {})
         menu = context.version_menu('history')

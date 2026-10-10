@@ -96,6 +96,8 @@ def rewrite_link(target: str, context: SiteContext) -> str:
     if target.startswith("examples/"):
         return target
     base, _, fragment = target.partition("#")
+    if base == 'history.md':
+        return context.prefix + 'history.html' + ('#' + fragment if fragment else '')
     if base in {key+'.md' for key,_,_ in context.pages}:
         return base[:-3]+'.html'+('#'+fragment if fragment else '')
     if base in LINKS:

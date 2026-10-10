@@ -95,3 +95,47 @@ node scripts/validate.cjs --parser /absolute/path/to/comment_format.js --roster-
 ```
 
 후속 후보의 실제 HLS/교차 컷 출력은 메모리 저장소를 쓰는 main Chrome 검증 화면에서 확인했습니다. 설치된 확장, 치지직 원본 플레이어, CSP/권한 동작이나 공개 게시 성공을 이 증거로 대신하지 않습니다. Chrome 확장 관리 화면의 자동 제어가 제한되어 사용자의 후보 패키지 수동 로드 후 공식 입구를 확인해야 합니다. 공개 main 채택은 아직 별개입니다.
+
+## 0.3.39 guide follow-up
+
+Product source396429e includes UI-only direct roster chips; shared parser SHA256
+d5a1a26b6a181ed19c5998c0736dc59cfaa73439e5b09893a00e721b23702b45
+is unchanged. Nine new semantic comment fixtures pass explicit local-parser
+conformance. The existing time and roster fixtures are checked after generation.
+Nineteen synthetic PNGs come from the actual current product modules; capture
+checks DOM roster-chip inheritance and detail context alongside stars/alignment.
+Product auto QA passes921 extension cases and32 short-link cases; source/package
+checks do not establish installed Chrome or Whale behavior.
+
+Guide stable/authoringVersion remain0.3.37; preview0.3.39 is separate. Exact
+committed inventory, generated-site regression and published navigation evidence
+are recorded with this release. No product JS/CSS/private capture bundle is
+published. Main Chrome list_extensions returned Transport closed, so current
+product runtime adoption is UNVERIFIED.
+
+Prepared0.3.39 output passes the existing site/link builder and exact image/link
+manifest checker(389 assets),15 existing parser time fixtures,6 roster/file
+fixtures,9 semantic fixtures,8 version checks and4 missing-asset/link regression
+checks. An actual IAB local page opened the new synthetic image dialog, closed
+it and returned focus to the same image link. At390px the document width375px
+and article327px stay within the viewport. The people page shows the direct
+roster-chip policy. Images below the viewport use existing lazy loading; this
+is not installed Chrome evidence.
+
+The new version's history.md article link exposed a builder omission: historical
+versions do not render their own history page. rewrite_link now routes this
+shared document to the global history page with its fragment intact. A regression
+check covers root stable and preview contexts. Frozen source text/pixels remain
+unchanged. Exact guide source snapshot3b90a6cc4e7c957f8f30a71dbbae25d0b0865631;
+full product396429e484d41a0478488fd35238c3a187ed0e5b.
+
+Pre-publication review rejected two stale people-page chip explanations. The
+corrected draft describes direct Point candidates and inherited roster details
+consistently with the current19 PNGs. The unpublished initial capture is retained
+as recovery/Git evidence; this task's new preview snapshot is regenerated from
+the corrected exact commit before first publication. Existing published0.3.37
+and earlier histories are untouched.
+
+Final first-publication0.3.39 snapshot source57087b6e8b6bfd71038486491033a1b2f2f2768f.
+Only this task-owned new preview replaces its unpublished capture; previously
+published history/source/pixels remain unchanged.
