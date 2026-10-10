@@ -95,3 +95,20 @@ node scripts/validate.cjs --parser /absolute/path/to/comment_format.js --roster-
 ```
 
 후속 후보의 실제 HLS/교차 컷 출력은 메모리 저장소를 쓰는 main Chrome 검증 화면에서 확인했습니다. 설치된 확장, 치지직 원본 플레이어, CSP/권한 동작이나 공개 게시 성공을 이 증거로 대신하지 않습니다. Chrome 확장 관리 화면의 자동 제어가 제한되어 사용자의 후보 패키지 수동 로드 후 공식 입구를 확인해야 합니다. 공개 main 채택은 아직 별개입니다.
+
+## 0.3.39 guide follow-up
+
+Product source396429e includes UI-only direct roster chips; shared parser SHA256
+d5a1a26b6a181ed19c5998c0736dc59cfaa73439e5b09893a00e721b23702b45
+is unchanged. Nine new semantic comment fixtures pass explicit local-parser
+conformance. The existing time and roster fixtures are checked after generation.
+Nineteen synthetic PNGs come from the actual current product modules; capture
+checks DOM roster-chip inheritance and detail context alongside stars/alignment.
+Product auto QA passes921 extension cases and32 short-link cases; source/package
+checks do not establish installed Chrome or Whale behavior.
+
+Guide stable/authoringVersion remain0.3.37; preview0.3.39 is separate. Exact
+committed inventory, generated-site regression and published navigation evidence
+are recorded with this release. No product JS/CSS/private capture bundle is
+published. Main Chrome list_extensions returned Transport closed, so current
+product runtime adoption is UNVERIFIED.

@@ -52,7 +52,7 @@ Verify actual version navigation, modal close/focus/scroll restoration, external
 
 Run `python scripts/check_published_site.py --directory .` on prepared output. Include every generated file, including new `docs/assets/versioned/*.png` files, in the owned commit. Then run `python scripts/check_published_site.py --ref HEAD` to validate the exact committed inventory. The PR gate checks that inventory before rebuilding: a build must not hide an omitted asset by recreating it only on the local machine. Validate the remote merge ref with the same command before merging.
 
-`build_site.current_assets` pins the current PNG pixels by hash for the default guide. Archived routes use only their preserved `assets.json`. Updating a current example does not reuse the old stable image map or overwrite historical pixels. The product-owned `design/timeline-guide-examples/capture.cjs` generates 17 synthetic examples from actual shipped modules; publish only its PNG output. Capture proof, the private module bundle and installed-browser QA remain separate local release artifacts.
+`build_site.current_assets` pins the current PNG pixels by hash for the default guide. Archived routes use only their preserved `assets.json`. Updating a current example does not reuse the old stable image map or overwrite historical pixels. The product-owned `design/timeline-guide-examples/capture.cjs` generates the synthetic examples in its cases.json from actual shipped modules; publish only its PNG output. Capture proof, the private module bundle and installed-browser QA remain separate local release artifacts.
 
 ## 0.3.37 preview / 2026-10-09
 
@@ -61,3 +61,20 @@ User-requested package guide, preserved from exact guide source e13cb32c1108e404
 ## 0.3.37 stable promotion / 2026-10-09
 
 The manager explicitly selected 0.3.37 as the default stable guide. The issue50 remote branch is the authoring authority. Copy the preserved 0.3.37 source to docs/source, set stable and authoringVersion to 0.3.37, and mark 0.3.32 archive. The same approved image bytes and every frozen history are retained. This guide designation does not submit a Chrome Web Store release or establish Whale runtime readiness.
+
+## 0.3.39 semantic comment preview / 2026-10-10
+
+The manager requested this public guide update and a product roster-chip correction.
+The issue52 remote branch is the authoring authority; local source archives are
+validation artifacts. Stable/authoringVersion stay0.3.37 and all earlier frozen
+source/image snapshots remain unchanged. Product source396429e (full revision
+recorded in VALIDATION.md) keeps inherited rosters as lookup context and presents
+only each scene's own roster chips.
+
+New draft pages describe marker-free heading/roster plus rounds, provisional
+D1/D2/Point structure, before/after rosters, contextual VS and comparisons,
+duplicate clocks, round overrides and safe termination/uncertain boundaries.
+The current product-owned renderer generated19 offline synthetic PNGs with actual
+DOM checks for inherited-chip suppression and preserved detail context. Only
+PNG output is published; private bundles/proof and installed Chrome evidence
+remain separate. Nine public semantic fixtures match the explicit local parser.
