@@ -112,3 +112,19 @@ committed inventory, generated-site regression and published navigation evidence
 are recorded with this release. No product JS/CSS/private capture bundle is
 published. Main Chrome list_extensions returned Transport closed, so current
 product runtime adoption is UNVERIFIED.
+
+Prepared0.3.39 output passes the existing site/link builder and exact image/link
+manifest checker(389 assets),15 existing parser time fixtures,6 roster/file
+fixtures,9 semantic fixtures,8 version checks and4 missing-asset/link regression
+checks. An actual IAB local page opened the new synthetic image dialog, closed
+it and returned focus to the same image link. At390px the document width375px
+and article327px stay within the viewport. The people page shows the direct
+roster-chip policy. Images below the viewport use existing lazy loading; this
+is not installed Chrome evidence.
+
+The new version's history.md article link exposed a builder omission: historical
+versions do not render their own history page. rewrite_link now routes this
+shared document to the global history page with its fragment intact. A regression
+check covers root stable and preview contexts. Frozen source text/pixels remain
+unchanged. Exact guide source snapshot3b90a6cc4e7c957f8f30a71dbbae25d0b0865631;
+full product396429e484d41a0478488fd35238c3a187ed0e5b.

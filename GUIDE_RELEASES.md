@@ -78,3 +78,8 @@ The current product-owned renderer generated19 offline synthetic PNGs with actua
 DOM checks for inherited-chip suppression and preserved detail context. Only
 PNG output is published; private bundles/proof and installed Chrome evidence
 remain separate. Nine public semantic fixtures match the explicit local parser.
+
+The0.3.39 snapshot comes from exact committed source
+3b90a6cc4e7c957f8f30a71dbbae25d0b0865631. Global history article links work
+from every version route, including fragments; this builder repair does not
+rewrite historical Markdown or pixels.
