@@ -31,13 +31,13 @@
 
 ## 현재 기준
 
-**[0.3.39 · 미리보기 안내](https://ttaem00.github.io/cva-ttaempad-timeline-spec/versions/0.3.39/index.html)**에서는 기호 없는 제목·판 목록, 합방 명단 앞뒤 배치와 팀 `VS`, 중복 시각을 읽는 방법을 설명합니다. 기본 stable 안내는 아래의 0.3.37입니다.
+**[0.3.39 · stable 안내](https://ttaem00.github.io/cva-ttaempad-timeline-spec/)**에서는 기호 없는 제목·판 목록, 합방 명단 앞뒤 배치와 팀 `VS`, 중복 시각 및 직접 인원 표시를 설명합니다.
 
-**기본 안내: [0.3.37 · stable](https://ttaem00.github.io/cva-ttaempad-timeline-spec/)** — 댓글 표기 확대, 합방 자동 찾기와 12명씩 더보기를 설명합니다. 0.3.32와 이전 기록은 보존합니다.
+**기본 안내: [0.3.39 · stable](https://ttaem00.github.io/cva-ttaempad-timeline-spec/)** — 댓글 표기 확대, 합방 자동 찾기와 12명씩 더보기를 설명합니다. 0.3.37과 이전 기록은 보존합니다.
 
-**CVA-탬패드 0.3.37 stable**을 기준으로 설명합니다. 시각·구간·목차·별 표시와 제목 옆 인물 칩, 인물 자동 검색과 겹치는 다시보기 불러오기를 안내합니다. `[M]`과 `[메모]`는 같은 메모 표기입니다.
+**CVA-탬패드 0.3.39 stable**을 기준으로 설명합니다. 시각·구간·목차·별 표시와 제목 옆 인물 칩, 인물 자동 검색과 겹치는 다시보기 불러오기를 안내합니다. `[M]`과 `[메모]`는 같은 메모 표기입니다.
 
-[버전 기록](docs/source/history.md)에서 0.3.23·0.3.31·0.3.32의 당시 안내를 볼 수 있습니다. [자료 공유하기](docs/source/sharing.md)와 [컷 작업과 MP4 저장](docs/source/cuts.md)은 현재 stable 기능을 설명합니다. 문서 버전 관리와 모듈 경로는 [유지보수 안내](GUIDE_RELEASES.md)에 있습니다.
+[버전 기록](docs/source/history.md)에서 0.3.23·0.3.31·0.3.32·0.3.37의 당시 안내를 볼 수 있습니다. [자료 공유하기](docs/source/sharing.md)와 [컷 작업과 MP4 저장](docs/source/cuts.md)은 현재 stable 기능을 설명합니다. 문서 버전 관리와 모듈 경로는 [유지보수 안내](GUIDE_RELEASES.md)에 있습니다.
 
 화면 예제는 현재 제품 모듈로 만든 가상 입력의 PNG이며, 실제 사용 화면은 별도로 표시합니다. [현재 지원 범위](SUPPORT.md)와 [검증 기록](VALIDATION.md)을 함께 확인할 수 있습니다.
 

@@ -1,6 +1,6 @@
 # Guide release maintenance
 
-The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.37 on 2026-10-09. Product source: 83fab17976b33dbd74868462e063218b1e2e457a. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.32, 0.3.31 and 0.3.23 snapshots remain immutable.
+The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.39 on 2026-10-10. Product source: 396429e484d41a0478488fd35238c3a187ed0e5b. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.32, 0.3.31 and 0.3.23 snapshots remain immutable.
 
 | Module | Responsibility |
 |---|---|
@@ -94,3 +94,7 @@ pixels remain byte-identical; no recapture guard is disabled.
 Final first-publication0.3.39 snapshot source57087b6e8b6bfd71038486491033a1b2f2f2768f.
 Only this task-owned new preview replaces its unpublished capture; previously
 published history/source/pixels remain unchanged.
+
+## 0.3.39 stable promotion / 2026-10-10
+
+The manager explicitly selected the published0.3.39 guide as default stable. Issue54 remote branch is the authoring authority; task-owned archives are validation artifacts. Preserved0.3.39 source from57087b6e8b6bfd71038486491033a1b2f2f2768f is copied to docs/source, with current-only preview wording changed to stable. Stable/authoringVersion become0.3.39;0.3.37 becomes archive. Every frozen history file and image pixel remains unchanged. This guide promotion does not submit the Store package or verify installed Chrome adoption.
