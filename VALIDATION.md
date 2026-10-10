@@ -1,6 +1,6 @@
 # 현재 문서 검증
 
-2026-10-09에 사용자가 기본 안내를 **0.3.37 stable**로 선택했습니다. 새 댓글 형태와 합방·12명씩 더보기는 [현재 안내](docs/source/index.md)와 [지원 범위](docs/source/formats.md)에서 확인합니다. 이번 안내 승격은 기존 사이트·정확한 게시 자산·문서 conformance·버전 회귀 검사와 게시 후 화면 확인으로 검증합니다. 과거 실행 결과의 버전을 소급 변경하지 않습니다.
+2026-10-10에 사용자가 기본 안내를 **0.3.39 stable**로 선택했습니다. 새 댓글 형태와 합방·12명씩 더보기는 [현재 안내](docs/source/index.md)와 [지원 범위](docs/source/formats.md)에서 확인합니다. 이번 안내 승격은 기존 사이트·정확한 게시 자산·문서 conformance·버전 회귀 검사와 게시 후 화면 확인으로 검증합니다. 과거 실행 결과의 버전을 소급 변경하지 않습니다.
 
 ## 2026-10-05 당시 검증
 
@@ -139,3 +139,7 @@ and earlier histories are untouched.
 Final first-publication0.3.39 snapshot source57087b6e8b6bfd71038486491033a1b2f2f2768f.
 Only this task-owned new preview replaces its unpublished capture; previously
 published history/source/pixels remain unchanged.
+
+## 0.3.39 stable promotion / 2026-10-10
+
+User-selected default0.3.39 uses the published source and actual-module images. Both stable pointers and menu labels change together; the old0.3.37 is archived. All frozen history/source/image bytes remain unchanged. Existing site, documentation, version and publication-asset checks and exact remote tree/merge inventory must pass before publication. Live default/version navigation, current policy, image dialog/focus and narrow layout are verified separately after Pages builds. Product package and installed-browser checks remain separate evidence.

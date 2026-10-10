@@ -1,6 +1,6 @@
 # 댓글 타임라인 의미 계약 — 공개 편집 초안 0.4
 
-작성 기준: 2026-10-09 · CVA-탬패드 0.3.37 stable · `comment_preview.v2`. 사용 예제는 [작성 기준](docs/source/reference.md), 현재 검증은 [검증 기록](VALIDATION.md)에서 확인합니다.
+작성 기준: 2026-10-10 · CVA-탬패드 0.3.39 stable · `comment_preview.v2`. 사용 예제는 [작성 기준](docs/source/reference.md), 현재 검증은 [검증 기록](VALIDATION.md)에서 확인합니다.
 
 ## 시간과 항목
 
