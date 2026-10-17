@@ -107,3 +107,17 @@ Issue56 adds a clearly labeled development preview with ordinary development-bui
 availability and separate professional verification status. Stable and authoring remain
 0.3.39. Existing frozen histories and preserved images remain byte-exact. This preview
 is documentation, not a Store/product release or a claim of full1.0 readiness.
+
+## Ordinary copy-option text draft / 2026-10-17
+
+Issue58 prepares the ordinary development candidate's explicit, default-off
+original-video-copy option in `guide-drafts/1.0.0/source/cuts.md` and `limits.md`.
+The feature is still being validated. This is an unshipped text draft, not a
+new capture or a change to the published1.0.0 preview. Stable/authoring stay0.3.39;
+every frozen history, public route and image stays unchanged.
+
+The current release contract accepts numeric app versions and preserves each
+version exactly once. It defines no separate documentation revision suffix or
+second capture for an already published version. Keep this draft unpublished
+until the product owner selects an explicit, history-preserving publication
+route. Do not invent an app version or bypass the recapture guard to publish it.

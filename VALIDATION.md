@@ -162,3 +162,24 @@ Prepared inventory428assets and all local links PASS before commit; product sour
 PR133 and receiver compatibility follow-up are separate from this public guide tree.
 Actual multipart upload/private-save proof, exact committed tree checks and public-site
 navigation readback are recorded independently before final completion.
+
+## Issue58: ordinary original-video-copy option draft
+
+The editable1.0.0 cuts/limits draft describes the default-off ordinary control,
+supported local H.264 MP4 video, precise audio trimming/AAC generation, exact-cut
+fallback, additional inspection reads and the absence of a speed/file-size promise.
+The existing save/Studio instructions remain intact. No new image, product runtime
+code, internal benchmark result, private channel or local path is published.
+
+Validation on this draft: the existing build/link checks pass with15 stable pages
+and6 preserved versions; exact committed publication inventory passes428 assets;
+the version suite passes8 tests, publication regression passes4 tests, and static
+documentation validation passes15 synthetic cases. The existing guide renderer
+also renders all14 draft pages in an external local-only preview and validates
+their links/fragments, including the new cuts/limits links. Whitespace checks pass.
+
+Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
+of this draft. Browser navigation, installed product behavior and deployment are
+not established by these checks. Publication is pending product-owner review and
+an explicit history-preserving route; this change does not recapture1.0.0 or
+establish a new guide revision schema.
