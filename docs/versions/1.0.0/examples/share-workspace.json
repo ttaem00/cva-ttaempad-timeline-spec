@@ -1,0 +1,202 @@
+{
+  "schema": "cva-ttaempad.share.v1",
+  "version": 1,
+  "title": "함께 보는 시간표",
+  "appVersion": "0.3.32",
+  "base": {
+    "videoNo": "15474104",
+    "clock": "vod_seconds",
+    "durationSec": 3600
+  },
+  "comments": {
+    "documents": [
+      {
+        "raw": "합방: 가상 방송인 A, 가상 방송인 B\n별칭: 역할A = 가상 방송인 A\n# 00:00 ~ 30:00 첫 게임\n## 02:00 ~ 10:00 첫 판\n### 03:00 ~ 08:00 세부 장면\n- 03:20 ⭐ 다시 볼 순간 (w. 역할A)\n- 04:00 ~ 04:30 [M] 설명\n- 05:00 ~ 06:00 [H] 예상 구간\n- 06:20 ~ 06:50 [H?] 편집 후보",
+        "completeness": "complete"
+      }
+    ],
+    "draft": {
+      "raw": "입력 중 원문",
+      "acceptedRaw": "",
+      "pendingDocuments": []
+    }
+  },
+  "publicData": {
+    "schema_version": "viewer_editor_tools.v1",
+    "video_no": "15474104",
+    "duration_sec": 3600,
+    "available": true,
+    "outline_projection": [
+      {
+        "id": "public1",
+        "level": "D1",
+        "title": "공개 요약",
+        "start_sec": 0,
+        "end_sec": 600
+      }
+    ],
+    "events": [],
+    "chat_buckets": []
+  },
+  "people": {
+    "manual": {
+      "schema": "chzzk.participant-roster",
+      "version": 1,
+      "members": [
+        {
+          "streamer": "가상 방송인 A"
+        },
+        {
+          "streamer": "가상 방송인 B"
+        }
+      ],
+      "aliases": [
+        {
+          "alias": "역할A",
+          "streamer": "가상 방송인 A"
+        }
+      ]
+    },
+    "roster": {
+      "projectId": "example",
+      "title": "비교 영상",
+      "people": [
+        {
+          "id": "vod-15474104",
+          "name": "기준 방송인",
+          "videoNo": "15474104",
+          "clockOrigin": 1000000
+        },
+        {
+          "id": "vod-15470797",
+          "name": "가상 방송인 A",
+          "videoNo": "15470797",
+          "clockOrigin": 1000000,
+          "durationSec": 3600
+        }
+      ]
+    },
+    "identities": [
+      {
+        "name": "가상 방송인 B",
+        "videoNo": "15482511"
+      }
+    ],
+    "hidden": [
+      "숨긴 이름"
+    ],
+    "closed": [
+      "15482511"
+    ]
+  },
+  "timing": [
+    {
+      "videoNo": "15470797",
+      "deltaSec": 1.25,
+      "basis": "shared_personal"
+    }
+  ],
+  "signals": {
+    "chat": {
+      "chat_buckets": [
+        {
+          "start_sec": 0,
+          "end_sec": 30,
+          "count": 32
+        },
+        {
+          "start_sec": 30,
+          "end_sec": 60,
+          "count": 70
+        }
+      ]
+    },
+    "clips": [
+      {
+        "id": "clip:example1",
+        "clip_uid": "example1",
+        "level": "Clip",
+        "title": "예제 클립",
+        "start_sec": 200,
+        "end_sec": 230
+      }
+    ],
+    "coverage": {
+      "chat": {
+        "status": "completed",
+        "messageCount": 102,
+        "coverageSeconds": 3600
+      },
+      "clips": {
+        "status": "partial",
+        "resolvedCount": 1,
+        "scannedCount": 2,
+        "unresolvedCount": 1
+      }
+    }
+  },
+  "cuts": {
+    "schemaVersion": 2,
+    "videoNo": "15474104",
+    "recordSourceNo": "15474104",
+    "record": null,
+    "person": {
+      "id": "vod-15474104",
+      "vod": {
+        "wallAnchorSec": 0,
+        "vodAnchorSec": 0
+      },
+      "timingOffsetSec": 0
+    },
+    "recordings": {},
+    "recordingPeople": {},
+    "cuts": [
+      {
+        "id": "cut-1",
+        "personId": "vod-15474104",
+        "recordingId": "local",
+        "inSec": 200,
+        "outSec": 230,
+        "timingOffsetSec": 0,
+        "note": "다시 볼 순간",
+        "source": {
+          "videoNo": "15474104",
+          "label": "기준 영상",
+          "wallAnchorSec": 0,
+          "duration": 3600
+        }
+      }
+    ],
+    "inputs": {
+      "in": "00:03:20",
+      "out": "00:03:50",
+      "note": "다시 볼 순간",
+      "source": "15474104"
+    },
+    "cfr": false,
+    "zero": false
+  },
+  "view": {
+    "layout": "explore",
+    "wide": false,
+    "videoSize": 40,
+    "timelineWindowSeconds": 0,
+    "timeSec": 200,
+    "sceneSearch": "",
+    "sceneKind": "all",
+    "rosterSearch": "",
+    "layers": {
+      "D1": true,
+      "D2": true,
+      "Point": true,
+      "Highlight": true,
+      "Chat": true,
+      "Clip": true
+    },
+    "sidebarOrder": [
+      "scenes",
+      "detail",
+      "cut"
+    ]
+  }
+}

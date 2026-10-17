@@ -98,3 +98,12 @@ published history/source/pixels remain unchanged.
 ## 0.3.39 stable promotion / 2026-10-10
 
 The manager explicitly selected the published0.3.39 guide as default stable. Issue54 remote branch is the authoring authority; task-owned archives are validation artifacts. Preserved0.3.39 source from57087b6e8b6bfd71038486491033a1b2f2f2768f is copied to docs/source, with current-only preview wording changed to stable. Stable/authoringVersion become0.3.39;0.3.37 becomes archive. Every frozen history file and image pixel remains unchanged. This guide promotion does not submit the Store package or verify installed Chrome adoption.
+
+
+##1.0.0 development preview /2026-10-17
+
+The manager requested split-VOD cut insertion and direct sequential Studio delivery.
+Issue56 adds a clearly labeled development preview with ordinary development-build
+availability and separate professional verification status. Stable and authoring remain
+0.3.39. Existing frozen histories and preserved images remain byte-exact. This preview
+is documentation, not a Store/product release or a claim of full1.0 readiness.
