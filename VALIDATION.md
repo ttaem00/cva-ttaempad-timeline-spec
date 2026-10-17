@@ -162,3 +162,192 @@ Prepared inventory428assets and all local links PASS before commit; product sour
 PR133 and receiver compatibility follow-up are separate from this public guide tree.
 Actual multipart upload/private-save proof, exact committed tree checks and public-site
 navigation readback are recorded independently before final completion.
+
+## Issue58: ordinary original-video-copy option draft
+
+The editable1.0.0 cuts/limits draft describes the ordinary original-video
+preference for new work, explicit compression changes disabling that preference,
+preservation of saved output intent, supported local H.264 MP4 and partial CHZZK
+candidate ranges, precise audio trimming/AAC regeneration, exact-cut fallback and
+the absence of a speed/file-size promise. Studio guidance distinguishes receiver
+binding from empty-input checks at delivery and preserves existing tabs during
+same-channel connection recovery without uncertain automatic retransmission.
+No new image, product runtime code, internal benchmark result, private channel or
+local path is published.
+
+The ordinary HLS original-video candidate passed bounded real-file inspection
+through the installed ordinary build's normal MP4 save button. One two-second
+H.264 High 1920x1080/60 output contains 466973 bytes, SHA-256
+`c26163cdeb27e7b24b97c3f87fc4270f71f0705620fc06e926c970cba4eadd16`.
+All 120 source/output VCL NAL byte sequences and independently decoded YUV frame
+hashes match, as do every rebased video PTS/duration and the dimensions. The first
+video PTS is 0; output metadata records 60 fps and limited-range BT.709.
+Regenerated 48 kHz stereo AAC passes structural/decode checks, with 256 final decoded
+padding samples remaining beyond the selected two seconds. Original audio sample
+identity, perceptual A/V sync and source DTS identity are not established.
+Whole-VOD/end-of-source cuts, long processing and Studio upload of this copied
+output were not verified by this observation. This evidence is not release readiness
+or publication.
+
+Validation on this draft: the existing build/link checks pass with15 stable pages
+and6 preserved versions; prepared publication inventory passes428 assets;
+the version suite passes8 tests, publication regression passes4 tests, and static
+documentation validation passes15 synthetic cases. The existing guide renderer
+also renders all14 draft pages in an external local-only preview and validates
+their links/fragments, including the new cuts/limits links. Whitespace checks pass.
+
+The original-preference and Studio wording follow-up repeats these checks with
+unchanged validation scripts in an external local-only copy. All14 updated draft
+pages render with valid links and fragments. The bounded real-file result above
+is separate product evidence; these documentation checks do not broaden its scope.
+
+The Studio retention follow-up explains that an existing delivery record keeps
+its target and retry context across connection checks or changed output settings.
+Explicit output cleanup retains existing Studio files and starts any next delivery
+as a new transfer from the beginning. The same local documentation checks pass.
+
+The reading-path follow-up distinguishes possible prefix reads for local recordings
+from CHZZK manifest, initial video configuration and required-range reads. CHZZK
+preparation checks boundaries, then validates selected packets in one output pass.
+An incompatibility discovered during copying cancels unfinished generation, preserves
+the cuts and does not silently retry through rendering. After reloading only the
+ordinary extension in main Chrome, one normal MP4-save action on this reading-path
+revision produced a two-second 1920x1080/60 file of 466973 bytes. All 120 source/output
+VCL NAL sequences, decoded YUV frame hashes and rebased PTS/duration mappings match;
+regenerated AAC passes structural checks. This bounded installed-file result applies
+to that reading-path revision. The private Studio upload previously verified used render
+fallback; copied-video Studio upload remained unverified at that revision. Broader output quality,
+whole-VOD/end-of-source and long processing remain unverified. The same local
+documentation checks pass.
+
+The AAC presentation-end follow-up is grounded in product source
+`4b1581c9ad5157fc7807986fb1a45efc2e64becc`, with 1614 project QA cases passing.
+After reloading only the ordinary extension in main Chrome, one normal MP4-save
+action produced a two-second 1920x1080/60 file of 466973 bytes, SHA-256
+`766567cb4999a40c780c5a7d3c64b6263b72b233e73050db0104fa9e7aa60c88`.
+All 120 VCL NAL sequences, independently decoded YUV frame hashes and rebased
+PTS/duration mappings match; regenerated AAC passes structural checks. The first-mux
+presentation cap and conditional omission of a second remux are supported by source
+and synthetic consumer checks. This installed run did not count remux calls or
+measure phase-specific timing, so it adds no direct remux-count or performance claim.
+Copied-video Studio upload was not verified at this revision; the prior private upload
+used render fallback. Other input quality, general cut boundaries, whole-VOD/end-of-source
+and actual 17-hour processing remain unverified. This observation adds no support
+for the separate temporary whole-source/EOF candidates.
+
+The subsequent bounded ordinary-build check uses product source
+`42ba4e98727e58b470057ccb805e3a7a6bfee4f1`, with 1674 project QA cases passing.
+The same five runtime files were installed while 99 other installed files were
+preserved. After reloading only the ordinary extension in main Chrome, one normal
+MP4-save action produced a two-second 1920x1080/60 file of 466973 bytes, SHA-256
+`90737a42112031daa845a1ed46e1c662430730dac0dce71df864fcaae09acd2c`.
+All 120 VCL NAL sequences, independently decoded YUV frame hashes and rebased
+PTS/duration mappings match; regenerated AAC passes structural checks. One normal
+ordinary YouTube-button action also delivered an approximately 0.45 MiB result
+without manual file selection. The same Studio video showed private save, upload,
+processing and copyright checks completing without a reported problem. The assigned
+file was cleaned up, so its separate SHA-256 and decoded content were not inspected.
+The YouTube 1080p60 rendition list was not checked during that run; the server
+preview at 360p and the local preview at 1080p did not establish that rendition.
+This run did not measure phase timing, codec work or fetch counters. Source and
+synthetic strict-source-first
+end-of-source checks do not establish actual whole-source/EOF output, general cut
+boundaries, other input quality or actual 17-hour processing. The bounded local-file
+inspection and normal private Studio delivery do not broaden those support claims.
+The same local documentation checks pass.
+
+The output-explanation follow-up is grounded in product source
+`3ce65336a719bcfdd2fc504ed73bb8bb33d6cc96`. Its source/package QA passes 12 steps
+and 1683 cases. The draft now explains regeneration for exact cut boundaries,
+selected size/direction or differing original video settings. It explicitly
+distinguishes copied video from AAC audio regenerated for the cuts; audio-free
+input receives no audio-regeneration phrase. Controller and mounted-UI regressions
+use mocked media and Studio boundaries. After reloading only the ordinary extension
+and its QA tab in main Chrome, one normal MP4-save action verified the copy/AAC
+explanation on the installed revision. The controller reported 120 copied video
+packets, no rendered video samples and 95 audio sample adds covering 96000 PCM
+frames; these are controller observations, not internal codec-operation counts.
+The resulting two-second 1920x1080/60 file contains 466973 bytes, SHA-256
+`981efdd5c848e505519af3e37b4a30a86ce7e8239719ea2e0817a09758a030fd`.
+The frozen independent validator passes all 120 VCL NAL sequences, decoded YUV
+frame hashes and rebased PTS/duration mappings, with AAC structural checks. Other
+fallback-reason labels retain controller/mounted-UI regression evidence. No new
+Studio upload was performed on this explanation revision.
+
+The earlier `42ba4e9` private Studio video was subsequently inspected on its normal
+YouTube watch page: its quality menu lists 1080p60 HD and 720p60. This establishes
+those menu choices for that video; no quality selection or publication setting was
+changed. The assigned file's separate SHA-256 and decoded content remain unverified.
+Neither observation adds whole-source or actual 17-hour evidence. Static
+documentation and draft render/link checks pass; unchanged version/publication
+checks retain the prior
+results above.
+
+Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
+of this draft. Browser navigation, installed product behavior and deployment are
+not established by these checks. This is an intentionally unpublished development draft. Publication requires
+an explicit history-preserving route; this change does not recapture1.0.0 or
+establish a new guide revision schema.
+
+### Whole-source, end-range, join and automatic-part text follow-up
+
+The new draft describes conditional source-zero copying with the original
+video/audio start difference preserved, separate confirmation of source ends for
+full reads and later-keyframe reads, compatible whole-source joins, and completion
+checks for original audio and regenerated AAC when audio outlasts video. It also
+distinguishes automatic internal part boundaries from saved cut coordinates and
+preserves established retry ranges and prior delivery records. These conditions
+do not promise copied output for general non-keyframe cuts; the existing precise
+generation path remains available.
+
+The product-owner's source record reports 1763 QA cases and Chrome/Whale package
+checks passing, two fresh builds, public-helper synthetic checks and independent
+decoded-frame comparisons. These are source/package and bounded synthetic evidence.
+Subsequent actual Main Chrome controller checks and independent inspection of four
+downloaded files pass within the following scope:
+
+| Case | Input and actual file evidence |
+|---|---|
+| Whole source | Short 1920x1080 High/B 60fps synthetic source,120 video packets/decoded frames. First video PTS3840/90000, video end183840/90000; audio/movie end103424/48000. Original video payload, decoded frames and PTS/durations match |
+| Two whole-source occurrences joined | The same retained synthetic source presented as two source occurrences,240 video packets/decoded frames at1920x1080/60. Original phase and the13920/90000 internal video gap are preserved. Video end377760/90000 differs from audio/movie end206848/48000; no video frame is extended |
+| Time-based automatic parts and retained retry | Separate32x24 High/B 6fps synthetic source, split at91920/90000 into two files with6 frames each. Both retain expected source payload, decoded frames and rebased timing. Retrying the second part reuses its retained file with no re-encode; the receiver is synthetic |
+
+All four files pass public and independent packet/configuration checks plus full
+audio/video decoding. The actual controller record uses the frozen LocalCuts
+implementation and public media constructors on an owned local test page. It is
+separate from the installed ordinary entry check: after reloading only its QA tab,
+the ordinary source identity, retained two cuts, original-first checkbox and Studio
+choice were confirmed. These new controller cases do not establish a new normal
+Studio upload. Time-based splitting is covered; forcing quota exhaustion or a
+256GB output is not. Released test resources report no active inputs, outputs,
+iterators, samples or retained files.
+
+AAC is regenerated, with no compressed-audio or PCM byte-identity acceptance.
+The whole and joined outputs decode to103424 and206848 frames respectively, equal
+to their requested counts. The6fps part files decode to49152/48128 frames versus
+49024/48000 requested:128 extra decoded samples per part,256 total. The first sample
+above the fixed1e-5 amplitude threshold is at frame448 in both parts. This observation
+is not a measured universal audio delay or a correction. Independently decoded
+source audio lacks the final768 reference frames of the second part's requested
+window; its container end does not prove original PCM coverage there. The almost
+silent whole/join inputs and periodic6fps test tone do not establish perceptual
+audio fidelity or lip sync. No matching old-renderer audio control was supplied for
+these exact selections.
+
+No actual17-hour processing, new Studio upload, Whale-runtime or live-publication
+verification is established. The earlier bounded installed1080p60 file, controller
+counts and private YouTube video's1080p60/720p60 menu observations above retain their
+original revision and input scope; they are not repeated or broadened here.
+
+This four-file draft has separate text/render/link validation. Those checks do not
+run the product, broaden the actual controller/file results or publish a guide revision.
+Stable 0.3.39, the already published 1.0.0 preview, every preserved history, image and
+public route remain unchanged.
+
+Root product review accepted these four editable paths after the bounded actual
+results above. Post-integration source `faa838f46467c2c88135b722954324d6b12b629e`
+passes all 12 project QA steps and 1779 extension cases with no skips, including
+Chrome/Whale package audits. This is automated integration evidence, separate from
+the actual Main Chrome controller, installed UI and file observations. Merging
+this editable draft preserves the existing published site and every immutable
+version; it does not select a new stable version or recapture published 1.0.0.
