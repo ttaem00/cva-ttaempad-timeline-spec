@@ -4,6 +4,11 @@
   "stableBasis": "Manager-selected stable 0.3.39 on 2026-10-10, following published preview and rebuilt package. Product source 396429e484d41a0478488fd35238c3a187ed0e5b. Store publication and installed-browser adoption are tracked separately.",
   "versions": [
     {
+      "version": "1.0.0",
+      "status": "preview",
+      "label": "1.0.0 · 개발 미리보기"
+    },
+    {
       "version": "0.3.39",
       "status": "stable",
       "label": "0.3.39 · stable"

@@ -143,3 +143,22 @@ published history/source/pixels remain unchanged.
 ## 0.3.39 stable promotion / 2026-10-10
 
 User-selected default0.3.39 uses the published source and actual-module images. Both stable pointers and menu labels change together; the old0.3.37 is archived. All frozen history/source/image bytes remain unchanged. Existing site, documentation, version and publication-asset checks and exact remote tree/merge inventory must pass before publication. Live default/version navigation, current policy, image dialog/focus and narrow layout are verified separately after Pages builds. Product package and installed-browser checks remain separate evidence.
+
+
+## Issue56:1.0.0 development preview
+
+The ordinary development guide documents deliberate front/before insertion, source
+clock preservation, supported1080p60, automatic actual-duration/byte/storage parts,
+sequential private upload completion, retry and direct Studio interaction pauses.
+Professional native verification and full1.0 release remain separate. No private QA
+channel/video IDs, local paths, product runtime code or new screenshots are published.
+Stable/authoring0.3.39 and all pre-existing frozen histories/image pixels are preserved.
+The1.0.0 draft is frozen from de8eba81ba32452e8282d9c72c2b6550463a4eee.
+An initial unpublished generated capture had a mixed-case fragment; it was retained
+outside the source tree as rejected task evidence before the corrected first history
+was prepared. No pre-existing committed history was edited or recaptured.
+
+Prepared inventory428assets and all local links PASS before commit; product source
+PR133 and receiver compatibility follow-up are separate from this public guide tree.
+Actual multipart upload/private-save proof, exact committed tree checks and public-site
+navigation readback are recorded independently before final completion.
