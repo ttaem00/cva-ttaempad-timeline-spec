@@ -117,10 +117,12 @@ preference, while saved output settings retain their prior intent. The draft
 also separates Studio receiver binding, delivery-time empty-input checks and
 same-channel connection recovery from upload completion and retry safety.
 The partial CHZZK candidate has passed a bounded installed 1080p60 file inspection
-for video content, timing and regenerated audio structure. Broader input coverage
-and copied-output Studio upload remain unverified. This is an unshipped text draft,
-not a
-new capture or a change to the published1.0.0 preview. Stable/authoring stay0.3.39;
+for video content, timing and regenerated audio structure. A normal ordinary
+YouTube-button action has also delivered a supported-range result without manual
+file selection and completed private Studio upload and processing. Broader input
+coverage and the YouTube 1080p60 rendition remain unverified. This is an unshipped
+text draft, not a new capture or a change to the published1.0.0 preview.
+Stable/authoring stay0.3.39;
 every frozen history, public route and image stays unchanged.
 
 The current release contract accepts numeric app versions and preserves each

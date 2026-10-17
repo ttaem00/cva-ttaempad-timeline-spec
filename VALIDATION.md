@@ -186,7 +186,8 @@ Regenerated 48 kHz stereo AAC passes structural/decode checks, with 256 final de
 padding samples remaining beyond the selected two seconds. Original audio sample
 identity, perceptual A/V sync and source DTS identity are not established.
 Whole-VOD/end-of-source cuts, long processing and Studio upload of this copied
-output remain unverified. This evidence is not release readiness or publication.
+output were not verified by this observation. This evidence is not release readiness
+or publication.
 
 Validation on this draft: the existing build/link checks pass with15 stable pages
 and6 preserved versions; prepared publication inventory passes428 assets;
@@ -215,7 +216,7 @@ revision produced a two-second 1920x1080/60 file of 466973 bytes. All 120 source
 VCL NAL sequences, decoded YUV frame hashes and rebased PTS/duration mappings match;
 regenerated AAC passes structural checks. This bounded installed-file result applies
 to that reading-path revision. The private Studio upload previously verified used render
-fallback; copied-video Studio upload remains unverified. Broader output quality,
+fallback; copied-video Studio upload remained unverified at that revision. Broader output quality,
 whole-VOD/end-of-source and long processing remain unverified. The same local
 documentation checks pass.
 
@@ -229,10 +230,30 @@ PTS/duration mappings match; regenerated AAC passes structural checks. The first
 presentation cap and conditional omission of a second remux are supported by source
 and synthetic consumer checks. This installed run did not count remux calls or
 measure phase-specific timing, so it adds no direct remux-count or performance claim.
-Copied-video Studio upload has not been verified; the prior private upload used
-render fallback. Other input quality, general cut boundaries, whole-VOD/end-of-source
+Copied-video Studio upload was not verified at this revision; the prior private upload
+used render fallback. Other input quality, general cut boundaries, whole-VOD/end-of-source
 and actual 17-hour processing remain unverified. This observation adds no support
 for the separate temporary whole-source/EOF candidates.
+
+The subsequent bounded ordinary-build check uses product source
+`42ba4e98727e58b470057ccb805e3a7a6bfee4f1`, with 1674 project QA cases passing.
+The same five runtime files were installed while 99 other installed files were
+preserved. After reloading only the ordinary extension in main Chrome, one normal
+MP4-save action produced a two-second 1920x1080/60 file of 466973 bytes, SHA-256
+`90737a42112031daa845a1ed46e1c662430730dac0dce71df864fcaae09acd2c`.
+All 120 VCL NAL sequences, independently decoded YUV frame hashes and rebased
+PTS/duration mappings match; regenerated AAC passes structural checks. One normal
+ordinary YouTube-button action also delivered an approximately 0.45 MiB result
+without manual file selection. The same Studio video showed private save, upload,
+processing and copyright checks completing without a reported problem. The assigned
+file was cleaned up, so its separate SHA-256 and decoded content were not inspected.
+The YouTube 1080p60 rendition list was not checked; the server preview at 360p and
+the local preview at 1080p do not establish that rendition. This run did not measure
+phase timing, codec work or fetch counters. Source and synthetic strict-source-first
+end-of-source checks do not establish actual whole-source/EOF output, general cut
+boundaries, other input quality or actual 17-hour processing. The bounded local-file
+inspection and normal private Studio delivery do not broaden those support claims.
+The same local documentation checks pass.
 
 Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
 of this draft. Browser navigation, installed product behavior and deployment are
