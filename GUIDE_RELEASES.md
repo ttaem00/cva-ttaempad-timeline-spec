@@ -139,7 +139,21 @@ compatible whole-source joins, and original-audio plus regenerated-AAC end check
 Automatic part boundaries may use verified keyframes without changing saved cuts;
 retry keeps established ranges and delivery history, and required repartitioning
 affects only output that has not been delivered. Unsupported boundaries retain the
-existing precise generation path. Bounded Main Chrome checks now cover actual
+existing precise generation path. The reopened Issue58 continuation also describes
+ordinary whole/end buttons that resolve the selected VOD at 1080 and read Input
+duration up front, without output inspection, frame decoding or an FPS probe.
+Optional numeric draft/cut coordinates preserve that duration through persistence,
+forward wall-consistency validation and retime/split. Manual commit replaces the
+selected numeric endpoint even when its displayed string is unchanged; Esc and a
+canceled source transition preserve the previous draft. No near-EOF snap or deferred
+EOF flag is introduced. A conditional unchanged single-whole HLS AAC path copies
+eligible encoded audio, and requires both video/audio completion receipts before
+the file can close successfully; other audio keeps precise trim/AAC regeneration.
+These new UI/precision/AAC additions currently have source and automated-test
+evidence only: their installed ordinary entry, actual whole-CHZZK output and Studio
+delivery remain unverified. No actual observation below is extended to these additions.
+
+Earlier bounded Main Chrome checks cover actual
 controller output from short local synthetic inputs: one whole 1080p60 source,
 two whole-source occurrences joined at 1080p60, and a separate small 6fps input
 split into two time-limited parts with retained-file retry. Independent inspection
