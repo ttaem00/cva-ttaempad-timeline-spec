@@ -149,9 +149,27 @@ canceled source transition preserve the previous draft. No near-EOF snap or defe
 EOF flag is introduced. A conditional unchanged single-whole HLS AAC path copies
 eligible encoded audio, and requires both video/audio completion receipts before
 the file can close successfully; other audio keeps precise trim/AAC regeneration.
-These new UI/precision/AAC additions currently have source and automated-test
-evidence only: their installed ordinary entry, actual whole-CHZZK output and Studio
-delivery remain unverified. No actual observation below is extended to these additions.
+Installed ordinary Main Chrome now has bounded normal-entry evidence for whole-button
+collection, native-range work JSON saving and Undo, plus end-button precise draft JSON.
+This confirms selection/persistence only, not a long whole-CHZZK output or whole AAC copy.
+A subsequent multi-source output first required the explicit memory choice, then
+stopped at a strict output-time-grid check with no completed file. The repair uses
+integer tick accumulation for copied packets, fragment joins and required native PCM
+lengths, preserving original coordinates and SDK tolerance. After installation, the
+ordinary MP4 button produced a retained file in the original cut order. Independent
+inspection passes its 1080p60 structure and full video decode. A fresh reordered
+normal-button output is also retained physically. Both cut orders match all7506
+source video access units, presentation times and decoded YUV frames. A continuous
+AAC decoder repair reduces repeated one-second audio-boundary damage in a newer
+retained reordered output; its video remains source-identical. The first448 audio
+frames are still zero despite active source audio, and decoded AAC tail padding
+remains. These are unresolved audio limits, not complete audiovisual acceptance.
+The rendered baseline stopped at the actual memory cap, so no completed speed
+comparison is established. Native endpoint cuts also expose an unresolved preview
+clock/duration difference after final-fragment/EOS observation; stored cuts and
+export coordinates are preserved. Long whole-CHZZK output, whole AAC copy and new
+Studio delivery remain unverified. Earlier observations below
+retain their original scope.
 
 Earlier bounded Main Chrome checks cover actual
 controller output from short local synthetic inputs: one whole 1080p60 source,
