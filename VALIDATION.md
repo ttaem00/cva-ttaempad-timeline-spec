@@ -247,13 +247,41 @@ ordinary YouTube-button action also delivered an approximately 0.45 MiB result
 without manual file selection. The same Studio video showed private save, upload,
 processing and copyright checks completing without a reported problem. The assigned
 file was cleaned up, so its separate SHA-256 and decoded content were not inspected.
-The YouTube 1080p60 rendition list was not checked; the server preview at 360p and
-the local preview at 1080p do not establish that rendition. This run did not measure
-phase timing, codec work or fetch counters. Source and synthetic strict-source-first
+The YouTube 1080p60 rendition list was not checked during that run; the server
+preview at 360p and the local preview at 1080p did not establish that rendition.
+This run did not measure phase timing, codec work or fetch counters. Source and
+synthetic strict-source-first
 end-of-source checks do not establish actual whole-source/EOF output, general cut
 boundaries, other input quality or actual 17-hour processing. The bounded local-file
 inspection and normal private Studio delivery do not broaden those support claims.
 The same local documentation checks pass.
+
+The output-explanation follow-up is grounded in product source
+`3ce65336a719bcfdd2fc504ed73bb8bb33d6cc96`. Its source/package QA passes 12 steps
+and 1683 cases. The draft now explains regeneration for exact cut boundaries,
+selected size/direction or differing original video settings. It explicitly
+distinguishes copied video from AAC audio regenerated for the cuts; audio-free
+input receives no audio-regeneration phrase. Controller and mounted-UI regressions
+use mocked media and Studio boundaries. After reloading only the ordinary extension
+and its QA tab in main Chrome, one normal MP4-save action verified the copy/AAC
+explanation on the installed revision. The controller reported 120 copied video
+packets, no rendered video samples and 95 audio sample adds covering 96000 PCM
+frames; these are controller observations, not internal codec-operation counts.
+The resulting two-second 1920x1080/60 file contains 466973 bytes, SHA-256
+`981efdd5c848e505519af3e37b4a30a86ce7e8239719ea2e0817a09758a030fd`.
+The frozen independent validator passes all 120 VCL NAL sequences, decoded YUV
+frame hashes and rebased PTS/duration mappings, with AAC structural checks. Other
+fallback-reason labels retain controller/mounted-UI regression evidence. No new
+Studio upload was performed on this explanation revision.
+
+The earlier `42ba4e9` private Studio video was subsequently inspected on its normal
+YouTube watch page: its quality menu lists 1080p60 HD and 720p60. This establishes
+those menu choices for that video; no quality selection or publication setting was
+changed. The assigned file's separate SHA-256 and decoded content remain unverified.
+Neither observation adds whole-source or actual 17-hour evidence. Static
+documentation and draft render/link checks pass; unchanged version/publication
+checks retain the prior
+results above.
 
 Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
 of this draft. Browser navigation, installed product behavior and deployment are
