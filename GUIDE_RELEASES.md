@@ -131,3 +131,23 @@ version exactly once. It defines no separate documentation revision suffix or
 second capture for an already published version. Keep this draft unpublished
 until the product owner selects an explicit, history-preserving publication
 route. Do not invent an app version or bypass the recapture guard to publish it.
+
+The whole/end-of-source and partition follow-up remains an unpublished text draft.
+It describes conditional copying from source zero while preserving the original
+video/audio start difference, separate later-keyframe-to-end checks,
+compatible whole-source joins, and original-audio plus regenerated-AAC end checks.
+Automatic part boundaries may use verified keyframes without changing saved cuts;
+retry keeps established ranges and delivery history, and required repartitioning
+affects only output that has not been delivered. Unsupported boundaries retain the
+existing precise generation path. Bounded Main Chrome checks now cover actual
+controller output from short local synthetic inputs: one whole 1080p60 source,
+two whole-source occurrences joined at 1080p60, and a separate small 6fps input
+split into two time-limited parts with retained-file retry. Independent inspection
+passes video payload, decoded frames, timing and full-file decoding. The ordinary
+installed entry and its original-first/Studio choices were checked separately;
+these controller cases use a synthetic receiver and add no Studio upload.
+Regenerated AAC startup/tail and source-reference limits remain explicit, without
+audio byte-identity or perceptual-sync acceptance. Earlier bounded file and private
+YouTube quality-menu observations retain their original scope. No actual 17-hour,
+quota-exhaustion, Whale-runtime, publication, capture, stable-promotion, route or
+preserved-history result is added.

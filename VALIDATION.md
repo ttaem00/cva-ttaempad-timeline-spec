@@ -285,6 +285,69 @@ results above.
 
 Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
 of this draft. Browser navigation, installed product behavior and deployment are
-not established by these checks. Publication is pending product-owner review and
+not established by these checks. This is an intentionally unpublished development draft. Publication requires
 an explicit history-preserving route; this change does not recapture1.0.0 or
 establish a new guide revision schema.
+
+### Whole-source, end-range, join and automatic-part text follow-up
+
+The new draft describes conditional source-zero copying with the original
+video/audio start difference preserved, separate confirmation of source ends for
+full reads and later-keyframe reads, compatible whole-source joins, and completion
+checks for original audio and regenerated AAC when audio outlasts video. It also
+distinguishes automatic internal part boundaries from saved cut coordinates and
+preserves established retry ranges and prior delivery records. These conditions
+do not promise copied output for general non-keyframe cuts; the existing precise
+generation path remains available.
+
+The product-owner's source record reports 1763 QA cases and Chrome/Whale package
+checks passing, two fresh builds, public-helper synthetic checks and independent
+decoded-frame comparisons. These are source/package and bounded synthetic evidence.
+Subsequent actual Main Chrome controller checks and independent inspection of four
+downloaded files pass within the following scope:
+
+| Case | Input and actual file evidence |
+|---|---|
+| Whole source | Short 1920x1080 High/B 60fps synthetic source,120 video packets/decoded frames. First video PTS3840/90000, video end183840/90000; audio/movie end103424/48000. Original video payload, decoded frames and PTS/durations match |
+| Two whole-source occurrences joined | The same retained synthetic source presented as two source occurrences,240 video packets/decoded frames at1920x1080/60. Original phase and the13920/90000 internal video gap are preserved. Video end377760/90000 differs from audio/movie end206848/48000; no video frame is extended |
+| Time-based automatic parts and retained retry | Separate32x24 High/B 6fps synthetic source, split at91920/90000 into two files with6 frames each. Both retain expected source payload, decoded frames and rebased timing. Retrying the second part reuses its retained file with no re-encode; the receiver is synthetic |
+
+All four files pass public and independent packet/configuration checks plus full
+audio/video decoding. The actual controller record uses the frozen LocalCuts
+implementation and public media constructors on an owned local test page. It is
+separate from the installed ordinary entry check: after reloading only its QA tab,
+the ordinary source identity, retained two cuts, original-first checkbox and Studio
+choice were confirmed. These new controller cases do not establish a new normal
+Studio upload. Time-based splitting is covered; forcing quota exhaustion or a
+256GB output is not. Released test resources report no active inputs, outputs,
+iterators, samples or retained files.
+
+AAC is regenerated, with no compressed-audio or PCM byte-identity acceptance.
+The whole and joined outputs decode to103424 and206848 frames respectively, equal
+to their requested counts. The6fps part files decode to49152/48128 frames versus
+49024/48000 requested:128 extra decoded samples per part,256 total. The first sample
+above the fixed1e-5 amplitude threshold is at frame448 in both parts. This observation
+is not a measured universal audio delay or a correction. Independently decoded
+source audio lacks the final768 reference frames of the second part's requested
+window; its container end does not prove original PCM coverage there. The almost
+silent whole/join inputs and periodic6fps test tone do not establish perceptual
+audio fidelity or lip sync. No matching old-renderer audio control was supplied for
+these exact selections.
+
+No actual17-hour processing, new Studio upload, Whale-runtime or live-publication
+verification is established. The earlier bounded installed1080p60 file, controller
+counts and private YouTube video's1080p60/720p60 menu observations above retain their
+original revision and input scope; they are not repeated or broadened here.
+
+This four-file draft has separate text/render/link validation. Those checks do not
+run the product, broaden the actual controller/file results or publish a guide revision.
+Stable 0.3.39, the already published 1.0.0 preview, every preserved history, image and
+public route remain unchanged.
+
+Root product review accepted these four editable paths after the bounded actual
+results above. Post-integration source `faa838f46467c2c88135b722954324d6b12b629e`
+passes all 12 project QA steps and 1779 extension cases with no skips, including
+Chrome/Whale package audits. This is automated integration evidence, separate from
+the actual Main Chrome controller, installed UI and file observations. Merging
+this editable draft preserves the existing published site and every immutable
+version; it does not select a new stable version or recapture published 1.0.0.
