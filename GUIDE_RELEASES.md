@@ -116,8 +116,10 @@ to original video where supported; changing compression quality disables that
 preference, while saved output settings retain their prior intent. The draft
 also separates Studio receiver binding, delivery-time empty-input checks and
 same-channel connection recovery from upload completion and retry safety.
-The local-file and partial CHZZK copy scope is still being validated. This is an
-unshipped text draft, not a
+The partial CHZZK candidate has passed a bounded installed 1080p60 file inspection
+for video content, timing and regenerated audio structure. Broader input coverage
+and copied-output Studio upload remain unverified. This is an unshipped text draft,
+not a
 new capture or a change to the published1.0.0 preview. Stable/authoring stay0.3.39;
 every frozen history, public route and image stays unchanged.
 

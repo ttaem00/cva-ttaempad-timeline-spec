@@ -213,12 +213,26 @@ the cuts and does not silently retry through rendering. After reloading only the
 ordinary extension in main Chrome, one normal MP4-save action on this reading-path
 revision produced a two-second 1920x1080/60 file of 466973 bytes. All 120 source/output
 VCL NAL sequences, decoded YUV frame hashes and rebased PTS/duration mappings match;
-regenerated AAC passes structural checks. This bounded installed-file result does not
-verify the subsequent AAC presentation-end optimization candidate, whose installed
-output remains pending. The private Studio upload previously verified used render
+regenerated AAC passes structural checks. This bounded installed-file result applies
+to that reading-path revision. The private Studio upload previously verified used render
 fallback; copied-video Studio upload remains unverified. Broader output quality,
 whole-VOD/end-of-source and long processing remain unverified. The same local
 documentation checks pass.
+
+The AAC presentation-end follow-up is grounded in product source
+`4b1581c9ad5157fc7807986fb1a45efc2e64becc`, with 1614 project QA cases passing.
+After reloading only the ordinary extension in main Chrome, one normal MP4-save
+action produced a two-second 1920x1080/60 file of 466973 bytes, SHA-256
+`766567cb4999a40c780c5a7d3c64b6263b72b233e73050db0104fa9e7aa60c88`.
+All 120 VCL NAL sequences, independently decoded YUV frame hashes and rebased
+PTS/duration mappings match; regenerated AAC passes structural checks. The first-mux
+presentation cap and conditional omission of a second remux are supported by source
+and synthetic consumer checks. This installed run did not count remux calls or
+measure phase-specific timing, so it adds no direct remux-count or performance claim.
+Copied-video Studio upload has not been verified; the prior private upload used
+render fallback. Other input quality, general cut boundaries, whole-VOD/end-of-source
+and actual 17-hour processing remain unverified. This observation adds no support
+for the separate temporary whole-source/EOF candidates.
 
 Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
 of this draft. Browser navigation, installed product behavior and deployment are
