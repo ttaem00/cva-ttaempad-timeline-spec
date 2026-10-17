@@ -110,9 +110,14 @@ is documentation, not a Store/product release or a claim of full1.0 readiness.
 
 ## Ordinary copy-option text draft / 2026-10-17
 
-Issue58 prepares the ordinary development candidate's explicit, default-off
-original-video-copy option in `guide-drafts/1.0.0/source/cuts.md` and `limits.md`.
-The feature is still being validated. This is an unshipped text draft, not a
+Issue58 prepares the ordinary development candidate's original-video preference
+in `guide-drafts/1.0.0/source/cuts.md` and `limits.md`. New ordinary work defaults
+to original video where supported; changing compression quality disables that
+preference, while saved output settings retain their prior intent. The draft
+also separates Studio receiver binding, delivery-time empty-input checks and
+same-channel connection recovery from upload completion and retry safety.
+The local-file and partial CHZZK copy scope is still being validated. This is an
+unshipped text draft, not a
 new capture or a change to the published1.0.0 preview. Stable/authoring stay0.3.39;
 every frozen history, public route and image stays unchanged.
 

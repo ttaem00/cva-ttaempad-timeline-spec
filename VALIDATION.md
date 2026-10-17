@@ -165,18 +165,60 @@ navigation readback are recorded independently before final completion.
 
 ## Issue58: ordinary original-video-copy option draft
 
-The editable1.0.0 cuts/limits draft describes the default-off ordinary control,
-supported local H.264 MP4 video, precise audio trimming/AAC generation, exact-cut
-fallback, additional inspection reads and the absence of a speed/file-size promise.
-The existing save/Studio instructions remain intact. No new image, product runtime
-code, internal benchmark result, private channel or local path is published.
+The editable1.0.0 cuts/limits draft describes the ordinary original-video
+preference for new work, explicit compression changes disabling that preference,
+preservation of saved output intent, supported local H.264 MP4 and partial CHZZK
+candidate ranges, precise audio trimming/AAC regeneration, exact-cut fallback and
+the absence of a speed/file-size promise. Studio guidance distinguishes receiver
+binding from empty-input checks at delivery and preserves existing tabs during
+same-channel connection recovery without uncertain automatic retransmission.
+No new image, product runtime code, internal benchmark result, private channel or
+local path is published.
+
+The ordinary HLS original-video candidate passed bounded real-file inspection
+through the installed ordinary build's normal MP4 save button. One two-second
+H.264 High 1920x1080/60 output contains 466973 bytes, SHA-256
+`c26163cdeb27e7b24b97c3f87fc4270f71f0705620fc06e926c970cba4eadd16`.
+All 120 source/output VCL NAL byte sequences and independently decoded YUV frame
+hashes match, as do every rebased video PTS/duration and the dimensions. The first
+video PTS is 0; output metadata records 60 fps and limited-range BT.709.
+Regenerated 48 kHz stereo AAC passes structural/decode checks, with 256 final decoded
+padding samples remaining beyond the selected two seconds. Original audio sample
+identity, perceptual A/V sync and source DTS identity are not established.
+Whole-VOD/end-of-source cuts, long processing and Studio upload of this copied
+output remain unverified. This evidence is not release readiness or publication.
 
 Validation on this draft: the existing build/link checks pass with15 stable pages
-and6 preserved versions; exact committed publication inventory passes428 assets;
+and6 preserved versions; prepared publication inventory passes428 assets;
 the version suite passes8 tests, publication regression passes4 tests, and static
 documentation validation passes15 synthetic cases. The existing guide renderer
 also renders all14 draft pages in an external local-only preview and validates
 their links/fragments, including the new cuts/limits links. Whitespace checks pass.
+
+The original-preference and Studio wording follow-up repeats these checks with
+unchanged validation scripts in an external local-only copy. All14 updated draft
+pages render with valid links and fragments. The bounded real-file result above
+is separate product evidence; these documentation checks do not broaden its scope.
+
+The Studio retention follow-up explains that an existing delivery record keeps
+its target and retry context across connection checks or changed output settings.
+Explicit output cleanup retains existing Studio files and starts any next delivery
+as a new transfer from the beginning. The same local documentation checks pass.
+
+The reading-path follow-up distinguishes possible prefix reads for local recordings
+from CHZZK manifest, initial video configuration and required-range reads. CHZZK
+preparation checks boundaries, then validates selected packets in one output pass.
+An incompatibility discovered during copying cancels unfinished generation, preserves
+the cuts and does not silently retry through rendering. After reloading only the
+ordinary extension in main Chrome, one normal MP4-save action on this reading-path
+revision produced a two-second 1920x1080/60 file of 466973 bytes. All 120 source/output
+VCL NAL sequences, decoded YUV frame hashes and rebased PTS/duration mappings match;
+regenerated AAC passes structural checks. This bounded installed-file result does not
+verify the subsequent AAC presentation-end optimization candidate, whose installed
+output remains pending. The private Studio upload previously verified used render
+fallback; copied-video Studio upload remains unverified. Broader output quality,
+whole-VOD/end-of-source and long processing remain unverified. The same local
+documentation checks pass.
 
 Stable/authoring remain0.3.39. No `docs/` or `guide-history/` file changes are part
 of this draft. Browser navigation, installed product behavior and deployment are
