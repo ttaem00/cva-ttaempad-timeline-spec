@@ -161,9 +161,13 @@ inspection passes its 1080p60 structure and full video decode. A fresh reordered
 normal-button output is also retained physically. Both cut orders match all7506
 source video access units, presentation times and decoded YUV frames. A continuous
 AAC decoder repair reduces repeated one-second audio-boundary damage in a newer
-retained reordered output; its video remains source-identical. The first448 audio
-frames are still zero despite active source audio, and decoded AAC tail padding
-remains. These are unresolved audio limits, not complete audiovisual acceptance.
+retained reordered output; its video remains source-identical. That earlier file
+still has448 zero startup frames despite active source audio and decoded AAC tail
+padding. Its failure record is preserved. A later development-installation file
+has source-correlated startup and join samples; the same Main Chrome WebAudio
+decoder returns exactly its requested audio length. The separate decoder's tail
+padding observation is retained. Neither numeric result establishes full audible
+playback, perceptual sync or complete audiovisual acceptance.
 The rendered baseline stopped at the actual memory cap, so no completed speed
 comparison is established. Native endpoint cuts also expose an unresolved preview
 clock/duration difference after final-fragment/EOS observation; stored cuts and
@@ -183,3 +187,27 @@ audio byte-identity or perceptual-sync acceptance. Earlier bounded file and priv
 YouTube quality-menu observations retain their original scope. No actual 17-hour,
 quota-exhaustion, Whale-runtime, publication, capture, stable-promotion, route or
 preserved-history result is added.
+
+## Ordinary development control guidance / 2026-10-18
+
+The editable cuts and limits draft names the shorter **선택 장면으로** control,
+explains **영상 생성 준비 중** before a part has progress values, and describes
+returning to TTaempad to explicitly check a Studio tab opened later. Listing or
+binding a receiver is kept separate from file generation, delivery and upload.
+Preparation, cancellation and failure guidance continues to preserve existing
+drafts and cuts. This text update adds no professional-editor behavior or new
+Studio upload success claim.
+
+The size notice now distinguishes estimated bytes from completed bytes and says
+when the existing continue-download choice becomes available. Its actual 128 MiB
+cap, incomplete-output handling and direct-save alternative remain unchanged.
+The audio-limit text also separates the preserved earlier startup failure from
+the later same-file startup/join and Chrome audio-decode observations. Full
+audible playback and perceptual sync remain unverified.
+These instructions describe an ordinary development installation; they do not
+announce a new Store version or a full 1.0 release.
+
+Only this editable text and maintenance record change. Stable/authoring remain
+0.3.39; the published 1.0.0 preview, frozen histories, generated pages, images and
+version pointers are preserved. The existing no-recapture publication boundary
+still applies; no capture, publication or professional guide is added.
