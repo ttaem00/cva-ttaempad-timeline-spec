@@ -351,3 +351,54 @@ Chrome/Whale package audits. This is automated integration evidence, separate fr
 the actual Main Chrome controller, installed UI and file observations. Merging
 this editable draft preserves the existing published site and every immutable
 version; it does not select a new stable version or recapture published 1.0.0.
+
+### Professional full-track AAC source candidate / 2026-10-19
+
+This draft review covers the professional source candidate separately from
+ordinary whole-HLS AAC. Admission requires a regular finite clear MP4 AAC-LC
+stereo track, the full presented audio range, supported source-declared exact
+clocks/edit and the complete known original sgpd/sbgp roll pair. Missing or
+unsupported evidence does not authorize compressed-audio reuse.
+
+The processed-video integration must prove actual written packet timing and
+presentation coverage, an exact native video edit, original AAC End/count/coded
+duration, the same source binding and the physical output Close acknowledgement.
+Only that completed native result may retain the same File through Studio
+finalization. A rendered-frame count alone is insufficient. An off-grid start
+that cannot preserve the exact presentation remains on the existing native AAC
+path before output claim; no timestamp rounding or post-claim encode fallback
+is authorized.
+
+For a source-aac claim, missing or mismatched completion evidence must stop
+delivery and preserve existing edits. A sanitized proof does not authorize the
+legacy remux if File ownership, revision, duration or exact tick checks fail.
+Those failures must be terminal for source-aac; the existing non-source-aac
+finalization behavior is retained. This is an accepted consumer-boundary repair
+requirement, not a claim that the successor source or actual Studio flow passed.
+
+The preceding frozen full-track source unit reports 120 selected native tests
+passing with zero ignored cases. The root matching build reproduces its frozen
+source tree f1871873624f8549cd26b9572bad75e03138797fa590da189c045a8eaff95fe6
+and completed in 167.843 seconds. The separately prepared root JavaScript seam
+suite reports 158 passing tests. These are separate source, build and JavaScript
+evidence scopes; they do not establish canonical source adoption, installation,
+an actual output file or processed-video Studio acceptance. The processed-video
+integration requirement above remains pending verification.
+
+Source and automated checks are separate from independent AAC decoding,
+listening, audiovisual sync and actual Studio delivery. No new actual-file or
+Studio acceptance is added by this documentation note. Prior failures and
+existing bounded observations retain their original input and revision scope.
+
+The FFmpeg edit-list implementation and its duration correction are relevant
+design references, not acceptance evidence for this product:
+[FFmpeg n8.0 movenc edit handling](https://github.com/FFmpeg/FFmpeg/blob/n8.0/libavformat/movenc.c#L3739-L3835)
+and [the post-edit duration correction](https://ffmpeg.org/pipermail/ffmpeg-cvslog/2021-January/125662.html).
+
+Issue58 remains open. Its earlier PR59 was merged at
+b39d266571b5f1bd27cba6454e2522a722cccf9b; the current branch
+codex/issue-58-normal-native-end-preview is tracked by open draft PR60. The
+current draft does not reopen or rewrite that historical merge.
+
+Stable/authoring 0.3.39, the published 1.0.0 preview, all frozen histories,
+generated pages, version pointers and images remain unchanged.

@@ -211,3 +211,26 @@ Only this editable text and maintenance record change. Stable/authoring remain
 0.3.39; the published 1.0.0 preview, frozen histories, generated pages, images and
 version pointers are preserved. The existing no-recapture publication boundary
 still applies; no capture, publication or professional guide is added.
+
+## Professional original-audio source candidate / 2026-10-19
+
+The editable 1.0.0 cuts and limits draft distinguishes the next professional
+source candidate from the current development installation and the ordinary
+whole-HLS AAC candidate. Its first audio-copy cohort is a regular finite clear
+MP4 AAC-LC stereo track used over its complete presented range, with a supported
+original edit and complete known original roll context. Unsupported inputs keep
+the existing native AAC processing path.
+
+Processed-video Studio delivery must preserve the same completed native File
+only after exact packet coverage, the selected presentation edit, complete AAC
+termination and physical output close are proved together. This is an integration
+requirement, not an actual-file or Studio acceptance claim. Real decoding,
+listening, audiovisual sync and Studio delivery remain unverified for this source
+candidate. A source-aac completion claim with missing or mismatched proof must
+stop delivery and preserve existing edits instead of using an additional remux.
+The existing non-source-aac finalization behavior is retained.
+
+Only editable draft text and its maintenance/validation records are affected.
+Stable/authoring remain 0.3.39. The published 1.0.0 preview, preserved history,
+generated pages, version pointers, images and deployment remain unchanged.
+No capture or publication route is selected.
