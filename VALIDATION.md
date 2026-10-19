@@ -459,3 +459,10 @@ and this path's Studio delivery remain UNVERIFIED. Original product movies
 NO_SHIP are unchanged. This text update adds no media, capture, publication or
 stable promotion; stable/authoring 0.3.39, the published 1.0.0 preview and all
 protected histories, generated output, pointers and assets remain byte-exact.
+
+
+### 2026-10-19 unpublished draft — actual original AAC and remaining inspection/finalizer boundaries
+
+Only the existing four Issue58/PR60 maintenance paths changed. Pro captured processed-video/source-AAC output62687B preserved94 AU/config/edit/roll and exact1.98s movie declarations. Native Close proof and real same-File consumer/capture/disposal passed with one producer and zero second remux; the destination was simulated, Studio0. Default FFmpeg source/output PCM-s32 hashes matched93rows/95232samples, including192 samples beyond the95040-sample presentation declaration. These observations are scoped and do not establish audible trim/sync or general device support.
+
+The generic production inspector's2vs1.98 duration mismatch is reproduced and matches the upstream1.61.0 [edit-end case447](https://github.com/Vanilagy/mediabunny/issues/447). New source queries/inspector tests and final source adoption are separate ongoing evidence. A captured111125B59-frame re-encoded control uses the expected existing native-processing route; its direct native intermediate is not the final Studio remuxed file and fails exact selected presentation. That failure remains recorded. No broad acceptance, public publication, stable promotion or actual Studio claim follows from these checks. All protected stable/history/generated assets remain exact.

@@ -261,3 +261,10 @@ Only these four editable draft/maintenance paths change. Stable/authoring stay
 0.3.39; the published 1.0.0 preview, histories, generated pages, version pointers,
 assets, images and deployment remain unchanged. Overall acceptance is NOT_DONE
 and NO_SHIP; no new product output or Studio submission is added.
+
+
+### 2026-10-19 — unpublished AAC actual-file checkpoint
+
+The existing Issue58/PR60 draft remains unpublished. A wholly synthetic Pro native output preserved94 original AAC packets, complete original configuration/edit/roll metadata and1.98s movie presentation; the captured same File passed independent packet binding and same-decoder source comparison. This does not establish hearing/sync, other platforms, Studio or whole release acceptance. Production generic inspection still reports2s: the same1.61.0 edit-end omission is reported in [Mediabunny447](https://github.com/Vanilagy/mediabunny/issues/447). The source repair is under verification; no adoption/reload claim is made here.
+
+A59-frame partial-audio control was actually re-encoded and captured after a QA route-label repair. Its native intermediate has padded AAC/1000Hz header rounding before the existing final remux, so exact final timing remains unverified. The incorrect QA assertion, initial discarded output, subsequent actual output and current finalizer gap are preserved separately. Stable/default0.3.39, published1.0 preview/history/version pointers/generated images/deployment are unchanged.
