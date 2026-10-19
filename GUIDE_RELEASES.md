@@ -214,9 +214,10 @@ still applies; no capture, publication or professional guide is added.
 
 ## Professional original-audio source candidate / 2026-10-19
 
-The editable 1.0.0 cuts and limits draft distinguishes the next professional
-source candidate from the current development installation and the ordinary
-whole-HLS AAC candidate. Its first audio-copy cohort is a regular finite clear
+At the initial source-only review, the editable 1.0.0 cuts and limits draft
+distinguished the professional source candidate from the then-current
+development installation and the ordinary whole-HLS AAC candidate. Its first
+audio-copy cohort is a regular finite clear
 MP4 AAC-LC stereo track used over its complete presented range, with a supported
 original edit and complete known original roll context. Unsupported inputs keep
 the existing native AAC processing path.
@@ -234,3 +235,29 @@ Only editable draft text and its maintenance/validation records are affected.
 Stable/authoring remain 0.3.39. The published 1.0.0 preview, preserved history,
 generated pages, version pointers, images and deployment remain unchanged.
 No capture or publication route is selected.
+
+## Professional full-track AAC development installation / 2026-10-19
+
+The later professional source f361196906deb830548debbacee5824e21cde9ef is
+installed and reloaded in the owned Main Chrome session. The editable cuts and
+limits draft now describes this installed path rather than a source-only future
+candidate. Its finite clear full-track AAC-LC stereo restrictions and existing
+native AAC behavior for unsupported input remain unchanged. Missing or
+mismatched source-audio completion proof stops delivery and preserves edits.
+
+The bounded evidence covers 129 selected native tests, 167 JavaScript tests,
+all 12 project QA steps, matching installed asset hashes, the actual installed
+JavaScript rejection guard and saved-project preservation with eight original
+attachments. These results do not establish a positive AAC output, independent
+AAC decoding, listening, audiovisual sync or Studio delivery.
+
+A separate reviewed ASC source correction passes 10 selected native tests and
+retains the complete original configuration bytes. Its matching build,
+installation and actual consumer evidence remain separate; this record does
+not claim that the additional configuration support is installed. Earlier
+source-only review results and failures retain their original scope.
+
+Only these four editable draft/maintenance paths change. Stable/authoring stay
+0.3.39; the published 1.0.0 preview, histories, generated pages, version pointers,
+assets, images and deployment remain unchanged. Overall acceptance is NOT_DONE
+and NO_SHIP; no new product output or Studio submission is added.

@@ -354,7 +354,7 @@ version; it does not select a new stable version or recapture published 1.0.0.
 
 ### Professional full-track AAC source candidate / 2026-10-19
 
-This draft review covers the professional source candidate separately from
+The initial source-only draft review covered the professional candidate separately from
 ordinary whole-HLS AAC. Admission requires a regular finite clear MP4 AAC-LC
 stereo track, the full presented audio range, supported source-declared exact
 clocks/edit and the complete known original sgpd/sbgp roll pair. Missing or
@@ -374,16 +374,17 @@ delivery and preserve existing edits. A sanitized proof does not authorize the
 legacy remux if File ownership, revision, duration or exact tick checks fail.
 Those failures must be terminal for source-aac; the existing non-source-aac
 finalization behavior is retained. This is an accepted consumer-boundary repair
-requirement, not a claim that the successor source or actual Studio flow passed.
+requirement at that review, not a claim that the successor source or actual
+Studio flow had passed. Subsequent integration evidence is recorded below.
 
 The preceding frozen full-track source unit reports 120 selected native tests
 passing with zero ignored cases. The root matching build reproduces its frozen
 source tree f1871873624f8549cd26b9572bad75e03138797fa590da189c045a8eaff95fe6
 and completed in 167.843 seconds. The separately prepared root JavaScript seam
 suite reports 158 passing tests. These are separate source, build and JavaScript
-evidence scopes; they do not establish canonical source adoption, installation,
-an actual output file or processed-video Studio acceptance. The processed-video
-integration requirement above remains pending verification.
+evidence scopes; at that point they did not establish canonical source adoption,
+installation, an actual output file or processed-video Studio acceptance. The
+processed-video integration requirement remained pending at that review.
 
 Source and automated checks are separate from independent AAC decoding,
 listening, audiovisual sync and actual Studio delivery. No new actual-file or
@@ -402,3 +403,59 @@ current draft does not reopen or rewrite that historical merge.
 
 Stable/authoring 0.3.39, the published 1.0.0 preview, all frozen histories,
 generated pages, version pointers and images remain unchanged.
+
+### Professional AAC installed boundary and ASC source successor / 2026-10-19
+
+The subsequent professional checkpoint f361196906deb830548debbacee5824e21cde9ef
+adopts the processed-video exact-edit/packet/Close integration and terminal
+source-aac proof failures, including a completion-owner mismatch before the
+source claim could be lost. The existing non-source-aac finalization behavior
+is retained. The root adjudication records 129 selected native tests, 167
+JavaScript tests and eight build-boundary tests passing with zero ignored or
+skipped cases. All 12 integrated project QA steps pass; their real-use status
+remains UNVERIFIED and release status remains NOT_READY.
+
+The matching development package was installed with an exact 135-file audit
+and a five-file delta, then the extension and only the owned QA page were
+reloaded. Served JavaScript, glue and WASM hashes match the installed candidate.
+The actual installed JavaScript guard rejected a missing source-aac completion
+proof, disposed/cancelled that owned test output and retained no part. It invoked
+no actual native export and created no media file. This is an installed negative
+boundary observation, not a positive native AAC consumer result or independently
+observed WASM resource-use proof.
+
+The original project was checked before, after and after normal save/re-entry:
+eight attachments, durable saved bytes, snapshot/history/jobs and UI state were
+preserved, with only the explicitly excluded runtime FPS changing. The saved
+14,232-byte document SHA-256 is
+cf3d3460c024d08349bfab563a1d5b391214d2a6cc60e9932166809a4fc88579.
+The earlier wrong-canvas setup stop, first re-entry path mismatch and immediate
+close observer are preserved in the raw records; their corrected checks do not
+erase those failures or relax the original comparison.
+
+A separate one-file ASC source successor has a reproduced actual-parsed
+five-byte RED followed by 10 selected native tests passing, including raw
+malformed/extension/configuration rejection before packet reads. Independent
+review confirms that the prior 24 test bodies and unrelated source bytes remain
+unchanged. Compact two-byte configuration leaves SBR unspecified; the admitted
+five-byte form explicitly declares it absent. Both retain every original byte;
+no truncation, normalization or roll manufacture is introduced. Its matching
+build and installation are separate pending evidence at this documentation
+checkpoint. This source result does not demonstrate real AAC payload decoding.
+
+The local final adjudication receipt SHA-256 is
+42ff92fa25c58743c9a49ca8e22b66be7f8795272eab2886b4a289e64c8f7daa;
+the integrated QA report is
+ec23fa00096577ab6cc8ae229b3638c2d3e6a93c6cbf8717958eea5a02d0cb31;
+the installed-module observation is
+5d1d2d02167972ce0117eb18f228c92477bb75754f56c8a11baa6a31f39d2852.
+The ASC review uses mp4.rs SHA-256
+b0177ecd5a24f823e3d3f81e0fd9dc2d713253d63bdc5364004d4229bc91d72d.
+These receipts retain the exact source/build/install and raw evidence links.
+
+Actual positive AAC output, independent decoding, listening, audiovisual sync
+and this path's Studio delivery remain UNVERIFIED. Original product movies
+2/2 remain CLOSED and extra Studio submissions remain 0. Overall NOT_DONE and
+NO_SHIP are unchanged. This text update adds no media, capture, publication or
+stable promotion; stable/authoring 0.3.39, the published 1.0.0 preview and all
+protected histories, generated output, pointers and assets remain byte-exact.
