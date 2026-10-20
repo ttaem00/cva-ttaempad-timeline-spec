@@ -351,3 +351,176 @@ Chrome/Whale package audits. This is automated integration evidence, separate fr
 the actual Main Chrome controller, installed UI and file observations. Merging
 this editable draft preserves the existing published site and every immutable
 version; it does not select a new stable version or recapture published 1.0.0.
+
+### Professional full-track AAC source candidate / 2026-10-19
+
+The initial source-only draft review covered the professional candidate separately from
+ordinary whole-HLS AAC. Admission requires a regular finite clear MP4 AAC-LC
+stereo track, the full presented audio range, supported source-declared exact
+clocks/edit and the complete known original sgpd/sbgp roll pair. Missing or
+unsupported evidence does not authorize compressed-audio reuse.
+
+The processed-video integration must prove actual written packet timing and
+presentation coverage, an exact native video edit, original AAC End/count/coded
+duration, the same source binding and the physical output Close acknowledgement.
+Only that completed native result may retain the same File through Studio
+finalization. A rendered-frame count alone is insufficient. An off-grid start
+that cannot preserve the exact presentation remains on the existing native AAC
+path before output claim; no timestamp rounding or post-claim encode fallback
+is authorized.
+
+For a source-aac claim, missing or mismatched completion evidence must stop
+delivery and preserve existing edits. A sanitized proof does not authorize the
+legacy remux if File ownership, revision, duration or exact tick checks fail.
+Those failures must be terminal for source-aac; the existing non-source-aac
+finalization behavior is retained. This is an accepted consumer-boundary repair
+requirement at that review, not a claim that the successor source or actual
+Studio flow had passed. Subsequent integration evidence is recorded below.
+
+The preceding frozen full-track source unit reports 120 selected native tests
+passing with zero ignored cases. The root matching build reproduces its frozen
+source tree f1871873624f8549cd26b9572bad75e03138797fa590da189c045a8eaff95fe6
+and completed in 167.843 seconds. The separately prepared root JavaScript seam
+suite reports 158 passing tests. These are separate source, build and JavaScript
+evidence scopes; at that point they did not establish canonical source adoption,
+installation, an actual output file or processed-video Studio acceptance. The
+processed-video integration requirement remained pending at that review.
+
+Source and automated checks are separate from independent AAC decoding,
+listening, audiovisual sync and actual Studio delivery. No new actual-file or
+Studio acceptance is added by this documentation note. Prior failures and
+existing bounded observations retain their original input and revision scope.
+
+The FFmpeg edit-list implementation and its duration correction are relevant
+design references, not acceptance evidence for this product:
+[FFmpeg n8.0 movenc edit handling](https://github.com/FFmpeg/FFmpeg/blob/n8.0/libavformat/movenc.c#L3739-L3835)
+and [the post-edit duration correction](https://ffmpeg.org/pipermail/ffmpeg-cvslog/2021-January/125662.html).
+
+Issue58 remains open. Its earlier PR59 was merged at
+b39d266571b5f1bd27cba6454e2522a722cccf9b; the current branch
+codex/issue-58-normal-native-end-preview is tracked by open draft PR60. The
+current draft does not reopen or rewrite that historical merge.
+
+Stable/authoring 0.3.39, the published 1.0.0 preview, all frozen histories,
+generated pages, version pointers and images remain unchanged.
+
+### Professional AAC installed boundary and ASC source successor / 2026-10-19
+
+The subsequent professional checkpoint f361196906deb830548debbacee5824e21cde9ef
+adopts the processed-video exact-edit/packet/Close integration and terminal
+source-aac proof failures, including a completion-owner mismatch before the
+source claim could be lost. The existing non-source-aac finalization behavior
+is retained. The root adjudication records 129 selected native tests, 167
+JavaScript tests and eight build-boundary tests passing with zero ignored or
+skipped cases. All 12 integrated project QA steps pass; their real-use status
+remains UNVERIFIED and release status remains NOT_READY.
+
+The matching development package was installed with an exact 135-file audit
+and a five-file delta, then the extension and only the owned QA page were
+reloaded. Served JavaScript, glue and WASM hashes match the installed candidate.
+The actual installed JavaScript guard rejected a missing source-aac completion
+proof, disposed/cancelled that owned test output and retained no part. It invoked
+no actual native export and created no media file. This is an installed negative
+boundary observation, not a positive native AAC consumer result or independently
+observed WASM resource-use proof.
+
+The original project was checked before, after and after normal save/re-entry:
+eight attachments, durable saved bytes, snapshot/history/jobs and UI state were
+preserved, with only the explicitly excluded runtime FPS changing. The saved
+14,232-byte document SHA-256 is
+cf3d3460c024d08349bfab563a1d5b391214d2a6cc60e9932166809a4fc88579.
+The earlier wrong-canvas setup stop, first re-entry path mismatch and immediate
+close observer are preserved in the raw records; their corrected checks do not
+erase those failures or relax the original comparison.
+
+A separate one-file ASC source successor has a reproduced actual-parsed
+five-byte RED followed by 10 selected native tests passing, including raw
+malformed/extension/configuration rejection before packet reads. Independent
+review confirms that the prior 24 test bodies and unrelated source bytes remain
+unchanged. Compact two-byte configuration leaves SBR unspecified; the admitted
+five-byte form explicitly declares it absent. Both retain every original byte;
+no truncation, normalization or roll manufacture is introduced. Its matching
+build and installation are separate pending evidence at this documentation
+checkpoint. This source result does not demonstrate real AAC payload decoding.
+
+The local final adjudication receipt SHA-256 is
+42ff92fa25c58743c9a49ca8e22b66be7f8795272eab2886b4a289e64c8f7daa;
+the integrated QA report is
+ec23fa00096577ab6cc8ae229b3638c2d3e6a93c6cbf8717958eea5a02d0cb31;
+the installed-module observation is
+5d1d2d02167972ce0117eb18f228c92477bb75754f56c8a11baa6a31f39d2852.
+The ASC review uses mp4.rs SHA-256
+b0177ecd5a24f823e3d3f81e0fd9dc2d713253d63bdc5364004d4229bc91d72d.
+These receipts retain the exact source/build/install and raw evidence links.
+
+Actual positive AAC output, independent decoding, listening, audiovisual sync
+and this path's Studio delivery remain UNVERIFIED. Original product movies
+2/2 remain CLOSED and extra Studio submissions remain 0. Overall NOT_DONE and
+NO_SHIP are unchanged. This text update adds no media, capture, publication or
+stable promotion; stable/authoring 0.3.39, the published 1.0.0 preview and all
+protected histories, generated output, pointers and assets remain byte-exact.
+
+
+### 2026-10-19 unpublished draft — actual original AAC and remaining inspection/finalizer boundaries
+
+Only the existing four Issue58/PR60 maintenance paths changed. Pro captured processed-video/source-AAC output62687B preserved94 AU/config/edit/roll and exact1.98s movie declarations. Native Close proof and real same-File consumer/capture/disposal passed with one producer and zero second remux; the destination was simulated, Studio0. Default FFmpeg source/output PCM-s32 hashes matched93rows/95232samples, including192 samples beyond the95040-sample presentation declaration. These observations are scoped and do not establish audible trim/sync or general device support.
+
+The generic production inspector's2vs1.98 duration mismatch is reproduced and matches the upstream1.61.0 [edit-end case447](https://github.com/Vanilagy/mediabunny/issues/447). New source queries/inspector tests and final source adoption are separate ongoing evidence. A captured111125B59-frame re-encoded control uses the expected existing native-processing route; its direct native intermediate is not the final Studio remuxed file and fails exact selected presentation. That failure remains recorded. No broad acceptance, public publication, stable promotion or actual Studio claim follows from these checks. All protected stable/history/generated assets remain exact.
+
+
+### 2026-10-19 — current unpublished native presentation boundary
+
+The shared inspector source repair now passes paired project QA and reproducible SDK/source-offer builds. Retained physical-file public metadata queries read the1.98s declaration; legacy packet duration APIs are unchanged. The exact3-file runtime delta is installed in both fixed product folders with backups and full135/104 package equality. Same-Chrome reload was NOT_ATTEMPTED: an instrumented supported tool reconnect reached Chrome attach and timed out. Byte installation, reload request and actual behavior remain distinct.
+
+Independent observation of the actual111349B ordinary finalized control preserved all59 AVC/94 AAC payloads/config, but default FFprobe reads every video timestamp+1/30 and end2s instead of59/30. FFmpeg decodes95232frames as in the raw native control,832 beyond selected94400; audible or browser playback is unverified. The raw native-processing file is also the direct Export/Quick local-save artifact, so its1000Hz edit rounding/AAC padding declaration is a separate user-visible gap, not solely an intermediate test seam. Native exact-close and distinct same-File completion proof source repair is ACTIVE; no new native output acceptance is claimed. Earlier successful source-AAC1.98 proof stays scoped and unchanged. Studio0, old failures and historical budgets preserved. Only the same four draft/maintenance paths change; protected stable/default0.3.39, published preview/history/generated/pointers/assets/deployment remain unchanged. Whole NOT_DONE/NO_SHIP.
+
+
+### 2026-10-19 — source-native exact-end and same-file decoder comparison
+
+The existing Pro source now carries the matching native exact-presentation patch and distinct post-Close same-File proof;129 preceding sourceAAC scope remains historical. Current selected native25/JS203/build-boundary8 and full project QA12steps (2491PASS/4skip) pass. A source-bound real software H264/AAC CPU synthetic output has59frames/end59/30 and explicit94400-sample audio presentation; actual positioned writes sync/close before completion. This is a CPU component, not installed Chrome or the original imported MP4. Native new assets are not installed or reloaded at this checkpoint.
+
+The unchanged physical CPU file was observed by default FFmpeg8.1.1 and a checksum-pinned portable9.0.2 QA oracle. The old consumer emits832 extra AAC padding samples; the new consumer emits exactly94400/final192 and59video frames/end59/30. Official FFmpeg [8.1.1 FATE](https://github.com/FFmpeg/FFmpeg/blob/n8.1.1/tests/ref/fate/gaplessenc-pcm-to-mov-aac) versus [9.0 FATE](https://github.com/FFmpeg/FFmpeg/blob/n9.0/tests/ref/fate/gaplessenc-pcm-to-mov-aac) independently reproduces this partial-tail demux/decoder change. Old failure logs remain; no file trim/re-encode/remux or requested-duration override was used. Native generated AAC roll metadata completeness is a separate source compatibility check under Apple's explicit-delay guidance. Same-Chrome reload/private same-File finalizer, actual local picker, hearing/sync/other players/whole output and Studio remain UNVERIFIED. Whole NOT_DONE/NO_SHIP; no stable/default0.3.39, published preview/history/generated/version pointers/assets/deployment changes.
+
+
+### 2026-10-19 — generated AAC roll, physical pair and installed bytes
+
+The existing writer now maps the concrete builtin AAC decoder's one-access-unit dependency over the actual final AAC sample count, independently of encoder priming. Original source-AAC metadata stays preserved and custom/unknown encoders stay unspecified. Preferred fef4d5e1 source /11131fa5 patch has60 selected source tests PASS; matching pinned WASM build, physical CPU output and independent source review pass. The new84252B synthetic file9095e6db contains actual94 AAC roll(-1),59video/94400logical presentation. Physical sync/handle-drop precedes three held Pending polls with no proof until Close ACK, then public Done.
+
+Independent new-file default9.0.2 observation ran three commands once, all exit0/empty stderr. Removing only the54 generated roll bytes and correcting their five enclosing lengths in memory reconstructs the entire preceding d7163247 file. All153 physical AV payload/config/timing/flags/side-data rows and decoded row hashes are identical. Default PCM94400/final frame192 and video59 both end59/30. Old8.1.1 tail832 remains preserved; final frame192 is not an extra tail. Separately, the original1.98s source-AAC file and copied counterpart both decode95040 under9.0.2 with identical rows; their old8.1.1 extra192 observation remains historical. [Official8.1.1 FATE](https://github.com/FFmpeg/FFmpeg/blob/n8.1.1/tests/ref/fate/gaplessenc-pcm-to-mov-aac) and [9.0 FATE](https://github.com/FFmpeg/FFmpeg/blob/n9.0/tests/ref/fate/gaplessenc-pcm-to-mov-aac) provide the version-specific partial-tail precedent, not a browser guarantee.
+
+Current Pro full project QA12steps PASS/2491extension PASS4skip, build-boundary8PASS and editor135-file audit pass. The existing installer backed up the prior135 files, applied exactly five native runtime files and verified all135 incoming hashes. Reload was NOT_ATTEMPTED because the existing MainChrome initial attach remains quarantined; installed bytes and actual runtime are distinct. Normal's added U0 in-memory regressions pass fullQA2231/5skip and retain the actual regular-MP4 late header rewrite negative; no new upload/server ACK follows. Actual Chrome/private same-File consumer/local picker/Apple/hearing/sync/wholeHLS/long resources/Studio remain unverified. Whole NOT_DONE/NO_SHIP, old failures/budgets/Studio0 preserved. These four existing draft/maintenance paths do not publish or promote stable0.3.39, published preview/history/generated/version pointers/assets.
+
+
+### 2026-10-19 — unpublished exact fractional-clock CPU pair
+
+The current source-AAC physical output63277B/SHA2561d2be0caa930d0b46bdaff388b6961e3c72ebb2fc9582ef7dc053b16ad65f8d7 and native-AAC output84289B/SHA25637e9dcc89096d7507b1be0e415d4b5d49caa8dd11bdcb5deba0006790be47204 each pass the independent default FFmpeg9 video60/PCM95040 observation at selected1.98s. SourceAAC keeps original94 AAC/config/roll and encoded AV payload/rational timing; the old final video discard flag1 becomes0. NativeAAC has its own exact post-Close proof and generated roll. Movie clocks90000/178200 and1000/1980 are exact equivalent selected ranges, not a forced common timescale. Video lastPTS59/30 and full60-frame grid extent2s are distinguished from presentation end1.98s. Positioned writes physically sync/close before held Pending polls and completion ACK. Earlier59-frame failure, two pre-Exporter serialization failures and old decoder-tail results remain preserved; no timing clamp, extra mux, new input or threshold correction is used in the observations.
+
+Current source bda850537c226d5650b26fe95912faa2c252cf3851fac80124537fe1b088e36a /patch766d6e9e5a77a8a7e93b133360f9e57b28f9c30dd7b1994a047fb6aef87e2dab has87 selected source PASS and12-step full project QA PASS. The current QA report SHA256 is e3484fe7cfa14b58bfe6203db18ffcf2477d3324799745c090830ca2ab15cc04; runtime fingerprint5c2346c1d18726cd53dba617984a1c5882c59c47cf643198e049b9be625dde86. The135-file editor package passes audit; the existing installer backs up135 files and changes only WASMd69b0f51a8a44f9474feb0e144d08ba27b6a6d171a608cb8f7929ad1fe4a5639/upstream, then verifies all135 hashes. Normal104 is unchanged. These source/build/package/installed-byte results do not establish runtime reload: the initial Main Chrome attach remains quarantined and reload is NOT_ATTEMPTED. Same Chrome output/HLS/local picker/Apple/hearing/sync/long resources/Studio and whole acceptance remain UNVERIFIED or NOT_DONE. No speed comparison or public publication claim is made. This four-path text follow-up preserves stable0.3.39, published preview/history/generated pages/version pointers/assets/deployment and Studio0.
+
+### 2026-10-20 - unpublished professional current-stage progress
+
+R31 keeps the existing connection and progress blocks above a shared equal-size local/YouTube action row in General and Quick Export. General queue append remains in a separate row and Quick Close stays outside body scrolling. The editable cuts draft describes this candidate placement. Native36 UI checks and the matching source build pass, including a stable top-aligned Quick Close after scrolling; installed-screen and actual running-output observations remain separate and pending. Whole NOT_DONE/NO_SHIP and additional agent Studio0 are unchanged. The guide change is unpublished text only; protected stable/default, published preview/history, generated pages, pointers, images and deployment remain unchanged.
+
+The existing editable1.0.0 cuts/limits draft describes professional Export and Quick Export preparation, render, finalization, transfer and private-confirmation stages. Percentages and bytes require current-stage observations; unknown progress remains indeterminate. Transfer100 and legacy handoff do not establish private completion. Failed/cancelled/uncertain states retain their last actual measurement. Source tests, matching builds and installed browser observations remain separate; current integration is under verification and whole NOT_DONE/NO_SHIP remains. No private channel, uploaded filename or video link is included. R30 extends this same draft to shared General/Quick start and destination/settings disabling, a distinct local generation/write gauge, unknown cumulative-byte totals, physical saved completion and popup-close versus output-cancel semantics. Completed-file upload candidates also require a currently available matching file; direct local and disposed temporary artifacts are excluded. New-run preparation replaces prior destination status. Output locks use actual export ownership, leaving unrelated analysis/proxy/preview work and safe queue draft management available. A stopped queue may accept frozen Ready work; a running queue cannot start new work behind another busy output. An already-open preset manager preserves browsing/closing while applying settings stays locked. Current source/native/build/install checks remain separate and actual R30 Chrome behavior is not yet verified. Only these four draft/maintenance paths change; stable/default0.3.39, published1.0.0 preview, histories, generated pages, pointers, images and deployment remain unchanged.
+
+### 2026-10-20 — unpublished R35 delivery choices and truthful connection stages
+
+Issue58/PR60 retains the existing four editable maintenance/draft paths. The Normal draft now describes destination first, the relevant file or YouTube method next, and one visible primary action. Existing file preference is preserved; initial YouTube and missing legacy method remain Studio. Pro General/Quick retain adjacent file/YouTube actions with one YouTube method selection. Studio-only tab tools, Google human account/channel consent, private defaults and adjacent information readable during output remain explicit. Both existing sequence-settings context entrances and effective export target/format are described as candidate behavior; installed current-screen acceptance is pending.
+
+Source connection events distinguish account authorization from channel checking without a fabricated percentage. A110-second authentication deadline and safe pre-begin noMedia errors explicitly state that generation and transmission have not started; later uncertain receipt and retained-file retry are separate. Normal518/520 failed before media and its initial auth subphase remains UNKNOWN. The new correction's installed runtime behavior is UNVERIFIED.
+
+The actual Pro60-second broadcast cohort has first Google ACK during generation, the same execution's Studio private record and independently decoded same-file1080p60/3600video/2880000stereo samples/exact60s. It was processed/native-aac in692.537s, not a source-copy or speed comparison. The Studio1:01 display difference, exact source-window correspondence, hearing/sync and long-work acceptance remain unverified. The original app uncertain observation is preserved and app-final-settlement correction remains unverified. Separate legacy Studio496/497 completed private upload. The privacy website's PR4934 is merged; this does not complete OAuth/user rollout or product acceptance. No private channel, filename, video link or authentication value is included here.
+
+This is unpublished text only. Stable/authoring0.3.39, the already published1.0.0 preview, frozen histories, generated pages, version pointers, image pixels and deployment remain unchanged. New actual UI screenshots and current installed output acceptance remain pending. Whole NOT_DONE/NO_SHIP remains.
+
+### 2026-10-20 — unpublished R36 installed export UX and full-file observation
+
+Current installed Normal evidence confirms the compact destination/method layout and information button beside the YouTube action. File methods distinguish a completed in-memory download, capped at128MiB and following browser download settings, from an actual OS location/name selection before generation and concurrent writes. YouTube methods distinguish Google transmission during generation from Studio handoff after file completion. Automatic same-channel Studio selection and explicit selection/binding are accepted only as connection behavior; these checks created no new upload. Pro General/Quick's basename entry, paired footer actions, relevant setting locks and stage gauges describe the current UI contract. Actual physical Close/private completion remains separate from generation or transfer100%.
+
+The actual Normal360-second file is22,202,994 bytes, produced in103.543s by video rendering and AAC regeneration after exact-video-end copy admission failed. Independent pinned default FFmpeg9.0.2/ffprobe observation completed whole-video framehash, whole-audio framehash and whole finite-PCM reads with exit0 and empty decoder-error logs. It finds H.264 High1920x1080/nominal60fps,21,598 video frames and48kHz stereo17,280,000 PCM frames. It does not substitute the nominal21,600 for the observed count. In180 fragments, video first PTS2458/57600s and last PTS20735578/57600s plus duration422/57600s end exactly at360s; audio packets and decoded PCM run0..360s. Initialization durations are0 with no edit list. ffprobe reports each stream duration360s but format duration360.042674s. Default video framehash rounds to1/60s, first PTS3 and last PTS21600, so its rounded extent is distinct from the file's57600Hz clock.
+
+Both decoded audio channels begin with1024 zero PCM frames and have finite signal through the final frame. AAC-LC metadata reports initial_padding0, with no skip/discard side data or edit list. These observations do not establish original priming compensation or A/V alignment. The initial reused short-canary parser's nonzero-origin failure is retained; its successful full-video decode was reused without another video decode, and the final observation reports the positive origin rather than manufacturing a0..360 grid PASS. Original source identity, source timestamps/PCM correspondence, hearing and lip sync remain UNVERIFIED. The canceled wrong-target output is separate failure context, not this completion or long-work proof. Decoder-lifetime follow-up has not yet established a performance gain.
+
+The existing Pro60-second processed/native-AAC case retains its same-file1080p60/3600video/2,880,000stereo samples/exact60s decode and private-server evidence. It remains a scoped case rather than an ordinary source-copy, all-input or speed claim. Website ownership and production homepage deployment8c5699ae/HTTP200 were observed, with the common privacy text preserved. Google app verification is incomplete and full OAuth verification submission is pending; a published homepage/policy and a private upload do not establish authorization for all users.
+
+Only the four existing dirty draft/maintenance Markdown files are updated, preserving their previous changes. Existing local Markdown/link checks and in-memory rendering are the document validation scope; no generated site, image, frozen history, version pointer, stable/default or published preview is changed. No new media, upload, product test or guide publication is performed. Whole NOT_DONE/NO_SHIP remains.
