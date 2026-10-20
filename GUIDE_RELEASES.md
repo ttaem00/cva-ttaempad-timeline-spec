@@ -4,7 +4,7 @@ The default site describes the explicitly selected stable app version, not the l
 
 ## Current authoring version correction / 2026-10-20
 
-Normal and **CVA-TTaempad pro** remain in **0.n development**, and both current package versions are **0.3.39**. The existing `guide-drafts/1.0.0/` path, goal filenames and preserved `1.0.0` preview labels are historical documentation identifiers, not a released product version. Product 1.0.0 release and whole-product acceptance remain **NOT_DONE**.
+Normal and **CVA-TTaempad pro** remain in **0.n development**, and both current development package versions are **0.4.0**. Development packages are installed; follow-up repairs and real-use acceptance remain in progress. The existing `guide-drafts/1.0.0/` path, goal filenames and preserved `1.0.0` preview labels are historical documentation identifiers, not a released product version. Product 1.0.0 release and whole-product acceptance remain **NOT_DONE**.
 
 Continue authoring in the existing unpublished draft paths. This text correction does not rename or recapture frozen snapshots, edit published/generated pages or assets, change version manifests or stable/authoring pointers, or authorize a separate current-development public route. The existing explicit, history-preserving publication boundary still applies. Historical records below keep their original labels and evidence scope; a published documentation preview is not a product 1.0.0 release.
 
