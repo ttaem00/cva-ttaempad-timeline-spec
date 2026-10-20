@@ -2,6 +2,12 @@
 
 The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.39 on 2026-10-10. Product source: 396429e484d41a0478488fd35238c3a187ed0e5b. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.32, 0.3.31 and 0.3.23 snapshots remain immutable.
 
+## Current authoring version correction / 2026-10-20
+
+Normal and **CVA-TTaempad pro** remain in **0.n development**, and both current package versions are **0.3.39**. The existing `guide-drafts/1.0.0/` path, goal filenames and preserved `1.0.0` preview labels are historical documentation identifiers, not a released product version. Product 1.0.0 release and whole-product acceptance remain **NOT_DONE**.
+
+Continue authoring in the existing unpublished draft paths. This text correction does not rename or recapture frozen snapshots, edit published/generated pages or assets, change version manifests or stable/authoring pointers, or authorize a separate current-development public route. The existing explicit, history-preserving publication boundary still applies. Historical records below keep their original labels and evidence scope; a published documentation preview is not a product 1.0.0 release.
+
 | Module | Responsibility |
 |---|---|
 | `docs/source/*.md` | Editable current stable guide |
