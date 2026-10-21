@@ -1,5 +1,9 @@
 # Guide release maintenance
 
+## R52 0.4.0 final QA reconciliation / 2026-10-21
+
+The current installed development version is 0.4.0. Correct only existing unpublished draft text for R51 acceptance and the observed Google data-access review. R52 repaired the observed initial-preferences/control ordering defect and verified the same installed Chrome short-link activation, separate shared-copy save and original VOD reentry. Full release remains NOT_READY; these text updates do not establish Whale or unexecuted release journeys. Existing stable0.3.39, published preview/history, images and version pointers remain unchanged.
+
 ## R51 unpublished development continuation / 2026-10-21
 
 Issue58 continues only `guide-drafts/1.0.0/source`: Pro native-project sharing,
