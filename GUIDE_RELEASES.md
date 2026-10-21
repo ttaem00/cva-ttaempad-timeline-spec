@@ -7,29 +7,39 @@ describe current Normal and Pro 0.4.0, with their differences, separate Chrome
 installation steps and two existing Store item links. This authorization supersedes
 the earlier unpublished-only continuation boundary below for this release.
 
-`guide-drafts/0.4.0/source/` reuses the latest 15 editable pages from the former
-1.0.0 authoring directory. The former authoring directory and every published
-`guide-history/1.0.0/` file and image remain preserved. Capture the new exact
-committed authoring revision once, then copy its source into `docs/source`, set
-both stable and authoringVersion to 0.4.0, add its stable entry, and mark the old
-0.3.39 stable and 1.0.0 development preview as archives. Do not rename or recapture
-the old 1.0.0 snapshot. The selected guide baseline does not claim product 1.0.0
-release or Store approval.
-
-Authoring preparation is the current stage. No capture, pointer promotion, generated
-site rebuild or external publication has been performed by this authoring change.
-After the root commits the authoring inputs, use:
+`guide-drafts/0.4.0/source/` reused the latest 15 editable pages from the former
+1.0.0 authoring directory. The new 0.4.0 snapshot was captured exactly once from
+committed authoring source `4f267724f95ba246a7ebb656ba792d7e3bf12afb`:
 
 ```text
-python scripts/capture_guide_release.py --version 0.4.0 --ref <exact-authoring-commit> --source-path guide-drafts/0.4.0/source
+python scripts/capture_guide_release.py --version 0.4.0 --ref 4f267724f95ba246a7ebb656ba792d7e3bf12afb --source-path guide-drafts/0.4.0/source
 ```
 
-Then perform the existing stable-promotion, image/link inventory, site build and
-exact-commit checks below. Retain the existing actual-module PNG pixels and public
-JSON URLs. Normal and Pro Store submission/publication remain separate external
-states. Their 0.4.0 publication is not confirmed at this authoring checkpoint.
-Existing output timings retain their measured scope; the new Studio transfer
-implementation and its validation will be reconciled by root before capture.
+The captured source is now adopted into `docs/source`; stable and authoringVersion
+are both 0.4.0. The former 0.3.39 stable and 1.0.0 development preview are archives.
+The current first-page and README title spells the product `CVA-TTaempad pro`
+exactly; that editorial title correction is distinct from the exact captured
+source. The former authoring directory and every earlier history file and image
+remain preserved. No old snapshot was renamed or recaptured. The selected guide
+baseline does not claim product 1.0.0 release or Store approval.
+
+The 0.4.0 snapshot, current sources, version pointers and generated reading site
+are now reconciled locally. One existing `scripts/Test-PrValidationGate.ps1` run
+passed the committed-input image/link inventory (428 assets), the generated site
+(15 stable pages and 7 preserved versions), 15 static synthetic cases, all 8 guide
+version tests, all 4 published-site tests and the whitespace check. The prepared
+0.4.0 directory inventory then passed with 467 assets. All 317 prior history and
+asset files remain byte exact apart from the generated current search index,
+which intentionally follows the new source. The initial committed inventory
+check refers to authoring HEAD; root must verify the final committed publication
+inventory before merge. External guide publication is not performed
+by this work. The prior exact-module
+PNG pixels and public JSON URLs are retained. Current dashboard observations show
+Normal published at 0.3.39 and Pro under its old name as a 1.0.0 draft. Neither
+0.4.0 Store submission nor publication is claimed here. Existing output timings
+retain their measured scope; the R53 Studio transfer implementation and its
+product validation remain root-owned and are not converted into an unmeasured
+speed guarantee in this guide.
 
 ## R52 0.4.0 final QA reconciliation / 2026-10-21
 

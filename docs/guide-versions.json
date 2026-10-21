@@ -1,17 +1,22 @@
 {
-  "stable": "0.3.39",
-  "authoringVersion": "0.3.39",
-  "stableBasis": "Manager-selected stable 0.3.39 on 2026-10-10, following published preview and rebuilt package. Product source 396429e484d41a0478488fd35238c3a187ed0e5b. Store publication and installed-browser adoption are tracked separately.",
+  "stable": "0.4.0",
+  "authoringVersion": "0.4.0",
+  "stableBasis": "Manager-selected current Normal and CVA-TTaempad pro 0.4.0 guide on 2026-10-21. Exact authoring source 4f267724f95ba246a7ebb656ba792d7e3bf12afb; prior 1.0.0 development preview and earlier stable snapshots preserved. Guide publication, installed products and Chrome Web Store review/publication are separate evidence.",
   "versions": [
     {
+      "version": "0.4.0",
+      "status": "stable",
+      "label": "0.4.0 · stable"
+    },
+    {
       "version": "1.0.0",
-      "status": "preview",
-      "label": "1.0.0 · 개발 미리보기"
+      "status": "archive",
+      "label": "1.0.0 · 이전 개발 미리보기"
     },
     {
       "version": "0.3.39",
-      "status": "stable",
-      "label": "0.3.39 · stable"
+      "status": "archive",
+      "label": "0.3.39 · 이전 기록"
     },
     {
       "version": "0.3.37",

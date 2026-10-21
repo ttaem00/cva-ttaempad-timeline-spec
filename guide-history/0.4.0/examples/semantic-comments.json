@@ -1,0 +1,77 @@
+{
+  "version": "0.3.39",
+  "kind": "public-safe-synthetic-semantic-comments",
+  "cases": [
+    {
+      "id": "untimed-title-rounds-and-point",
+      "raw": "가상 게임 합방 : 방송인A,방송인B VS 방송인C,방송인D\n01:00 1판\n01:30 ⭐ 뜻밖의 사건\n03:00 2판\n05:00 저챗",
+      "starts": [60,60,90,180,300],
+      "roles": ["chapter","chapter","point","chapter","chapter"],
+      "depths": [1,2,null,2,1],
+      "namesAt": {"1":["방송인A","방송인B","방송인C","방송인D"],"3":["방송인A","방송인B","방송인C","방송인D"],"4":[]}
+    },
+    {
+      "id": "roster-only-before-rounds",
+      "raw": "(방송인A,방송인B VS 방송인C,방송인D)\n01:00 1판\n03:00 2판\n05:00 저챗",
+      "starts": [60,60,180,300],
+      "roles": ["chapter","chapter","chapter","chapter"],
+      "depths": [1,2,2,1],
+      "namesAt": {"1":["방송인A","방송인B","방송인C","방송인D"]}
+    },
+    {
+      "id": "roster-before-timed-start",
+      "raw": "(방송인A,방송인B VS 방송인C,방송인D)\n\n01:00 가상 게임 합방\n02:00 1판\n03:00 2판\n05:00 저챗",
+      "starts": [60,120,180,300],
+      "roles": ["chapter","chapter","chapter","chapter"],
+      "depths": [1,2,2,1],
+      "namesAt": {"1":["방송인A","방송인B","방송인C","방송인D"]}
+    },
+    {
+      "id": "roster-after-timed-start",
+      "raw": "01:00 가상 게임 합방\n\n(방송인A,방송인B VS 방송인C,방송인D)\n02:00 1판\n03:00 2판\n05:00 저챗",
+      "starts": [60,120,180,300],
+      "roles": ["chapter","chapter","chapter","chapter"],
+      "depths": [1,2,2,1],
+      "namesAt": {"1":["방송인A","방송인B","방송인C","방송인D"]}
+    },
+    {
+      "id": "round-local-roster",
+      "raw": "가상 합방 (방송인A,방송인B VS 방송인C,방송인D)\n01:00 1판\n02:00 2판 (방송인E,방송인F VS 방송인G,방송인H)\n03:00 3판\n05:00 저챗",
+      "starts": [60,60,120,180,300],
+      "roles": ["chapter","chapter","chapter","chapter","chapter"],
+      "depths": [1,2,2,2,1],
+      "namesAt": {"1":["방송인A","방송인B","방송인C","방송인D"],"2":["방송인E","방송인F","방송인G","방송인H"],"3":["방송인A","방송인B","방송인C","방송인D"]}
+    },
+    {
+      "id": "same-clock-round-is-preserved",
+      "raw": "가상 합방 (방송인A,방송인B VS 방송인C,방송인D)\n01:00 1판\n01:00 2판\n03:00 3판\n04:00 4판\n05:00 합방 종료",
+      "starts": [60,60,60,180,240,300],
+      "roles": ["chapter","chapter","point","chapter","chapter","chapter"],
+      "depths": [1,2,null,2,2,1],
+      "namesAt": {"3":["방송인A","방송인B","방송인C","방송인D"],"4":["방송인A","방송인B","방송인C","방송인D"],"5":[]}
+    },
+    {
+      "id": "comparison-vs-is-not-a-roster",
+      "raw": "# 01:00 갈드컵 (방송인A,방송인B versus 방송인C,방송인D)\n## 02:00 대결\n# 05:00 끝",
+      "starts": [60,120,300],
+      "roles": ["chapter","chapter","chapter"],
+      "depths": [1,2,1],
+      "namesAt": {"0":[],"1":[]}
+    },
+    {
+      "id": "round-list-alone-stays-points",
+      "raw": "01:00 1판\n03:00 2판",
+      "starts": [60,180],
+      "roles": ["point","point"],
+      "depths": [null,null],
+      "namesAt": {"0":[],"1":[]}
+    },
+    {
+      "id": "weak-flat-collab-does-not-invent-chapters",
+      "raw": "01:00 합방 (방송인A,방송인B VS 방송인C,방송인D)\n03:00 1판\n05:00 저챗",
+      "starts": [60,180,300],
+      "roles": ["point","point","point"],
+      "depths": [null,null,null]
+    }
+  ]
+}
