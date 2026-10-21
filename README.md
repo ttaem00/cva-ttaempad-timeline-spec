@@ -1,6 +1,6 @@
-# CVA-탬패드 댓글 시간축 안내
+# CVA-탬패드 · CVA-TTaempad pro 0.4.0 사용 안내
 
-다시보기 댓글의 **시각·목차·장면·관련 인물**을 읽고 확인하는 공개 문서입니다. 새 댓글은 간단한 시각 목록으로 시작할 수 있고, 기존 댓글은 원문을 보존하며 가져옵니다.
+다시보기에서 장면을 찾고, 다른 시점과 비교하고, 필요한 구간을 편집해 저장하는 **CVA-탬패드 일반판과 CVA-TTaempad pro 0.4.0**의 사용 안내입니다. 댓글의 시각·목차·장면·관련 인물을 읽는 방법부터 컷 저장, YouTube 전송과 Pro 편집 공유까지 설명합니다.
 
 ```text
 00:00 방송 시작
@@ -16,7 +16,7 @@
 
 | 문서 | 내용 |
 |---|---|
-| [빠른 시작](docs/source/index.md) | 선택 → 미리보기 → 시간축에 불러오기 |
+| [빠른 시작·제품 선택·Chrome 설치](docs/source/index.md) | 일반판과 Pro의 차이, 각각의 Store 주소와 설치 순서 |
 | [지원 형태 한눈에](docs/source/formats.md) | 모든 현재 지원 형태를 예제와 의미로 비교 |
 | [시간축 용어](docs/source/timeline.md) | 독립 목차에서 CVA의 d1·d2·dn·point·예상구간과 자동 끝 확인 |
 | [자료 공유하기](docs/source/sharing.md) | 시간표·합방·집계·컷을 링크나 파일로 전달 |
@@ -31,15 +31,18 @@
 
 ## 현재 기준
 
-현재 일반판과 **CVA-TTaempad pro**는 **0.n 개발 단계**이며, 두 제품의 현재 개발 패키지 버전은 **0.4.0**입니다. 개발 패키지는 설치했으며 후속 수정과 실사용 검증은 진행 중입니다. 기존 `guide-drafts/1.0.0/` 경로와 보존된 `1.0.0` 미리보기 표기는 과거 목표·문서 식별자이며 제품 1.0.0 공개·출시를 뜻하지 않습니다. 최신 기능 설명은 기존 [미게시 작성 초안](guide-drafts/1.0.0/source/index.md)에서 관리합니다. **제품 1.0.0 출시와 전체 기능 수락은 NOT_DONE**입니다. 공개 기본 안내와 보존된 페이지·버전 포인터는 이 문구 정정으로 바뀌지 않으며, 별도 개발판 공개 경로도 추가하지 않습니다.
+현재 제품과 문서 작성 기준은 **0.4.0**입니다. 일반판은 다시보기 탐색·합방 비교·컷 수집과 순서 편집을, **CVA-TTaempad pro**는 시퀀스·트랙·효과를 사용하는 정밀 편집을 제공합니다. 2026-10-21 관리자가 0.4.0을 기본 안내로 선택했습니다. 정확한 작성 커밋을 캡처해 현재 문서와 버전 포인터를 0.4.0으로 맞췄으며, 생성·검증과 외부 게시 확인은 [유지보수 기록](GUIDE_RELEASES.md)에 구분합니다.
 
-**[0.3.39 · stable 안내](https://ttaem00.github.io/cva-ttaempad-timeline-spec/)**에서는 기호 없는 제목·판 목록, 합방 명단 앞뒤 배치와 팀 `VS`, 중복 시각 및 직접 인원 표시를 설명합니다.
+| 제품 | Chrome Web Store | 안내 |
+|---|---|---|
+| 일반판 · CVA-탬패드 | [일반판 Store 페이지](https://chromewebstore.google.com/detail/cva-%ED%83%AC%ED%8C%A8%EB%93%9C/ajokeikoipagcdnpdkkbamidkjgeghon?hl=ko) | [일반판 사용·설치](docs/source/index.md#일반판-chrome-설치) |
+| Pro · CVA-TTaempad pro | [Pro Store 페이지](https://chromewebstore.google.com/detail/emkepdnkieiaadkciifenmhlkpiamhmm?hl=ko) | [Pro 사용·설치](docs/source/index.md#pro-chrome-설치) |
 
-**기본 안내: [0.3.39 · stable](https://ttaem00.github.io/cva-ttaempad-timeline-spec/)** — 댓글 표기 확대, 합방 자동 찾기와 12명씩 더보기를 설명합니다. 0.3.37과 이전 기록은 보존합니다.
+두 Store의 0.4.0 심사·공개 완료는 이 문서 작성만으로 확인되지 않습니다. Store에서 실제 제품명·버전을 확인하세요. 공개 전에는 기존 버전이 보이거나 Pro 페이지가 열리지 않을 수 있습니다. 개발 설치와 Store 설치도 구분합니다.
 
-**CVA-탬패드 0.3.39 stable**을 기준으로 설명합니다. 시각·구간·목차·별 표시와 제목 옆 인물 칩, 인물 자동 검색과 겹치는 다시보기 불러오기를 안내합니다. `[M]`과 `[메모]`는 같은 메모 표기입니다.
+과거 `1.0.0`은 당시 개발 미리보기의 문서 식별자입니다. 기존 [1.0.0 보관본](https://ttaem00.github.io/cva-ttaempad-timeline-spec/versions/1.0.0/index.html)과 0.3.39·이전 [버전 기록](docs/source/history.md)은 보존합니다. 현재 제품의 1.0.0 출시를 뜻하지 않습니다. 댓글·시간표의 기존 기능과 `[M]`·`[메모]` 표기는 이어서 사용할 수 있습니다.
 
-[버전 기록](docs/source/history.md)에서 0.3.23·0.3.31·0.3.32·0.3.37의 당시 안내를 볼 수 있습니다. [자료 공유하기](docs/source/sharing.md)와 [컷 작업과 MP4 저장](docs/source/cuts.md)은 현재 stable 기능을 설명합니다. 문서 버전 관리와 모듈 경로는 [유지보수 안내](GUIDE_RELEASES.md)에 있습니다.
+[자료 공유하기](docs/source/sharing.md)와 [컷 작업과 MP4 저장](docs/source/cuts.md)에서 0.4.0 기능을 확인하세요. 문서 버전 관리와 모듈 경로는 [유지보수 안내](GUIDE_RELEASES.md)에 있습니다.
 
 화면 예제는 현재 제품 모듈로 만든 가상 입력의 PNG이며, 실제 사용 화면은 별도로 표시합니다. [현재 지원 범위](SUPPORT.md)와 [검증 기록](VALIDATION.md)을 함께 확인할 수 있습니다.
 
