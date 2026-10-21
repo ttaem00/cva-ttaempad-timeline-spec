@@ -1,5 +1,15 @@
 # Guide release maintenance
 
+## R51 unpublished development continuation / 2026-10-21
+
+Issue58 continues only `guide-drafts/1.0.0/source`: Pro native-project sharing,
+its existing short-link and JSON size boundaries, the default-on periodic autosave
+control, and separate rendering / MP4 finalization / YouTube processing evidence.
+The R51 source candidate batches metadata without changing the tested output bytes;
+bounded synthetic timing is not a long-output speed guarantee. Candidate installation,
+browser behavior and whole-product acceptance remain separate evidence. Stable0.3.39,
+the published preview, frozen histories, image pixels and version pointers are unchanged.
+
 The default site describes the explicitly selected stable app version, not the latest product main. `docs/guide-versions.json` is the single version pointer. The manager selected 0.3.39 on 2026-10-10. Product source: 396429e484d41a0478488fd35238c3a187ed0e5b. The guide stable designation is separate from Chrome Web Store publication. Previous 0.3.32, 0.3.31 and 0.3.23 snapshots remain immutable.
 
 ## Current authoring version correction / 2026-10-20
