@@ -1,5 +1,36 @@
 # Guide release maintenance
 
+## R53 explicit 0.4.0 public guide promotion / 2026-10-21
+
+The manager explicitly selected the actual public guide and repository README to
+describe current Normal and Pro 0.4.0, with their differences, separate Chrome
+installation steps and two existing Store item links. This authorization supersedes
+the earlier unpublished-only continuation boundary below for this release.
+
+`guide-drafts/0.4.0/source/` reuses the latest 15 editable pages from the former
+1.0.0 authoring directory. The former authoring directory and every published
+`guide-history/1.0.0/` file and image remain preserved. Capture the new exact
+committed authoring revision once, then copy its source into `docs/source`, set
+both stable and authoringVersion to 0.4.0, add its stable entry, and mark the old
+0.3.39 stable and 1.0.0 development preview as archives. Do not rename or recapture
+the old 1.0.0 snapshot. The selected guide baseline does not claim product 1.0.0
+release or Store approval.
+
+Authoring preparation is the current stage. No capture, pointer promotion, generated
+site rebuild or external publication has been performed by this authoring change.
+After the root commits the authoring inputs, use:
+
+```text
+python scripts/capture_guide_release.py --version 0.4.0 --ref <exact-authoring-commit> --source-path guide-drafts/0.4.0/source
+```
+
+Then perform the existing stable-promotion, image/link inventory, site build and
+exact-commit checks below. Retain the existing actual-module PNG pixels and public
+JSON URLs. Normal and Pro Store submission/publication remain separate external
+states. Their 0.4.0 publication is not confirmed at this authoring checkpoint.
+Existing output timings retain their measured scope; the new Studio transfer
+implementation and its validation will be reconciled by root before capture.
+
 ## R52 0.4.0 final QA reconciliation / 2026-10-21
 
 The current installed development version is 0.4.0. Correct only existing unpublished draft text for R51 acceptance and the observed Google data-access review. R52 repaired the observed initial-preferences/control ordering defect and verified the same installed Chrome short-link activation, separate shared-copy save and original VOD reentry. Full release remains NOT_READY; these text updates do not establish Whale or unexecuted release journeys. Existing stable0.3.39, published preview/history, images and version pointers remain unchanged.
