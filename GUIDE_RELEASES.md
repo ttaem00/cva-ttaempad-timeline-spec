@@ -1,5 +1,18 @@
 # Guide release maintenance
 
+## Current 0.4.0 browser H.264 automatic encoding guidance / 2026-10-22
+
+Issue58 describes the web Pro Export / Quick Export automatic encoding default
+in the current cuts guide. Source preservation remains the first choice; processed
+H.264 keeps the selected dimensions, cadence, profile (High by default) and target
+bitrate. Automatic VBR peak behaviour and file size may differ from compatibility
+encoding. Explicit Off / maximum-bitrate choices and unsupported browser settings
+retain the compatibility path. Studio remains the default YouTube method.
+Stable and authoringVersion stay 0.4.0. Frozen histories, drafts and image pixels
+remain unchanged. This guidance is not a measured speed / GPU guarantee or the
+completion of the six R56 long-output acceptance cells; publication and product
+verification remain separate evidence.
+
 ## Current 0.4.0 Studio default correction / 2026-10-22
 
 Issue58 updates the two current cuts-guide paragraphs to match the temporary
