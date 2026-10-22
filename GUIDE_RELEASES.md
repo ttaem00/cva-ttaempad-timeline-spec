@@ -1,5 +1,16 @@
 # Guide release maintenance
 
+## Current 0.4.0 Studio default correction / 2026-10-22
+
+Issue58 updates the two current cuts-guide paragraphs to match the temporary
+Studio-tab YouTube default for Normal and Pro Export / Quick Export while the
+Google-account method is being stabilized. Google transfer remains an explicit
+choice, and Pro preserves an explicitly saved Google or Studio method. The
+current source explains the default marker without changing private-video
+defaults or claiming upload, performance, Store or Google approval evidence.
+Stable and authoringVersion stay 0.4.0; drafts, frozen histories and image pixels
+remain unchanged. Merge and publication require the product owner's review.
+
 ## R53 explicit 0.4.0 public guide promotion / 2026-10-21
 
 The manager explicitly selected the actual public guide and repository README to
