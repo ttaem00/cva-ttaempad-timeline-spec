@@ -1,5 +1,30 @@
 # Guide release maintenance
 
+## 0.4.1 upcoming guide preview / 2026-10-24
+
+This is a documentation preview of the shared mixed-outline comment support.
+The current installed Normal and CVA-TTaempad pro product versions remain 0.4.0;
+stable and authoringVersion remain 0.4.0. No product 0.4.1 release, default-guide
+promotion, Store publication or installed-browser acceptance follows from this
+preview.
+
+The draft with 15 pages was captured once from exact guide source
+`93de16647c65895ad525e937f254620eee9ded1c` using
+`guide-drafts/0.4.1/source`. Four pages explain unclocked explicit parents,
+local peer tree/round relationships, preserved explicit roles and boundaries.
+All pre-existing histories and image pixels remain preserved.
+
+Two new synthetic PNGs use the existing actual-product-module renderer, product
+version 0.4.0 and parser SHA256
+`a645771086974d3b473780e1fddd60a3218a95990fd453729c798a9503a83bc0`.
+The 19 previous cases are retained and two fictional cases are appended. The 21
+renderer cases passed, the two new PNGs were visually checked, existing guide
+conformance passed 15 parser cases and 6 people/portable cases, and 15 draft article
+bodies passed 175 local links/fragments. These are renderer and local document
+checks, separate from actual guide navigation or product/browser/output QA.
+Publish only the PNGs; private capture adapters and modules are not site assets.
+
+
 ## Current 0.4.0 browser H.264 automatic encoding guidance / 2026-10-22
 
 Issue58 describes the web Pro Export / Quick Export automatic encoding default
