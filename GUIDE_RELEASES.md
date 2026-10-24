@@ -1,5 +1,28 @@
 # Guide release maintenance
 
+## Issue81 current scene-card names and recording times / 2026-10-24
+
+The manager requested current0.4.0 guide adoption for product Issue202. Scene
+finding displays names without a related/collaboration prefix for w./w//with and
+direct rosters. This is a display change: candidate versus declared meaning,
+alias mapping, inherited lookup context, original comments and timeline roles
+remain authoritative. Current people text and three current synthetic PNG
+references change; old pixels, frozen histories and the six deployed-version
+catalog entries stay unchanged.
+
+The existing product-owned `design/timeline-guide-examples/capture.cjs` captured
+the private actual-module renderer from the Issue202 owned source (base
+`965777570f3330674d1c20f7cf2a351a34ef5d35` plus the owned recording-clock fix),
+consumer0.4.0. All21 synthetic fixtures rendered successfully. The scenes module SHA256
+is `273bcad6f2c750c63335a17c605d364e0dd2f06bcdede7a4881ec383b59601e8`.
+Only the three reviewed current people PNGs are published under new names;
+private bundles, fixture proof and modules are not guide assets. Headless local
+artwork capture is distinct from installed main-Chrome product QA and public
+Pages adoption. The recording-start guidance distinguishes each recording's
+zero-time anchor from the whole session start, preserves unknown clocks and
+personal correction, and does not promise frame synchronization. No new product
+version or public preview is created. The current public guide remains0.4.0.
+
 ## Issue77 deployed-version catalog / 2026-10-24
 
 The public catalog contains actual product versions delivered to users, not
