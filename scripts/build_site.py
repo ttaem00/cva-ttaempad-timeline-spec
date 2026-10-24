@@ -61,7 +61,8 @@ class SiteContext:
             available = (key in {page[0] for page in PAGES}
                          and (HISTORY / version / 'source' / (key + '.md')).exists())
             page = key if available else 'index'
-            target = self.prefix + f'versions/{version}/{page}.html'
+            target = (self.prefix + f'{key}.html' if release['status'] == 'stable'
+                      else self.prefix + f'versions/{version}/{page}.html')
             items.append(f'<a href="{target}">{html.escape(release["label"])}</a>')
         label = next(r['label'] for r in VERSIONS['versions'] if r['version'] == self.version)
         return (f'<details class="guide-version"><summary>{html.escape(label)}</summary>'
@@ -269,11 +270,11 @@ def page_template(key, label, article, headings, previous, next_page, context: S
     toc = ''.join(f'<a class="toc-depth-{level}" href="#{anchor}">{html.escape(title)}</a>' for level, title, anchor in headings if level == 2)
     prev_next = ''.join(f'<a href="{item[0]}.html"><small>{direction}</small><span>{item[1]} {arrow}</span></a>'
                         for item, direction, arrow in [(previous, "이전 문서", "←"), (next_page, "다음 문서", "→")] if item)
-    status = {'stable': 'stable', 'preview': '미리보기', 'archive': '이전 기록'}[context.status]
     if context.prefix:
-        note = f'{context.version} · {status} — 보존된 당시 안내입니다.'
+        version_label = next(r['label'] for r in VERSIONS['versions'] if r['version'] == context.version)
+        note = f'{html.escape(version_label)} — 보존된 당시 안내입니다.'
         if context.status == 'preview':
-            note = f'{context.version} 미리보기 — 현재 stable은 {APP_VERSION}입니다.'
+            note = f'{html.escape(version_label)} — 현재 stable은 {APP_VERSION}입니다.'
     else:
         note = f'{APP_VERSION} · stable 안내'
     return f'''<!doctype html>
@@ -416,7 +417,7 @@ def main():
     rows = []
     for release in VERSIONS['versions']:
         version = release['version']
-        description = {'preview': '다음 버전 기능을 먼저 살펴보는 미리보기', 'stable': '기본 안내의 기준 버전',
+        description = {'preview': '다음 버전 기능을 먼저 살펴보는 미리보기', 'stable': '이 버전의 최초 보존 안내. 최신 사용법은 기본 안내에서 확인',
                        'archive': '당시 작성된 이전 안내'}[release['status']]
         rows.append(f'| [{release["label"]}](../versions/{version}/index.html) | {description} |')
     history = ('# 버전 기록\n\n기본 문서는 **'+APP_VERSION+' stable**을 기준으로 읽습니다. '
