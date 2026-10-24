@@ -1,5 +1,24 @@
 # Guide release maintenance
 
+## Issue58 PR190 current export guidance / 2026-10-24
+
+The manager selected current main/stable operation for the installed0.4.0
+products. Reuse the retained R56 cuts/limits draft only for the relevant export
+paragraphs, on current guide main `eb5c07a`, without restoring the retired preview.
+The two current source pages distinguish Normal memory download from Pro disk
+staging, the existing Studio default, generation/finalization/delivery/private
+save phases, the Pro editing lock and its existing cancellation entrance, and
+recovery of an already completed File for the original interrupted Studio upload.
+The application resume control does not automatically reselect a Studio File.
+
+The source behavior was compared with product PR190 source `255b056`. No measured
+speed, actual hardware-backend guarantee, full visual quality or automatic upload
+recovery is claimed. Stable/authoring remain0.4.0; the six deployed-version catalog
+entries and retained histories stay unchanged. These two articles have no embedded
+images, and the existing actual-module artwork cases cover timelines/people rather
+than export controls, so no unrelated image is regenerated or relabeled. Public
+Pages adoption and installed/Store adoption remain separate from local generation.
+
 ## Issue81 current scene-card names and recording times / 2026-10-24
 
 The manager requested current0.4.0 guide adoption for product Issue202. Scene
