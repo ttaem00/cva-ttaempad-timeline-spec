@@ -1,5 +1,6 @@
 """Release boundaries and reading-site behavior contracts, without a product parser."""
 import copy
+import html
 import json
 import shutil
 import tempfile
@@ -12,6 +13,19 @@ from capture_guide_release import capture
 
 
 class GuideVersions(unittest.TestCase):
+    def test_archive_label_and_current_stable_navigation_are_consistent(self):
+        metadata = copy.deepcopy(site.VERSIONS)
+        archived = next(r for r in metadata['versions'] if r['status'] == 'archive')
+        archived['label'] = 'Actual product draft & corrected <name>'
+        stable = next(r for r in metadata['versions'] if r['status'] == 'stable')
+        with patch.object(site, 'VERSIONS', metadata):
+            context = site.SiteContext(archived['version'], 'archive', site.PAGES, '../../', {})
+            rendered = site.page_template('index', 'Guide', '<h1>Guide</h1>', [], None, None, context)
+            menu = context.version_menu('index')
+        self.assertIn(html.escape(archived['label']) + ' — 보존된 당시 안내입니다.', rendered)
+        self.assertIn(f'<a href="../../index.html">{stable["label"]}</a>', menu)
+        self.assertNotIn(f'<a href="../../versions/{stable["version"]}/index.html">', menu)
+
     def test_history_article_links_use_the_global_history_in_every_version(self):
         for version, status, prefix in [('0.3.37', 'stable', ''), ('0.3.39', 'preview', '../../')]:
             context = site.SiteContext(version, status, site.PAGES, prefix, {})
