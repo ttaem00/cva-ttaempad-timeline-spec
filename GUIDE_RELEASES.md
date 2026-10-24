@@ -1,5 +1,31 @@
 # Guide release maintenance
 
+## Issue77 public current-guide navigation / 2026-10-24
+
+The public version selector helps readers choose usable product guidance. Internal
+draft provenance belongs in maintenance history, without a public explanation of
+an authoring mistake. This follow-up supersedes the public label approach below:
+the draft is absent from the public catalog, history page and search. Stable and
+authoringVersion remain 0.4.0; current article content is unchanged.
+
+Preservation and publication now have separate inputs. Every internal numeric
+history directory still passes its original inventory/hash checks. Retired HTML
+entry points are routing data outside the public version catalog. Their exact
+generated subtree is reconciled before rebuilding neutral current-guide links;
+old Markdown, examples and search payloads are no longer published. Page keys
+route to the corresponding current page, with query/fragment preservation and a
+visible current-guide fallback. Frozen history, draft sources and image bytes
+are not edited. Repeated builds must not republish old payloads.
+
+Primary references: [W3C H76](https://www.w3.org/WAI/WCAG22/Techniques/html/H76)
+and [jekyll-redirect-from's template](https://github.com/jekyll/jekyll-redirect-from/blob/master/lib/jekyll-redirect-from/redirect.html)
+support a neutral immediate redirect with a plain fallback link. The existing
+static builder implements that small pattern, preserving the fragment in script;
+no redirect dependency is added. [Read the Docs hidden versions](https://docs.readthedocs.com/platform/latest/guides/hiding-a-version.html)
+separates selector visibility from storage, but hiding alone leaves old content
+accessible and does not satisfy this request. The modern-web-guidance lookup had
+no matching entry; these primary sources supply the applicable design evidence.
+
 ## Issue77 current 0.4.0 comment compatibility / 2026-10-24
 
 The manager authorized applying and publishing the current 0.4.0 guide correction
