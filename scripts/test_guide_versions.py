@@ -52,13 +52,62 @@ class GuideVersions(unittest.TestCase):
     def test_preserved_source_tampering_is_rejected(self):
         scratch = site.ROOT / '.runtime'
         scratch.mkdir(exist_ok=True)
-        with tempfile.TemporaryDirectory(dir=scratch) as directory:
-            history = Path(directory)
-            shutil.copytree(site.HISTORY, history, dirs_exist_ok=True)
-            target = history / '0.3.32/source/sharing.md'
-            target.write_text('changed', encoding='utf-8')
-            with patch.object(site, 'HISTORY', history), self.assertRaisesRegex(ValueError, 'preserved version changed'):
-                site.verify_history()
+        for version in ('0.3.32', *site.CURRENT_GUIDE_ALIASES):
+            with self.subTest(version=version), tempfile.TemporaryDirectory(dir=scratch) as directory:
+                history = Path(directory)
+                shutil.copytree(site.HISTORY, history, dirs_exist_ok=True)
+                target = history / version / 'source/sharing.md'
+                target.write_text('changed', encoding='utf-8')
+                with patch.object(site, 'HISTORY', history), self.assertRaisesRegex(ValueError, 'preserved version changed'):
+                    site.verify_history()
+
+    def test_retired_drafts_are_not_in_public_catalog_or_search(self):
+        for version in site.CURRENT_GUIDE_ALIASES:
+            self.assertNotIn(version, [r['version'] for r in site.VERSIONS['versions']])
+            for page in site.DOCS.rglob('*.html'):
+                self.assertNotIn(version, page.read_text(encoding='utf-8'), str(page))
+            for search in site.DOCS.rglob('search-index.js'):
+                self.assertNotIn(version, search.read_text(encoding='utf-8'), str(search))
+            self.assertTrue((site.HISTORY / version / 'integrity.json').is_file())
+
+    def test_current_aliases_reconcile_old_payload_and_are_repeatable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            docs = Path(directory) / 'docs'
+            for version in site.CURRENT_GUIDE_ALIASES:
+                old = docs / 'versions' / version
+                for name in ('source/index.md', 'examples/old.json', 'assets/search-index.js', 'unknown.html'):
+                    target = old / name
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_text('old draft payload', encoding='utf-8')
+            with patch.object(site, 'DOCS', docs):
+                site.build_current_guide_aliases()
+                first = {p.relative_to(docs): p.read_bytes() for p in docs.rglob('*') if p.is_file()}
+                site.build_current_guide_aliases()
+                self.assertEqual(first, {p.relative_to(docs): p.read_bytes() for p in docs.rglob('*') if p.is_file()})
+            current_pages = {page[0] for page in site.PAGES} | {'history'}
+            for path, raw in first.items():
+                self.assertEqual(path.suffix, '.html')
+                target = '../../' + (path.stem if path.stem in current_pages else 'index') + '.html'
+                text = raw.decode('utf-8')
+                self.assertIn(f'href="{target}"', text)
+                self.assertIn(f'content="0; url={target}"', text)
+                self.assertIn('location.replace(', text)
+                self.assertIn('location.hash', text)
+                self.assertIn('name="robots" content="noindex"', text)
+                self.assertNotIn('old draft payload', text)
+                self.assertNotIn('오표기', text)
+
+    def test_current_alias_cannot_delete_outside_its_published_subtree(self):
+        with tempfile.TemporaryDirectory() as directory:
+            docs = Path(directory) / 'docs'
+            outside = docs / 'outside'
+            outside.mkdir(parents=True)
+            original = outside / 'keep.txt'
+            original.write_text('preserve', encoding='utf-8')
+            with patch.object(site, 'DOCS', docs), patch.object(site, 'CURRENT_GUIDE_ALIASES', ('../outside',)):
+                with self.assertRaisesRegex(ValueError, 'escapes published versions'):
+                    site.build_current_guide_aliases()
+            self.assertEqual(original.read_text(encoding='utf-8'), 'preserve')
 
     def test_stable_and_history_do_not_mix(self):
         stable = (site.DOCS / 'sharing.html').read_text(encoding='utf-8')

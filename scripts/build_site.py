@@ -40,6 +40,8 @@ LINKS = {"PEOPLE.md": "people.html", "IMPORT.md": "files.html",
 VERSIONS = json.loads((DOCS / 'guide-versions.json').read_text(encoding='utf-8'))
 APP_VERSION = VERSIONS['stable']
 HISTORY = ROOT / 'guide-history'
+# Retired URLs are routing data, not entries in the public release catalog.
+CURRENT_GUIDE_ALIASES = ('0.4.1',)
 
 
 @dataclass
@@ -348,7 +350,17 @@ def verify_history():
         version = release['version']
         if not re.fullmatch(r'\d+\.\d+\.\d+', version) or release['status'] not in {'stable', 'preview', 'archive'}:
             raise ValueError('invalid version metadata')
-        base = HISTORY / version
+        if not (HISTORY / version).is_dir():
+            raise ValueError('published version has no preserved source')
+    for version in CURRENT_GUIDE_ALIASES:
+        if not re.fullmatch(r'\d+\.\d+\.\d+', version) or version in {r['version'] for r in versions}:
+            raise ValueError('invalid or published current-guide alias')
+        if not (HISTORY / version).is_dir():
+            raise ValueError('current-guide alias has no preserved source')
+    for base in sorted(HISTORY.iterdir()):
+        if not base.is_dir() or not re.fullmatch(r'\d+\.\d+\.\d+', base.name):
+            continue
+        version = base.name
         integrity = json.loads((base / 'integrity.json').read_text(encoding='utf-8'))
         files = {p.relative_to(base).as_posix() for p in base.rglob('*') if p.is_file()} - {'integrity.json'}
         if integrity['version'] != version or files != set(integrity['files']):
@@ -390,6 +402,38 @@ def copy_examples(source: Path, output: Path):
             destination = output / 'examples' / example.relative_to(source)
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_bytes(example.read_bytes().replace(b'\r\n', b'\n'))
+
+
+def build_current_guide_aliases():
+    """Retain old HTML entry points without republishing their draft content."""
+    current_pages = {page[0] for page in PAGES} | {'history'}
+    for version in CURRENT_GUIDE_ALIASES:
+        destination = DOCS / 'versions' / version
+        if destination.resolve() != DOCS.resolve() / 'versions' / version:
+            raise ValueError('current-guide alias escapes published versions')
+        pages = {page[0] for page in PAGES if (HISTORY / version / 'source' / (page[0] + '.md')).is_file()}
+        pages.update(path.stem for path in destination.glob('*.html'))
+        artifacts = [path for path in destination.rglob('*') if path.is_file()]
+        if any(not path.resolve().is_relative_to(destination.resolve()) for path in artifacts):
+            raise ValueError('current-guide alias contains a linked external artifact')
+        # This exact subtree contains generated publication artifacts only.
+        for path in artifacts:
+            path.unlink()
+        destination.mkdir(parents=True, exist_ok=True)
+        for page in sorted(pages):
+            target = '../../' + (page if page in current_pages else 'index') + '.html'
+            escaped = html.escape(target, quote=True)
+            script_target = json.dumps(target).replace('<', '\\u003c')
+            redirect = f'''<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{escaped}">
+<title>현재 안내</title>
+<script>location.replace({script_target} + location.search + location.hash);</script>
+<noscript><meta http-equiv="refresh" content="0; url={escaped}"></noscript>
+</head><body><p><a href="{escaped}">현재 {APP_VERSION} 안내 열기</a></p></body></html>
+'''
+            (destination / (page + '.html')).write_text(redirect, encoding='utf-8', newline='\n')
 
 
 def current_assets():
@@ -438,6 +482,7 @@ def main():
         destination = DOCS / 'versions' / version
         build_pages(preserved / 'source', destination, context)
         copy_examples(preserved / 'examples', destination)
+    build_current_guide_aliases()
     (DOCS / '.nojekyll').write_bytes(b'')
     validate_site()
     artifact_paths = [p for p in DOCS.rglob('*') if p.is_file() and p.name != 'build-manifest.json']
@@ -447,7 +492,7 @@ def main():
                     p.read_bytes().replace(b'\r\n', b'\n') if p.suffix in {'.json', '.js', '.md', '.html', '.css', '.txt'}
                     else p.read_bytes()).hexdigest() for p in sorted(artifact_paths)}}
     (DOCS/'build-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
-    print(f'Reading site build and local links PASS; {len(root_pages)} stable pages; {len(VERSIONS["versions"])} preserved versions')
+    print(f'Reading site build and local links PASS; {len(root_pages)} stable pages; {len(VERSIONS["versions"])} public versions')
 
 
 if __name__ == '__main__':
