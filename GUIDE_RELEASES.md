@@ -1,5 +1,39 @@
 # Guide release maintenance
 
+## Issue84 current0.4.0 clip handoff and comment follow-through / 2026-10-24
+
+The manager selected public stable/default guidance for the current0.4.0 Normal
+and Pro improvements, including Store-package preparation. The user outcome is
+an accurate route from a chosen source interval to CHZZK's own clip editor, plus
+natural-comment interpretation and comparison of split recordings. Acceptance
+is current source-aligned instructions and exact site/image inventory; guide
+publication, installed behavior and Store approval remain separate evidence.
+
+Adopt only the existing Issue84 clip section into current `docs/source/cuts.md`.
+The selected compact label is **치지직 클립 ↗** beside **컷 담기** in **새 컷**;
+correct the same two labels in the retained unpublished0.4.0 draft. Collected
+cuts use **수정** to return to that same entrance. This is not a new output
+destination, concatenation, MP4 upload or automatic clip publication.
+
+Product `docs/issue-200-validation.md`, `docs/issue-202-validation.md` and the
+actual modules were compared at `00b946320e0963c2f449c55db8b06af48b0084f6`. Existing current
+`existing.md` already explains the Issue200 copy/peer hierarchy principles and
+stays unchanged. The current scenes SHA256 is `273bcad6f2c750c63335a17c605d364e0dd2f06bcdede7a4881ec383b59601e8`,
+identical to the Issue81 actual-module capture recorded below; reuse its three
+current people PNGs without relabeling old pixels. The existing product-owned
+`design/timeline-guide-examples/capture.cjs` and cases remain the image authority.
+Add one source-bound split-recording clock example to current `people.md` using
+the two VOD IDs and clocks recorded by Issue202; this does not prove frame/audio
+synchronization. No new image, private renderer bundle, version, preview,
+recapture or history edit is required. Stable/authoring remain0.4.0 and the six
+deployed-version catalog entries remain unchanged.
+
+Root subsequently reviewed the exact final clip label, draft entrance, collapsed
+hint and Pro hiding at PR207 head `82747383f6eab54bee708580e82c112b54babbec`, merged
+as product main `eabf379021b730e0700195f2f5d940a85d290c6b`. The parser and scene-image
+modules are unchanged by that layout follow-up; its controlled-tab F5 investigation
+is not claimed fixed by this guide or by packaging.
+
 ## Issue58 PR190 current export guidance / 2026-10-24
 
 The manager selected current main/stable operation for the installed0.4.0
