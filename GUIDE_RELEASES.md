@@ -1,5 +1,30 @@
 # Guide release maintenance
 
+## Issue77 current 0.4.0 comment compatibility / 2026-10-24
+
+The manager authorized applying and publishing the current 0.4.0 guide correction
+in [Issue77](https://github.com/ttaem00/cva-ttaempad-timeline-spec/issues/77).
+Current comment pages and the current SPEC/SUPPORT references describe copied
+Markdown escapes and hardbreaks, trailing bracket clocks and a short standalone
+title's local increasing peer list. The title borrows its first child's actual
+clock; explicit roles/ranges, raw text and ambiguous Point anchors remain authoritative.
+Product main is `8f9c1937c1d7aa3ed29532f867b3abc6330bfa23`; the explicitly supplied
+parser SHA256 is `7649a97f5fa19fca63e7750ee7a846250eba5121cf4fe1975ebc7954c50fb300`.
+Stable/authoring stay 0.4.0. Histories, preview drafts, version pointers and all
+image pixels remain preserved. Source validation and actual Pages publication
+are separate evidence; publication is not established by a local build.
+
+The original source-workspace failure used the stale active-main-runtime issuer
+at `31b3504d`, which required a guard inside the target repository. Canonical
+runtime PR2691 (merge `120aef77`) had already added the trusted issuer guard for
+an absent target guard while retaining precedence for an existing target guard
+and its failures. The current canonical issuer is adopted; no duplicate guard
+repair is needed. `Resolve-CodexRuntimeScript` accepts an explicit `-RepoRoot`
+for the verified current canonical checkout, then prefers its current Git/self
+path before environment fallback. This selection does not detect a stale script
+version or change global environment variables. These are authoring-tool facts,
+not additional product input requirements.
+
 ## 0.4.1 upcoming guide preview / 2026-10-24
 
 This is a documentation preview of the shared mixed-outline comment support.
