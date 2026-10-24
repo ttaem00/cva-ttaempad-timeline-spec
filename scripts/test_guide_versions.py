@@ -49,10 +49,17 @@ class GuideVersions(unittest.TestCase):
         with patch.object(site, 'VERSIONS', metadata), self.assertRaisesRegex(ValueError, 'promote explicitly'):
             site.verify_history()
 
+    def test_public_catalog_rejects_a_development_preview(self):
+        metadata = copy.deepcopy(site.VERSIONS)
+        next(r for r in metadata['versions'] if r['status'] == 'archive')['status'] = 'preview'
+        with patch.object(site, 'VERSIONS', metadata), self.assertRaisesRegex(ValueError, 'requires deployed'):
+            site.verify_history()
+
     def test_preserved_source_tampering_is_rejected(self):
         scratch = site.ROOT / '.runtime'
         scratch.mkdir(exist_ok=True)
-        for version in ('0.3.32', *site.CURRENT_GUIDE_ALIASES):
+        retained_aliases = [v for v in site.CURRENT_GUIDE_ALIASES if (site.HISTORY / v).is_dir()]
+        for version in ('0.3.32', *retained_aliases):
             with self.subTest(version=version), tempfile.TemporaryDirectory(dir=scratch) as directory:
                 history = Path(directory)
                 shutil.copytree(site.HISTORY, history, dirs_exist_ok=True)
@@ -68,7 +75,20 @@ class GuideVersions(unittest.TestCase):
                 self.assertNotIn(version, page.read_text(encoding='utf-8'), str(page))
             for search in site.DOCS.rglob('search-index.js'):
                 self.assertNotIn(version, search.read_text(encoding='utf-8'), str(search))
-            self.assertTrue((site.HISTORY / version / 'integrity.json').is_file())
+
+    def test_current_routes_do_not_require_internal_snapshots(self):
+        with tempfile.TemporaryDirectory() as directory:
+            docs = Path(directory) / 'docs'
+            with patch.object(site, 'DOCS', docs), patch.object(site, 'HISTORY', Path(directory) / 'absent'):
+                site.build_current_guide_aliases()
+            for version in site.CURRENT_GUIDE_ALIASES:
+                for key, _, _ in site.PAGES:
+                    self.assertIn(f'../../{key}.html', (docs / 'versions' / version / (key + '.html')).read_text(encoding='utf-8'))
+
+    def test_removed_development_snapshot_is_not_maintained(self):
+        self.assertFalse((site.HISTORY / '1.0.0').exists())
+        self.assertFalse((site.ROOT / 'guide-drafts/1.0.0').exists())
+        self.assertTrue((site.HISTORY / '0.4.1/integrity.json').is_file())
 
     def test_current_aliases_reconcile_old_payload_and_are_repeatable(self):
         with tempfile.TemporaryDirectory() as directory:

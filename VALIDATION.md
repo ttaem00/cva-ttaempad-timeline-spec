@@ -2,6 +2,12 @@
 
 현재 문서는 **CVA-탬패드 일반판·CVA-TTaempad pro 0.4.0**을 기준으로 합니다.
 
+## Issue77 실제 제품 버전 목록 / 2026-10-24
+
+공개 목록은 문서만 만든 버전을 제외하고 실제 전달·설치된 제품 버전만 유지합니다. 0.3.32는 공개 GitHub release, 0.3.37·0.3.39는 당시 Store 관찰, 0.3.23·0.3.31·현재 0.4.0은 실제 Chrome 설치·사용 기록으로 대조했습니다. 모든 버전의 Store 공개를 주장하지 않습니다. 근거 종류는 GUIDE_RELEASES.md의 현재 catalog 표에 구분합니다.
+
+관리자가 제거한 개발 미리보기의 내부 snapshot·draft와 전용 버전 기록을 삭제했습니다. 기존 HTML 진입점은 snapshot 없이도 현재 페이지로 연결됩니다. 버전 회귀 15개와 준비된 460개 게시 자산 inventory가 통과했으며, 보존본 변조 거부·preview 공개 거부·삭제한 보존본의 부재·기존 링크 생성·반복 빌드·삭제 경계를 확인합니다. 현재 본문과 다른 보존 원문·이미지는 유지합니다. 공개 Pages 채택과 실제 탐색은 Issue77의 후속 완료 근거로 별도 확인합니다.
+
 ## Issue77 공개 버전 탐색 정리 / 2026-10-24
 
 현재 안내를 찾는 사용자에게 내부 작성 사정을 설명하지 않는 것이 이번 수락 기준입니다. 공개 목록·기록·검색에서는 잘못 생성한 미래 버전을 제거하고, 기존 HTML 주소는 대응하는 현재 0.4.0 페이지로 연결합니다. JavaScript 경로는 query와 fragment를 보존하며, 비활성 환경에는 즉시 이동과 현재 안내 링크가 있습니다. 내부 history·draft·이미지는 보존합니다. 아래의 이전 공개 label 방식은 이번 결정으로 대체합니다.
@@ -176,24 +182,6 @@ published history/source/pixels remain unchanged.
 
 User-selected default0.3.39 uses the published source and actual-module images. Both stable pointers and menu labels change together; the old0.3.37 is archived. All frozen history/source/image bytes remain unchanged. Existing site, documentation, version and publication-asset checks and exact remote tree/merge inventory must pass before publication. Live default/version navigation, current policy, image dialog/focus and narrow layout are verified separately after Pages builds. Product package and installed-browser checks remain separate evidence.
 
-
-## Issue56:1.0.0 development preview
-
-The ordinary development guide documents deliberate front/before insertion, source
-clock preservation, supported1080p60, automatic actual-duration/byte/storage parts,
-sequential private upload completion, retry and direct Studio interaction pauses.
-Professional native verification and full1.0 release remain separate. No private QA
-channel/video IDs, local paths, product runtime code or new screenshots are published.
-Stable/authoring0.3.39 and all pre-existing frozen histories/image pixels are preserved.
-The1.0.0 draft is frozen from de8eba81ba32452e8282d9c72c2b6550463a4eee.
-An initial unpublished generated capture had a mixed-case fragment; it was retained
-outside the source tree as rejected task evidence before the corrected first history
-was prepared. No pre-existing committed history was edited or recaptured.
-
-Prepared inventory428assets and all local links PASS before commit; product source
-PR133 and receiver compatibility follow-up are separate from this public guide tree.
-Actual multipart upload/private-save proof, exact committed tree checks and public-site
-navigation readback are recorded independently before final completion.
 
 ## Issue58: ordinary original-video-copy option draft
 

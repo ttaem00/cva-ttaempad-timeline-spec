@@ -41,7 +41,7 @@ VERSIONS = json.loads((DOCS / 'guide-versions.json').read_text(encoding='utf-8')
 APP_VERSION = VERSIONS['stable']
 HISTORY = ROOT / 'guide-history'
 # Retired URLs are routing data, not entries in the public release catalog.
-CURRENT_GUIDE_ALIASES = ('0.4.1',)
+CURRENT_GUIDE_ALIASES = ('0.4.1', '1.0.0')
 
 
 @dataclass
@@ -275,8 +275,6 @@ def page_template(key, label, article, headings, previous, next_page, context: S
     if context.prefix:
         version_label = next(r['label'] for r in VERSIONS['versions'] if r['version'] == context.version)
         note = f'{html.escape(version_label)} — 보존된 당시 안내입니다.'
-        if context.status == 'preview':
-            note = f'{html.escape(version_label)} — 현재 stable은 {APP_VERSION}입니다.'
     else:
         note = f'{APP_VERSION} · stable 안내'
     return f'''<!doctype html>
@@ -348,15 +346,13 @@ def verify_history():
         raise ValueError('exactly one stable version is required')
     for release in versions:
         version = release['version']
-        if not re.fullmatch(r'\d+\.\d+\.\d+', version) or release['status'] not in {'stable', 'preview', 'archive'}:
-            raise ValueError('invalid version metadata')
+        if not re.fullmatch(r'\d+\.\d+\.\d+', version) or release['status'] not in {'stable', 'archive'}:
+            raise ValueError('public catalog requires deployed guide versions')
         if not (HISTORY / version).is_dir():
             raise ValueError('published version has no preserved source')
     for version in CURRENT_GUIDE_ALIASES:
         if not re.fullmatch(r'\d+\.\d+\.\d+', version) or version in {r['version'] for r in versions}:
             raise ValueError('invalid or published current-guide alias')
-        if not (HISTORY / version).is_dir():
-            raise ValueError('current-guide alias has no preserved source')
     for base in sorted(HISTORY.iterdir()):
         if not base.is_dir() or not re.fullmatch(r'\d+\.\d+\.\d+', base.name):
             continue
@@ -411,7 +407,7 @@ def build_current_guide_aliases():
         destination = DOCS / 'versions' / version
         if destination.resolve() != DOCS.resolve() / 'versions' / version:
             raise ValueError('current-guide alias escapes published versions')
-        pages = {page[0] for page in PAGES if (HISTORY / version / 'source' / (page[0] + '.md')).is_file()}
+        pages = {page[0] for page in PAGES}
         pages.update(path.stem for path in destination.glob('*.html'))
         artifacts = [path for path in destination.rglob('*') if path.is_file()]
         if any(not path.resolve().is_relative_to(destination.resolve()) for path in artifacts):
@@ -461,13 +457,12 @@ def main():
     rows = []
     for release in VERSIONS['versions']:
         version = release['version']
-        description = {'preview': '다음 버전 기능을 먼저 살펴보는 미리보기', 'stable': '이 버전의 최초 보존 안내. 최신 사용법은 기본 안내에서 확인',
-                       'archive': '당시 작성된 이전 안내'}[release['status']]
+        description = {'stable': '이 버전의 최초 보존 안내. 최신 사용법은 기본 안내에서 확인',
+                       'archive': '이전 배포 버전의 안내'}[release['status']]
         rows.append(f'| [{release["label"]}](../versions/{version}/index.html) | {description} |')
     history = ('# 버전 기록\n\n기본 문서는 **'+APP_VERSION+' stable**을 기준으로 읽습니다. '
                '다른 버전은 왼쪽 버전 메뉴에서 고를 수 있습니다.\n\n| 버전 | 안내 |\n|---|---|\n'
-               + '\n'.join(rows) + '\n\n이전 안내의 본문·예제·이미지는 당시 모습으로 보존합니다. '
-               '미리보기의 기능은 현재 stable 안내와 구분합니다.\n')
+               + '\n'.join(rows) + '\n\n이전 안내의 본문·예제·이미지는 당시 모습으로 보존합니다.\n')
     (SOURCE / 'history.md').write_text(history, encoding='utf-8', newline='\n')
     stable_assets = current_assets()
     root_pages = [(key, 'd1·d2·point' if key == 'timeline' else label, group) for key, label, group in PAGES] + [('history', '버전 기록', '더 알아보기')]

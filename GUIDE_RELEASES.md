@@ -1,5 +1,34 @@
 # Guide release maintenance
 
+## Issue77 deployed-version catalog / 2026-10-24
+
+The public catalog contains actual product versions delivered to users, not
+documentation-only version identifiers. A captured document, archive status or
+published guide is not evidence that its product version was deployed. Review
+the whole catalog against this rule when correcting an entry. Public Store
+publication and an actual development installation are distinct evidence.
+
+| Version | Product delivery evidence |
+|---|---|
+| 0.4.0 | Actual Normal/Pro package installation and Chrome adoption: product `docs/release-0.4.0.md`, R51/R55 verification. Store review remains separate. |
+| 0.3.39 | R53 dashboard observation below: Normal published at 0.3.39; product `docs/issue-125-validation.md` records installed worker/parser adoption. |
+| 0.3.37 | Product `docs/project-qa.md` and `docs/store-readiness.md`: actual public Store version observed on 2026-10-09. |
+| 0.3.32 | [Public v0.3.32 release](https://github.com/ttaem00/CVA-TTaempad/releases/tag/v0.3.32), 2026-10-05, non-draft/non-prerelease with Store ZIP. |
+| 0.3.31 | Product `docs/cafe-introduction.md`: actual Chrome installation used for the 2026-10-05 capture. This is not a Store-publication claim. |
+| 0.3.23 | This repository's validation record: same Chrome extension updated/reloaded to 0.3.23 and active version verified. Store submission was not performed. |
+
+The manager also removed the development preview from the maintained internal
+snapshot and editable draft. Its dedicated release/validation entries and README
+link are removed; older task audit statements below describe past observations,
+not current preservation instructions. Git history is not rewritten. Neutral old
+HTML routes use current page keys independently of snapshot lifetime. Retained
+internal histories still pass the same inventory/hash checks. Public previews
+are rejected by catalog validation. No current article or image pixels change.
+
+Same-task Harness diagnosis and the W3C/Jekyll redirect research recorded below
+remain applicable; the change is removal of snapshot coupling, not a new browser
+mechanism. Harness status remains enabled/integrity PASS with no active run.
+
 ## Issue77 public current-guide navigation / 2026-10-24
 
 The public version selector helps readers choose usable product guidance. Internal
@@ -288,14 +317,6 @@ published history/source/pixels remain unchanged.
 
 The manager explicitly selected the published0.3.39 guide as default stable. Issue54 remote branch is the authoring authority; task-owned archives are validation artifacts. Preserved0.3.39 source from57087b6e8b6bfd71038486491033a1b2f2f2768f is copied to docs/source, with current-only preview wording changed to stable. Stable/authoringVersion become0.3.39;0.3.37 becomes archive. Every frozen history file and image pixel remains unchanged. This guide promotion does not submit the Store package or verify installed Chrome adoption.
 
-
-##1.0.0 development preview /2026-10-17
-
-The manager requested split-VOD cut insertion and direct sequential Studio delivery.
-Issue56 adds a clearly labeled development preview with ordinary development-build
-availability and separate professional verification status. Stable and authoring remain
-0.3.39. Existing frozen histories and preserved images remain byte-exact. This preview
-is documentation, not a Store/product release or a claim of full1.0 readiness.
 
 ## Ordinary copy-option text draft / 2026-10-17
 
